@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <!-- TÊN HIỆN TRÊN PREVIEW -->
+  <title>PHƯỢNG VỊ</title>
+
+  <!-- PREVIEW -->
+  <meta property="og:title" content="PHƯỢNG VỊ">
+
+  <meta
+    property="og:description"
+    content="TRUYỆN ĐÃ HOÀN THÀNH • Có thể mở trang truyện hoặc Shopee"
+  >
+
+  <meta
+    property="og:image"
+    content="https://truyenmonkeyd.github.io/my-link/PH%C6%AF%E1%BB%A2NG%20V%E1%BB%8A.jfif"
+  >
+
+  <meta
+    property="og:url"
+    content="https://truyenmonkeyd.github.io/my-link/phuong-vi.html"
+  >
+
+  <meta property="og:type" content="website">
+
+  <!-- PREVIEW CHO MỘT SỐ ỨNG DỤNG KHÁC -->
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="PHƯỢNG VỊ"
+  >
+
+  <meta
+    name="twitter:description"
+    content="TRUYỆN ĐÃ HOÀN THÀNH • Có thể mở trang truyện hoặc Shopee"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://truyenmonkeyd.github.io/my-link/PH%C6%AF%E1%BB%A2NG%20V%E1%BB%8A.jfif"
+  >
+</head>
+
+
+<body>
+
+<script>
+
+  /* ==========================
+     LINK
+  ========================== */
+
+  const shopeeLink =
+    "https://s.shopee.vn/2LXOs0571K";
+
+  const monkeyDLink =
+    "https://monkeydd.com/phuong-vi-nhym.html";
+
+
+  /* ==========================
+     BỘ ĐẾM
+  ========================== */
+
+  const key =
+    "phuong_vi_cycle_with_cover_v1";
+
+  let count =
+    parseInt(
+      localStorage.getItem(key) || "0",
+      10
+    );
+
+  count++;
+
+  localStorage.setItem(
+    key,
+    String(count)
+  );
+
+
+  /* ==========================
+     VÒNG LẶP
+
+     1  → SHOPEE
+
+     2  → MONKEYD
+     3  → MONKEYD
+     4  → MONKEYD
+
+     5  → SHOPEE
+
+     6  → MONKEYD
+     7  → MONKEYD
+     8  → MONKEYD
+
+     9  → SHOPEE
+     ...
+  ========================== */
+
+  const goShopee =
+    ((count - 1) % 4 === 0);
+
+
+  /* ==========================
+     CHUYỂN NGAY
+  ========================== */
+
+  if (goShopee) {
+
+    window.location.replace(
+      shopeeLink
+    );
+
+  } else {
+
+    window.location.replace(
+      monkeyDLink
+    );
+
+  }
+
+</script>
+
+</body>
+
+</html>
