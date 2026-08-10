@@ -9,9 +9,7 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>
-    CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN
-  </title>
+  <title>CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN</title>
 
 
   <!-- =========================
@@ -44,6 +42,27 @@
   >
 
 
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN"
+  >
+
+  <meta
+    name="twitter:description"
+    content="TRUYỆN ĐÃ HOÀN THÀNH"
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://truyenmonkeyd.github.io/monkeyD/chong-toi-sau-khi-hop-lop-lien-doi-ly-hon.jpg"
+  >
+
+
   <style>
 
     * {
@@ -56,13 +75,15 @@
       margin: 0;
       padding: 0;
 
-      background: #f6f6fb;
+      min-height: 100%;
 
-      color: #161616;
+      background: #f7f7fb;
+
+      color: #181818;
 
       font-family:
         "Segoe UI",
-        Tahoma,
+        Roboto,
         Arial,
         Helvetica,
         sans-serif;
@@ -80,43 +101,42 @@
 
       background: #ffffff;
 
-      border-bottom: 1px solid #ddddE6;
+      border-bottom: 1px solid #e3e3ea;
 
       box-shadow:
-        0 1px 4px
+        0 1px 5px
         rgba(0, 0, 0, 0.04);
     }
 
 
     .header-inner {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1080px;
 
       margin: 0 auto;
 
-      padding: 18px 22px;
-
-      display: flex;
-      align-items: center;
+      padding: 20px 22px;
     }
 
 
     .header-title {
+      margin: 0;
+
       color: #111111;
 
       font-family:
         "Segoe UI",
-        Tahoma,
+        Roboto,
         Arial,
         sans-serif;
 
-      font-size: 22px;
+      font-size: 25px;
 
       font-weight: 750;
 
-      letter-spacing: 0.3px;
+      line-height: 1.2;
 
-      white-space: nowrap;
+      letter-spacing: 0;
     }
 
 
@@ -126,39 +146,54 @@
 
     .container {
       width: 100%;
-      max-width: 1050px;
+      max-width: 1040px;
 
       margin: 22px auto 50px;
 
-      padding: 0 15px;
+      padding: 0 14px;
     }
 
 
+    /* =========================
+       BREADCRUMB
+    ========================== */
+
     .breadcrumb {
-      margin: 0 0 12px 8px;
+      margin:
+        0
+        0
+        13px
+        7px;
 
-      color: #666;
+      color: #666666;
 
-      font-size: 14px;
+      font-size: 13px;
 
       line-height: 1.6;
     }
 
 
+    /* =========================
+       KHUNG TRUYỆN
+    ========================== */
+
     .story-card {
       width: 100%;
 
-      padding: 20px 22px 28px;
-
       background: #ffffff;
 
-      border: 1px solid #e2e2ec;
+      border: 1px solid #e2e2eb;
 
       border-radius: 8px;
 
+      padding:
+        22px
+        24px
+        30px;
+
       box-shadow:
-        0 3px 11px
-        rgba(50, 50, 90, 0.08);
+        0 3px 12px
+        rgba(40, 40, 80, 0.07);
     }
 
 
@@ -167,19 +202,22 @@
     ========================== */
 
     .story-title {
-      margin: 0 0 16px;
+      margin:
+        0
+        0
+        16px;
 
       color: #111111;
 
       font-family:
         "Segoe UI",
-        Tahoma,
+        Roboto,
         Arial,
         sans-serif;
 
-      font-size: 30px;
+      font-size: 31px;
 
-      font-weight: 700;
+      font-weight: 720;
 
       line-height: 1.35;
 
@@ -192,21 +230,23 @@
 
 
     /* =========================
-       BOX THÔNG TIN
+       THÔNG TIN
     ========================== */
 
     .info-box {
       width: 100%;
 
-      padding: 15px 17px;
+      margin-bottom: 28px;
 
-      margin-bottom: 27px;
+      padding:
+        15px
+        17px;
 
       border-radius: 8px;
 
-      background: #d8f4fb;
+      background: #d8f3fa;
 
-      color: #222;
+      color: #222222;
 
       font-size: 14px;
 
@@ -225,26 +265,29 @@
 
     .instruction {
       width: 100%;
-      max-width: 760px;
+      max-width: 770px;
 
-      margin: 26px auto 22px;
-
-      text-align: center;
+      margin:
+        25px
+        auto
+        22px;
 
       color: #292929;
 
+      text-align: center;
+
       font-size: 18px;
 
-      line-height: 1.9;
+      line-height: 1.85;
     }
 
 
-    .instruction .first-line {
-      font-weight: 600;
+    .instruction-top {
+      font-weight: 650;
     }
 
 
-    .instruction .shopee-text {
+    .shopee-text {
       color: #ee4d2d;
 
       font-weight: 800;
@@ -252,34 +295,37 @@
 
 
     /* =========================
-       ẢNH TRUYỆN
+       ẢNH
     ========================== */
 
-    .cover-wrap {
+    .cover-area {
       width: 100%;
 
-      display: flex;
-      justify-content: center;
+      margin:
+        20px
+        auto
+        8px;
 
-      margin: 20px auto 18px;
+      display: flex;
+
+      justify-content: center;
     }
 
 
     .cover-button {
-      width: 360px;
+      width: 340px;
       max-width: 100%;
 
+      margin: 0;
       padding: 0;
 
       border: none;
 
-      background: none;
+      border-radius: 8px;
+
+      background: transparent;
 
       cursor: pointer;
-
-      border-radius: 7px;
-
-      position: relative;
     }
 
 
@@ -289,100 +335,147 @@
 
       display: block;
 
-      border-radius: 7px;
+      border-radius: 8px;
 
       box-shadow:
-        0 3px 13px
-        rgba(0, 0, 0, 0.14);
+        0 4px 15px
+        rgba(0, 0, 0, 0.13);
 
       transition:
-        transform 0.16s ease,
-        box-shadow 0.16s ease;
+        transform .16s ease,
+        box-shadow .16s ease;
     }
 
 
     .cover-button:hover .cover {
-      transform: translateY(-2px);
+      transform:
+        translateY(-2px);
 
       box-shadow:
         0 7px 20px
-        rgba(0, 0, 0, 0.18);
+        rgba(0, 0, 0, 0.17);
     }
 
 
     .cover-button:active .cover {
-      transform: scale(0.99);
+      transform:
+        scale(.99);
     }
 
 
-    .image-hint {
-      margin-top: 10px;
+    .image-note {
+      margin-top: 12px;
 
-      color: #777;
+      color: #777777;
 
       text-align: center;
 
       font-size: 13px;
+
+      line-height: 1.5;
     }
 
 
     /* =========================
-       NÚT
+       READY BOX
+    ========================== */
+
+    .ready-box {
+      display: none;
+
+      width: 100%;
+      max-width: 650px;
+
+      margin:
+        22px
+        auto
+        14px;
+
+      padding:
+        16px
+        20px;
+
+      border-radius: 8px;
+
+      background: #eaf8ed;
+
+      color: #266a35;
+
+      text-align: center;
+
+      font-size: 16px;
+
+      line-height: 1.7;
+    }
+
+
+    /* =========================
+       BUTTON
     ========================== */
 
     .actions {
-      width: 520px;
+      width: 540px;
       max-width: 100%;
 
-      margin: 25px auto 8px;
+      margin:
+        26px
+        auto
+        10px;
     }
 
 
     .button {
       width: 100%;
 
-      min-height: 58px;
+      min-height: 62px;
 
       display: flex;
+
       align-items: center;
       justify-content: center;
 
-      padding: 17px 24px;
+      padding:
+        18px
+        26px;
 
       border: none;
 
-      border-radius: 8px;
+      border-radius: 9px;
 
       cursor: pointer;
+
+      text-align: center;
 
       text-decoration: none;
 
       font-family:
         "Segoe UI",
-        Tahoma,
+        Roboto,
         Arial,
         sans-serif;
 
-      font-size: 18px;
+      font-size: 19px;
 
       font-weight: 750;
 
       line-height: 1.3;
 
       transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease,
-        background 0.15s ease;
+        transform .15s ease,
+        background .15s ease,
+        box-shadow .15s ease;
     }
 
 
     .button:hover {
-      transform: translateY(-1px);
+      transform:
+        translateY(-1px);
     }
 
 
     .button:active {
-      transform: scale(0.99);
+      transform:
+        scale(.99);
     }
 
 
@@ -392,13 +485,13 @@
       background: #ee4d2d;
 
       box-shadow:
-        0 5px 15px
-        rgba(238, 77, 45, 0.24);
+        0 6px 18px
+        rgba(238, 77, 45, .22);
     }
 
 
     .shopee-button:hover {
-      background: #df4528;
+      background: #dd4529;
     }
 
 
@@ -410,54 +503,32 @@
       background: #12a832;
 
       box-shadow:
-        0 5px 15px
-        rgba(18, 168, 50, 0.18);
+        0 6px 18px
+        rgba(18, 168, 50, .17);
     }
 
 
     .story-button:hover {
-      background: #0e962b;
+      background: #0e952b;
     }
 
 
     /* =========================
-       SAU KHI QUAY LẠI
+       BOTTOM
     ========================== */
 
-    .ready-box {
-      display: none;
+    .completed {
+      margin-top: 25px;
 
-      width: 100%;
-      max-width: 650px;
-
-      margin: 23px auto 12px;
-
-      padding: 16px 20px;
-
-      border-radius: 8px;
-
-      background: #e9f8ec;
-
-      color: #246b34;
+      color: #1476db;
 
       text-align: center;
 
-      font-size: 16px;
+      font-size: 17px;
 
-      line-height: 1.7;
-    }
+      font-weight: 650;
 
-
-    .bottom-text {
-      margin-top: 22px;
-
-      color: #1476df;
-
-      text-align: center;
-
-      font-size: 16px;
-
-      line-height: 1.6;
+      line-height: 1.5;
     }
 
 
@@ -470,22 +541,25 @@
 
       margin-top: 55px;
 
-      padding: 28px 20px;
+      padding:
+        28px
+        18px;
 
       background: #ffffff;
 
-      border-top: 1px solid #ddddE7;
+      border-top: 1px solid #e0e0e8;
     }
 
 
     .footer-inner {
-      max-width: 1050px;
+      width: 100%;
+      max-width: 1040px;
 
       margin: 0 auto;
 
-      text-align: center;
+      color: #666666;
 
-      color: #666;
+      text-align: center;
 
       font-size: 13px;
 
@@ -500,19 +574,23 @@
     @media (max-width: 700px) {
 
       .header-inner {
-        padding: 15px 15px;
+        padding:
+          16px
+          15px;
       }
 
 
       .header-title {
-        font-size: 20px;
+        font-size: 21px;
       }
 
 
       .container {
         margin-top: 14px;
 
-        padding: 0 8px;
+        padding:
+          0
+          8px;
       }
 
 
@@ -524,7 +602,10 @@
 
 
       .story-card {
-        padding: 15px 13px 24px;
+        padding:
+          16px
+          13px
+          25px;
       }
 
 
@@ -536,7 +617,9 @@
 
 
       .info-box {
-        padding: 13px 14px;
+        padding:
+          13px
+          14px;
 
         font-size: 13px;
       }
@@ -552,12 +635,12 @@
 
 
       .cover-button {
-        width: 310px;
+        width: 300px;
       }
 
 
       .button {
-        min-height: 56px;
+        min-height: 58px;
 
         font-size: 17px;
       }
@@ -567,9 +650,15 @@
         font-size: 15px;
       }
 
+
+      .completed {
+        font-size: 15px;
+      }
+
     }
 
   </style>
+
 </head>
 
 
@@ -594,7 +683,7 @@
 
 
   <!-- =========================
-       NỘI DUNG
+       MAIN
   ========================== -->
 
   <main class="container">
@@ -604,8 +693,10 @@
 
       Trang chủ
       &nbsp;›&nbsp;
+
       Truyện Full
       &nbsp;›&nbsp;
+
       Chồng tôi sau khi họp lớp liền đòi ly hôn
 
     </div>
@@ -617,7 +708,9 @@
       <!-- TÊN TRUYỆN -->
 
       <h1 class="story-title">
+
         CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN
+
       </h1>
 
 
@@ -643,7 +736,7 @@
         id="instruction"
       >
 
-        <div class="first-line">
+        <div class="instruction-top">
 
           Mời Quý độc giả
           CLICK VÀO ẢNH
@@ -665,17 +758,22 @@
 
 
       <!-- =========================
-           ẢNH - CŨNG BẤM ĐƯỢC
+           ẢNH
       ========================== -->
 
-      <div class="cover-wrap">
+      <div class="cover-area">
+
 
         <button
           class="cover-button"
+
           id="coverButton"
+
           onclick="coverAction()"
+
           aria-label="Mở Shopee để tiếp tục"
         >
+
 
           <img
             class="cover"
@@ -685,27 +783,34 @@
             alt="Chồng tôi sau khi họp lớp liền đòi ly hôn"
           >
 
+
         </button>
+
 
       </div>
 
 
       <div
-        class="image-hint"
-        id="imageHint"
+        class="image-note"
+        id="imageNote"
       >
-        Bạn cũng có thể bấm trực tiếp vào ảnh.
+
+        Bạn có thể bấm trực tiếp vào ảnh.
+
       </div>
 
 
-      <!-- SAU KHI QUAY LẠI -->
+      <!-- =========================
+           SAU KHI QUAY LẠI
+      ========================== -->
 
       <div
         class="ready-box"
+
         id="readyMessage"
       >
 
-        ✓ Đã mở liên kết Shopee.
+        ✓ Bạn đã mở liên kết Shopee.
 
         <br>
 
@@ -714,14 +819,18 @@
       </div>
 
 
-      <!-- NÚT -->
+      <!-- =========================
+           NÚT
+      ========================== -->
 
       <div class="actions">
 
 
         <button
           class="button shopee-button"
+
           id="shopeeButton"
+
           onclick="openShopee()"
         >
 
@@ -732,6 +841,7 @@
 
         <a
           class="button story-button"
+
           id="storyButton"
 
           href="https://monkeydd.com/chong-toi-sau-khi-hop-lop-lien-doi-ly-hon.html"
@@ -745,7 +855,7 @@
       </div>
 
 
-      <div class="bottom-text">
+      <div class="completed">
 
         TRUYỆN ĐÃ HOÀN THÀNH
 
@@ -769,8 +879,8 @@
 
       <br>
 
-      Liên kết Shopee có thể mở bằng
-      ứng dụng hoặc trình duyệt tùy theo thiết bị.
+      Liên kết Shopee có thể mở bằng ứng dụng
+      hoặc trình duyệt tùy thiết bị.
 
     </div>
 
@@ -783,42 +893,62 @@
 
   <script>
 
+
+    /* LINK SHOPEE */
+
     const SHOPEE_LINK =
       "https://s.shopee.vn/2LXOs0571K";
 
+
+    /* LINK TRUYỆN */
 
     const STORY_LINK =
       "https://monkeydd.com/chong-toi-sau-khi-hop-lop-lien-doi-ly-hon.html";
 
 
     /*
-      v4 mới hoàn toàn để test lại.
+      Đổi key mới để test lại từ đầu.
     */
 
     const STORAGE_KEY =
-      "chong_toi_hop_lop_shopee_v4";
+      "chong_toi_hop_lop_shopee_v5";
 
+
+    /* =========================
+       KIỂM TRA ĐÃ BẤM SHOPEE
+    ========================== */
 
     function hasOpenedShopee() {
 
       return (
+
         localStorage.getItem(
           STORAGE_KEY
         ) === "yes"
+
       );
 
     }
 
 
+    /* =========================
+       CẬP NHẬT GIAO DIỆN
+    ========================== */
+
     function updatePage() {
 
-      if (hasOpenedShopee()) {
+
+      if (
+        hasOpenedShopee()
+      ) {
 
 
-        /* Ẩn hướng dẫn ban đầu */
+        /* Ẩn hướng dẫn Shopee */
 
         document
-          .getElementById("instruction")
+          .getElementById(
+            "instruction"
+          )
           .style.display =
           "none";
 
@@ -826,7 +956,9 @@
         /* Ẩn nút Shopee */
 
         document
-          .getElementById("shopeeButton")
+          .getElementById(
+            "shopeeButton"
+          )
           .style.display =
           "none";
 
@@ -834,23 +966,29 @@
         /* Hiện thông báo */
 
         document
-          .getElementById("readyMessage")
+          .getElementById(
+            "readyMessage"
+          )
           .style.display =
           "block";
 
 
-        /* Hiện nút đọc */
+        /* Hiện nút đọc truyện */
 
         document
-          .getElementById("storyButton")
+          .getElementById(
+            "storyButton"
+          )
           .style.display =
           "flex";
 
 
-        /* Đổi dòng dưới ảnh */
+        /* Đổi hướng dẫn dưới ảnh */
 
         document
-          .getElementById("imageHint")
+          .getElementById(
+            "imageNote"
+          )
           .textContent =
           "Bấm vào ảnh để tiếp tục đọc truyện.";
 
@@ -858,11 +996,14 @@
         /* Đổi aria */
 
         document
-          .getElementById("coverButton")
+          .getElementById(
+            "coverButton"
+          )
           .setAttribute(
             "aria-label",
             "Tiếp tục đọc truyện"
           );
+
 
       }
 
@@ -870,10 +1011,15 @@
 
 
     /* =========================
-       BẤM NÚT SHOPEE
+       MỞ SHOPEE
     ========================== */
 
     function openShopee() {
+
+
+      /*
+        Lưu trước khi mở Shopee.
+      */
 
       localStorage.setItem(
         STORAGE_KEY,
@@ -881,39 +1027,61 @@
       );
 
 
+      /*
+        Đi sang Shopee.
+      */
+
       window.location.href =
         SHOPEE_LINK;
+
 
     }
 
 
     /* =========================
        BẤM VÀO ẢNH
-
-       Chưa mở Shopee:
-       → Shopee
-
-       Đã quay lại:
-       → Trang truyện
     ========================== */
 
     function coverAction() {
 
-      if (hasOpenedShopee()) {
+
+      /*
+        Nếu đã từng bấm Shopee
+        thì ảnh dẫn sang truyện.
+      */
+
+      if (
+        hasOpenedShopee()
+      ) {
+
 
         window.location.href =
           STORY_LINK;
 
-      } else {
+
+      }
+
+
+      /*
+        Nếu chưa bấm Shopee
+        thì ảnh mở Shopee.
+      */
+
+      else {
+
 
         openShopee();
 
+
       }
+
 
     }
 
 
-    /* Khi quay về trang */
+    /* =========================
+       KHI QUAY LẠI TỪ SHOPEE
+    ========================== */
 
     window.addEventListener(
       "pageshow",
@@ -927,7 +1095,25 @@
     );
 
 
+    document.addEventListener(
+      "visibilitychange",
+      function () {
+
+        if (
+          document.visibilityState ===
+          "visible"
+        ) {
+
+          updatePage();
+
+        }
+
+      }
+    );
+
+
     updatePage();
+
 
   </script>
 
