@@ -1,1365 +1,459 @@
-<!DOCTYPE html>
-<html lang="vi">
+<script>
 
-<head>
-  <meta charset="UTF-8">
+  /*
+    SHOPEE RANDOM CHO BỘ NÀY
+    THUỘC ĐÚNG 5 LINK CỐ ĐỊNH
+  */
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+  const SHOPEE_LINK =
+    "https://s.shopee.vn/7AcfKhyGAP";
 
-  <title>YÊU 7 NĂM, ANH NÓI ĐÃ CHÁN TỪ LÂU RỒI</title>
 
+  const STORY_LINK =
+    "https://monkeydd.com/yeu-7-nam-anh-noi-da-chan-tu-lau-roi.html";
 
-  <!-- =========================
-       PREVIEW
-  ========================== -->
 
-  <meta
-    property="og:title"
-    content="YÊU 7 NĂM, ANH NÓI ĐÃ CHÁN TỪ LÂU RỒI"
-  >
+  /*
+    KEY MỚI ĐỂ RESET VÒNG TEST
+  */
 
-  <meta
-    property="og:description"
-    content="TRUYỆN ĐÃ HOÀN THÀNH"
-  >
+  const STORAGE_KEY =
+    "yeu_7_nam_visit_cycle_fixed_v2";
 
-  <meta
-    property="og:image"
-    content="https://cdn.monkeydarchive.com/images/story/2026/08/10/1786367330-yeu-7-nam-anh-noi-da-chan-tu-lau-roi.jpg"
-  >
 
-  <meta
-    property="og:url"
-    content="https://truyenmonkeyd.github.io/monkeyD/yeu-7-nam-anh-noi-da-chan-tu-lau-roi.html"
-  >
+  /* =====================================
+     ĐỌC SỐ LƯỢT
+     localStorage + cookie dự phòng
+  ===================================== */
 
-  <meta
-    property="og:type"
-    content="website"
-  >
+  function getVisitCount() {
 
+    try {
 
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  >
-
-  <meta
-    name="twitter:title"
-    content="YÊU 7 NĂM, ANH NÓI ĐÃ CHÁN TỪ LÂU RỒI"
-  >
-
-  <meta
-    name="twitter:description"
-    content="TRUYỆN ĐÃ HOÀN THÀNH"
-  >
-
-  <meta
-    name="twitter:image"
-    content="https://cdn.monkeydarchive.com/images/story/2026/08/10/1786367330-yeu-7-nam-anh-noi-da-chan-tu-lau-roi.jpg"
-  >
-
-
-  <style>
-
-    * {
-      box-sizing: border-box;
-    }
-
-
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-
-      background: #f5f5fb;
-
-      color: #181818;
-
-      font-family:
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        Helvetica,
-        sans-serif;
-
-      font-synthesis: none;
-    }
-
-
-    /* =========================
-       HEADER
-    ========================== */
-
-    .header {
-      width: 100%;
-
-      background: #ffffff;
-
-      border-bottom: 1px solid #e1e1e8;
-    }
-
-
-    .header-top {
-      width: 100%;
-      max-width: 1180px;
-
-      margin: 0 auto;
-
-      padding: 10px 18px;
-
-      display: flex;
-      align-items: center;
-      gap: 22px;
-    }
-
-
-    .brand {
-      color: #09a5e5;
-
-      font-size: 27px;
-
-      font-weight: 800;
-
-      line-height: 1;
-
-      white-space: nowrap;
-    }
-
-
-    /* =========================
-       SEARCH
-    ========================== */
-
-    .search-box {
-      width: 300px;
-      max-width: 100%;
-
-      height: 39px;
-
-      display: flex;
-      align-items: center;
-
-      padding: 0 13px;
-
-      border: 1px solid #d6d8df;
-
-      border-radius: 6px;
-
-      background: #ffffff;
-    }
-
-
-    .search-icon {
-      margin-right: 8px;
-
-      color: #555;
-
-      font-size: 16px;
-    }
-
-
-    .search {
-      width: 100%;
-
-      border: none;
-      outline: none;
-
-      background: transparent;
-
-      color: #333;
-
-      font-family: inherit;
-
-      font-size: 14px;
-    }
-
-
-    .search::placeholder {
-      color: #999;
-    }
-
-
-    .account {
-      margin-left: auto;
-
-      color: #555;
-
-      font-size: 13px;
-
-      white-space: nowrap;
-    }
-
-
-    /* =========================
-       MENU
-    ========================== */
-
-    .nav {
-      width: 100%;
-
-      background: #ffffff;
-
-      border-top: 1px solid #f1f1f3;
-      border-bottom: 1px solid #dddde7;
-    }
-
-
-    .nav-inner {
-      width: 100%;
-      max-width: 1180px;
-
-      margin: 0 auto;
-
-      padding: 0 8px;
-
-      display: flex;
-      align-items: center;
-
-      overflow-x: auto;
-    }
-
-
-    .nav-item {
-      padding: 14px 15px;
-
-      color: #111;
-
-      font-size: 14px;
-
-      text-decoration: none;
-
-      white-space: nowrap;
-    }
-
-
-    .nav-item:hover {
-      background: #f4f4f7;
-    }
-
-
-    /* =========================
-       MAIN
-    ========================== */
-
-    .container {
-      width: 100%;
-      max-width: 1080px;
-
-      margin: 22px auto 50px;
-
-      padding: 0 14px;
-    }
-
-
-    .breadcrumb {
-      margin: 0 0 13px 8px;
-
-      color: #555;
-
-      font-size: 13px;
-
-      line-height: 1.6;
-    }
-
-
-    .story-card {
-      width: 100%;
-
-      padding: 20px 22px 30px;
-
-      background: #ffffff;
-
-      border: 1px solid #e1e1ec;
-
-      border-radius: 7px;
-
-      box-shadow:
-        0 3px 11px
-        rgba(50, 50, 90, .07);
-    }
-
-
-    /* =========================
-       TÊN TRUYỆN
-    ========================== */
-
-    .story-title {
-      margin: 0 0 15px;
-
-      color: #111;
-
-      font-size: 30px;
-
-      font-weight: 700;
-
-      line-height: 1.4;
-
-      letter-spacing: 0;
-    }
-
-
-    /* =========================
-       INFO
-    ========================== */
-
-    .info-box {
-      width: 100%;
-
-      margin-bottom: 26px;
-
-      padding: 14px 16px;
-
-      border-radius: 8px;
-
-      background: #d5f3fa;
-
-      color: #222;
-
-      font-size: 14px;
-
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       HƯỚNG DẪN
-    ========================== */
-
-    .instruction {
-      width: 100%;
-      max-width: 760px;
-
-      margin: 25px auto 20px;
-
-      text-align: center;
-
-      color: #292929;
-
-      font-size: 18px;
-
-      line-height: 1.85;
-    }
-
-
-    .instruction-top {
-      font-weight: 650;
-    }
-
-
-    .shopee-text {
-      color: #ee4d2d;
-
-      font-weight: 800;
-    }
-
-
-    /* =========================
-       ẢNH
-    ========================== */
-
-    .cover-area {
-      width: 100%;
-
-      margin: 19px auto 8px;
-
-      display: flex;
-      justify-content: center;
-    }
-
-
-    .cover-link {
-      width: 340px;
-      max-width: 100%;
-
-      display: block;
-
-      margin: 0;
-
-      border-radius: 7px;
-
-      cursor: pointer;
-
-      text-decoration: none;
-    }
-
-
-    .cover {
-      width: 100%;
-      height: auto;
-
-      display: block;
-
-      border-radius: 7px;
-
-      box-shadow:
-        0 4px 15px
-        rgba(0, 0, 0, .13);
-
-      transition:
-        transform .15s ease,
-        box-shadow .15s ease;
-    }
-
-
-    .cover-link:hover .cover {
-      transform: translateY(-2px);
-
-      box-shadow:
-        0 7px 20px
-        rgba(0, 0, 0, .17);
-    }
-
-
-    .cover-link:active .cover {
-      transform: scale(.99);
-    }
-
-
-    .image-note {
-      margin-top: 12px;
-
-      color: #777;
-
-      text-align: center;
-
-      font-size: 13px;
-
-      line-height: 1.5;
-    }
-
-
-    /* =========================
-       NÚT
-    ========================== */
-
-    .actions {
-      width: 540px;
-      max-width: 100%;
-
-      margin: 25px auto 9px;
-    }
-
-
-    .button {
-      width: 100%;
-
-      min-height: 62px;
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 18px 25px;
-
-      border: none;
-
-      border-radius: 9px;
-
-      cursor: pointer;
-
-      text-align: center;
-
-      text-decoration: none;
-
-      font-family:
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        sans-serif;
-
-      font-size: 19px;
-
-      font-weight: 750;
-
-      line-height: 1.3;
-    }
-
-
-    .button:active {
-      transform: scale(.99);
-    }
-
-
-    .shopee-button {
-      color: #ffffff;
-
-      background: #ee4d2d;
-
-      box-shadow:
-        0 6px 18px
-        rgba(238, 77, 45, .22);
-    }
-
-
-    .shopee-button:hover {
-      background: #dc4529;
-    }
-
-
-    .story-button {
-      display: none;
-
-      color: #ffffff;
-
-      background: #11aa31;
-
-      box-shadow:
-        0 6px 18px
-        rgba(17, 170, 49, .16);
-    }
-
-
-    .story-button:hover {
-      background: #0e962b;
-    }
-
-
-    /* =========================
-       READY
-    ========================== */
-
-    .ready-box {
-      display: none;
-
-      width: 100%;
-      max-width: 650px;
-
-      margin: 22px auto 13px;
-
-      padding: 16px 20px;
-
-      border-radius: 8px;
-
-      background: #eaf8ed;
-
-      color: #266a35;
-
-      text-align: center;
-
-      font-size: 16px;
-
-      line-height: 1.7;
-    }
-
-
-    .completed {
-      margin-top: 23px;
-
-      color: #0878ee;
-
-      text-align: center;
-
-      font-size: 17px;
-
-      font-weight: 650;
-    }
-
-
-    /* =========================
-       FOOTER
-    ========================== */
-
-    .footer {
-      width: 100%;
-
-      margin-top: 55px;
-
-      padding: 30px 20px;
-
-      background: #ffffff;
-
-      border-top: 1px solid #dedee8;
-    }
-
-
-    .footer-inner {
-      width: 100%;
-      max-width: 1080px;
-
-      margin: 0 auto;
-
-      display: flex;
-      justify-content: space-between;
-
-      gap: 35px;
-    }
-
-
-    .footer-title {
-      color: #09a5e5;
-
-      font-size: 25px;
-
-      font-weight: 800;
-
-      white-space: nowrap;
-    }
-
-
-    .footer-text {
-      max-width: 520px;
-
-      color: #555;
-
-      font-size: 12px;
-
-      line-height: 1.7;
-    }
-
-
-    /* =========================
-       MOBILE
-    ========================== */
-
-    @media (max-width: 700px) {
-
-      .header-top {
-        flex-wrap: wrap;
-
-        padding: 11px 12px;
-
-        gap: 10px;
-      }
-
-
-      .brand {
-        font-size: 23px;
-      }
-
-
-      .account {
-        font-size: 12px;
-      }
-
-
-      .search-box {
-        order: 3;
-
-        width: 100%;
-      }
-
-
-      .nav-inner {
-        padding: 0 4px;
-      }
-
-
-      .nav-item {
-        padding: 11px 12px;
-
-        font-size: 13px;
-      }
-
-
-      .container {
-        margin-top: 14px;
-
-        padding: 0 8px;
-      }
-
-
-      .story-card {
-        padding: 15px 13px 25px;
-      }
-
-
-      .story-title {
-        font-size: 23px;
-
-        line-height: 1.45;
-      }
-
-
-      .instruction {
-        font-size: 16px;
-      }
-
-
-      .cover-link {
-        width: 300px;
-      }
-
-
-      .button {
-        min-height: 58px;
-
-        font-size: 17px;
-      }
-
-
-      .footer-inner {
-        flex-direction: column;
-      }
-
-    }
-
-  </style>
-
-</head>
-
-
-<body>
-
-
-  <!-- HEADER -->
-
-  <header class="header">
-
-    <div class="header-top">
-
-
-      <div class="brand">
-        TRUYỆN FULL
-      </div>
-
-
-      <div class="search-box">
-
-        <span class="search-icon">
-          ⌕
-        </span>
-
-
-        <input
-          class="search"
-          type="text"
-          placeholder="Tìm truyện"
-        >
-
-      </div>
-
-
-      <div class="account">
-        Tủ truyện của bạn
-      </div>
-
-
-    </div>
-
-  </header>
-
-
-  <!-- MENU -->
-
-  <nav class="nav">
-
-    <div class="nav-inner">
-
-
-      <a class="nav-item" href="#">
-        Trang chủ
-      </a>
-
-
-      <a class="nav-item" href="#">
-        Truyện mới
-      </a>
-
-
-      <a class="nav-item" href="#">
-        ☰ &nbsp;Thể loại
-      </a>
-
-
-      <a class="nav-item" href="#">
-        Truyện Full
-      </a>
-
-
-      <a class="nav-item" href="#">
-        ☆ &nbsp;Truyện Sáng Tác
-      </a>
-
-
-      <a class="nav-item" href="#">
-        Team
-      </a>
-
-
-      <a class="nav-item" href="#">
-        🔊 &nbsp;Nghe Audio
-      </a>
-
-
-      <a class="nav-item" href="#">
-        ▣ &nbsp;Tủ truyện
-      </a>
-
-
-    </div>
-
-  </nav>
-
-
-  <!-- MAIN -->
-
-  <main class="container">
-
-
-    <div class="breadcrumb">
-
-      Trang chủ
-      &nbsp;›&nbsp;
-
-      Truyện Full
-      &nbsp;›&nbsp;
-
-      Yêu 7 năm, anh nói đã chán từ lâu rồi
-
-    </div>
-
-
-    <section class="story-card">
-
-
-      <h1 class="story-title">
-
-        YÊU 7 NĂM, ANH NÓI ĐÃ CHÁN TỪ LÂU RỒI
-
-      </h1>
-
-
-      <div class="info-box">
-
-        Trạng thái:
-        Đã đủ bộ
-
-        <br>
-
-        Nội dung:
-        Toàn bộ chương truyện đã sẵn sàng.
-
-      </div>
-
-
-      <!-- HƯỚNG DẪN SHOPEE -->
-
-      <div
-        class="instruction"
-        id="instruction"
-      >
-
-
-        <div class="instruction-top">
-
-          Mời Quý độc giả
-          CLICK VÀO ẢNH
-          HOẶC Ô BÊN DƯỚI
-
-        </div>
-
-
-        <span class="shopee-text">
-
-          MỞ ỨNG DỤNG SHOPEE
-
-        </span>,
-
-        sau đó quay trở lại trang này
-        để tiếp tục đọc toàn bộ truyện.
-
-
-      </div>
-
-
-      <!-- ẢNH -->
-
-      <div class="cover-area">
-
-
-        <a
-          class="cover-link"
-
-          id="coverLink"
-
-          href="#"
-
-          aria-label="Mở liên kết"
-        >
-
-
-          <img
-            class="cover"
-
-            src="https://cdn.monkeydarchive.com/images/story/2026/08/10/1786367330-yeu-7-nam-anh-noi-da-chan-tu-lau-roi.jpg"
-
-            alt="Yêu 7 năm, anh nói đã chán từ lâu rồi"
-          >
-
-
-        </a>
-
-
-      </div>
-
-
-      <div
-        class="image-note"
-        id="imageNote"
-      >
-
-        Bạn có thể bấm trực tiếp vào ảnh.
-
-      </div>
-
-
-      <!-- READY -->
-
-      <div
-        class="ready-box"
-
-        id="readyMessage"
-      >
-
-        ✓ Bạn có thể tiếp tục đọc truyện.
-
-      </div>
-
-
-      <!-- BUTTON -->
-
-      <div class="actions">
-
-
-        <a
-          class="button shopee-button"
-
-          id="shopeeButton"
-
-          href="#"
-        >
-
-          MỞ SHOPEE ĐỂ TIẾP TỤC
-
-        </a>
-
-
-        <a
-          class="button story-button"
-
-          id="storyButton"
-
-          href="#"
-        >
-
-          TIẾP TỤC ĐỌC TRUYỆN
-
-        </a>
-
-
-      </div>
-
-
-      <div class="completed">
-
-        TRUYỆN ĐÃ HOÀN THÀNH
-
-      </div>
-
-
-    </section>
-
-  </main>
-
-
-  <!-- FOOTER -->
-
-  <footer class="footer">
-
-
-    <div class="footer-inner">
-
-
-      <div class="footer-title">
-
-        TRUYỆN FULL
-
-      </div>
-
-
-      <div class="footer-text">
-
-        Trang hỗ trợ điều hướng nội dung truyện.
-
-        <br><br>
-
-        Liên kết Shopee có thể mở bằng ứng dụng
-        hoặc trình duyệt tùy theo thiết bị.
-
-      </div>
-
-
-    </div>
-
-
-  </footer>
-
-
-  <!-- =========================
-       JAVASCRIPT
-       
-       VÒNG LẶP TÍNH THEO
-       MỖI LẦN LOAD TRANG:
-       
-       1 = SHOPEE
-       2 = MONKEYD
-       3 = MONKEYD
-       4 = SHOPEE
-       5 = MONKEYD
-       6 = MONKEYD
-       ...
-  ========================== -->
-
-  <script>
-
-
-    /*
-      SHOPEE RANDOM CHO TRUYỆN NÀY
-      - thuộc đúng bộ 5 link
-    */
-
-    const SHOPEE_LINK =
-      "https://s.shopee.vn/7AcfKhyGAP";
-
-
-    /*
-      LINK TRUYỆN
-    */
-
-    const STORY_LINK =
-      "https://monkeydd.com/yeu-7-nam-anh-noi-da-chan-tu-lau-roi.html";
-
-
-    /*
-      KEY RIÊNG CHO TRUYỆN NÀY
-    */
-
-    const STORAGE_KEY =
-      "yeu_7_nam_anh_noi_da_chan_visit_cycle_v1";
-
-
-    /* =========================
-       LẤY SỐ LƯỢT ĐÃ MỞ
-    ========================== */
-
-    function getVisitCount() {
-
-      return parseInt(
-
+      const saved =
         localStorage.getItem(
           STORAGE_KEY
-        ) || "0",
+        );
 
-        10
+      if (saved !== null) {
 
-      );
+        return parseInt(
+          saved,
+          10
+        ) || 0;
+
+      }
+
+    } catch (error) {}
+
+
+
+    const cookieName =
+      STORAGE_KEY + "=";
+
+
+    const cookies =
+      document.cookie.split(";");
+
+
+    for (
+      let i = 0;
+      i < cookies.length;
+      i++
+    ) {
+
+      let cookie =
+        cookies[i].trim();
+
+
+      if (
+        cookie.indexOf(
+          cookieName
+        ) === 0
+      ) {
+
+        return parseInt(
+          cookie.substring(
+            cookieName.length
+          ),
+          10
+        ) || 0;
+
+      }
 
     }
 
 
-    /* =========================
-       +1 MỖI LẦN LOAD TRANG
-    ========================== */
+    return 0;
 
-    function registerVisit() {
+  }
 
 
-      const oldCount =
-        getVisitCount();
+  /* =====================================
+     LƯU SỐ LƯỢT
+  ===================================== */
 
+  function saveVisitCount(count) {
 
-      const newCount =
-        oldCount + 1;
-
+    try {
 
       localStorage.setItem(
         STORAGE_KEY,
-        newCount.toString()
+        count.toString()
+      );
+
+    } catch (error) {}
+
+
+    document.cookie =
+      STORAGE_KEY +
+      "=" +
+      count +
+      "; max-age=31536000; path=/; SameSite=Lax";
+
+  }
+
+
+  /* =====================================
+     +1 LƯỢT
+  ===================================== */
+
+  function registerVisit() {
+
+    const newCount =
+      getVisitCount() + 1;
+
+
+    saveVisitCount(
+      newCount
+    );
+
+
+    return newCount;
+
+  }
+
+
+  /* =====================================
+     CHU KỲ
+
+     1 = SHOPEE
+     2 = MONKEYD
+     3 = MONKEYD
+
+     4 = SHOPEE
+     5 = MONKEYD
+     6 = MONKEYD
+     ...
+  ===================================== */
+
+  function getPosition(count) {
+
+    return (
+      ((count - 1) % 3) + 1
+    );
+
+  }
+
+
+  /* =====================================
+     GIAO DIỆN SHOPEE
+  ===================================== */
+
+  function showShopeeState() {
+
+    const instruction =
+      document.getElementById(
+        "instruction"
       );
 
 
-      return newCount;
-
-    }
-
-
-    /* =========================
-       1 / 2 / 3
-    ========================== */
-
-    function getPosition(count) {
-
-      return (
-        ((count - 1) % 3) + 1
-      );
-
-    }
-
-
-    /* =========================
-       LƯỢT SHOPEE
-    ========================== */
-
-    function showShopeeState() {
-
-
-      document
-        .getElementById(
-          "instruction"
-        )
-        .style.display =
-        "block";
-
-
-      document
-        .getElementById(
-          "readyMessage"
-        )
-        .style.display =
-        "none";
-
-
-      document
-        .getElementById(
-          "shopeeButton"
-        )
-        .style.display =
-        "flex";
-
-
-      document
-        .getElementById(
-          "storyButton"
-        )
-        .style.display =
-        "none";
-
-
-      document
-        .getElementById(
-          "imageNote"
-        )
-        .textContent =
-        "Bạn có thể bấm trực tiếp vào ảnh.";
-
-
-      /*
-        ẢNH -> SHOPEE
-      */
-
-      const coverLink =
-        document.getElementById(
-          "coverLink"
-        );
-
-
-      coverLink.href =
-        SHOPEE_LINK;
-
-
-      coverLink.target =
-        "_blank";
-
-
-      coverLink.rel =
-        "noopener noreferrer";
-
-
-      coverLink.setAttribute(
-        "aria-label",
-        "Mở Shopee để tiếp tục"
+    const ready =
+      document.getElementById(
+        "readyMessage"
       );
 
 
-      /*
-        BUTTON -> SHOPEE
-      */
-
-      const shopeeButton =
-        document.getElementById(
-          "shopeeButton"
-        );
-
-
-      shopeeButton.href =
-        SHOPEE_LINK;
-
-
-      shopeeButton.target =
-        "_blank";
-
-
-      shopeeButton.rel =
-        "noopener noreferrer";
-
-
-    }
-
-
-    /* =========================
-       LƯỢT MONKEYD
-    ========================== */
-
-    function showStoryState() {
-
-
-      document
-        .getElementById(
-          "instruction"
-        )
-        .style.display =
-        "none";
-
-
-      document
-        .getElementById(
-          "readyMessage"
-        )
-        .style.display =
-        "block";
-
-
-      document
-        .getElementById(
-          "shopeeButton"
-        )
-        .style.display =
-        "none";
-
-
-      document
-        .getElementById(
-          "storyButton"
-        )
-        .style.display =
-        "flex";
-
-
-      document
-        .getElementById(
-          "imageNote"
-        )
-        .textContent =
-        "Bấm vào ảnh để tiếp tục đọc truyện.";
-
-
-      /*
-        ẢNH -> MONKEYD
-      */
-
-      const coverLink =
-        document.getElementById(
-          "coverLink"
-        );
-
-
-      coverLink.href =
-        STORY_LINK;
-
-
-      coverLink.removeAttribute(
-        "target"
+    const shopeeButton =
+      document.getElementById(
+        "shopeeButton"
       );
 
 
-      coverLink.removeAttribute(
-        "rel"
+    const storyButton =
+      document.getElementById(
+        "storyButton"
       );
 
 
-      coverLink.setAttribute(
-        "aria-label",
-        "Tiếp tục đọc truyện"
+    const cover =
+      document.getElementById(
+        "coverLink"
       );
 
 
-      /*
-        BUTTON -> MONKEYD
-      */
-
-      const storyButton =
-        document.getElementById(
-          "storyButton"
-        );
+    const imageNote =
+      document.getElementById(
+        "imageNote"
+      );
 
 
-      storyButton.href =
-        STORY_LINK;
+    instruction.style.display =
+      "block";
 
 
-    }
+    ready.style.display =
+      "none";
 
 
-    /* =========================
-       BẮT ĐẦU 1 LƯỢT MỚI
-
-       QUAN TRỌNG:
-       CHỈ CHẠY 1 LẦN
-       KHI FILE HTML LOAD
-    ========================== */
-
-    function startVisit() {
+    shopeeButton.style.display =
+      "flex";
 
 
-      const visit =
-        registerVisit();
+    storyButton.style.display =
+      "none";
 
 
-      const position =
-        getPosition(
-          visit
-        );
+    imageNote.textContent =
+      "Bạn có thể bấm trực tiếp vào ảnh.";
 
 
-      /*
-        1 / 4 / 7 / 10...
-        -> SHOPEE
-      */
+    /* ẢNH -> SHOPEE */
 
-      if (
-        position === 1
-      ) {
+    cover.href =
+      SHOPEE_LINK;
 
 
-        showShopeeState();
+    cover.target =
+      "_blank";
 
 
-      }
+    cover.rel =
+      "noopener noreferrer";
 
 
-      /*
-        2 / 3
-        5 / 6
-        8 / 9...
-        -> MONKEYD
-      */
+    cover.onclick =
+      afterShopeeClick;
 
-      else {
 
+    /* NÚT -> SHOPEE */
+
+    shopeeButton.href =
+      SHOPEE_LINK;
+
+
+    shopeeButton.target =
+      "_blank";
+
+
+    shopeeButton.rel =
+      "noopener noreferrer";
+
+
+    shopeeButton.onclick =
+      afterShopeeClick;
+
+  }
+
+
+  /* =====================================
+     GIAO DIỆN MONKEYD
+  ===================================== */
+
+  function showStoryState() {
+
+    const instruction =
+      document.getElementById(
+        "instruction"
+      );
+
+
+    const ready =
+      document.getElementById(
+        "readyMessage"
+      );
+
+
+    const shopeeButton =
+      document.getElementById(
+        "shopeeButton"
+      );
+
+
+    const storyButton =
+      document.getElementById(
+        "storyButton"
+      );
+
+
+    const cover =
+      document.getElementById(
+        "coverLink"
+      );
+
+
+    const imageNote =
+      document.getElementById(
+        "imageNote"
+      );
+
+
+    instruction.style.display =
+      "none";
+
+
+    ready.style.display =
+      "block";
+
+
+    ready.innerHTML =
+      "✓ Nội dung đã sẵn sàng.<br>Bạn có thể tiếp tục đọc truyện.";
+
+
+    shopeeButton.style.display =
+      "none";
+
+
+    storyButton.style.display =
+      "flex";
+
+
+    imageNote.textContent =
+      "Bấm vào ảnh để tiếp tục đọc truyện.";
+
+
+    /* ẢNH -> MONKEYD */
+
+    cover.href =
+      STORY_LINK;
+
+
+    cover.removeAttribute(
+      "target"
+    );
+
+
+    cover.removeAttribute(
+      "rel"
+    );
+
+
+    cover.onclick =
+      null;
+
+
+    /* NÚT -> MONKEYD */
+
+    storyButton.href =
+      STORY_LINK;
+
+
+    storyButton.removeAttribute(
+      "target"
+    );
+
+  }
+
+
+  /* =====================================
+     SAU KHI BẤM SHOPEE
+
+     KHÔNG +1 LƯỢT.
+
+     Chỉ đổi tab hiện tại
+     sang trạng thái đọc truyện.
+  ===================================== */
+
+  function afterShopeeClick() {
+
+    setTimeout(
+      function () {
 
         showStoryState();
 
+      },
+      200
+    );
 
-      }
+  }
 
+
+  /* =====================================
+     BẮT ĐẦU MỘT LƯỢT MỚI
+  ===================================== */
+
+  function startVisit() {
+
+    const visit =
+      registerVisit();
+
+
+    const position =
+      getPosition(
+        visit
+      );
+
+
+    console.log(
+      "Lượt hiện tại:",
+      visit
+    );
+
+
+    console.log(
+      "Vị trí chu kỳ:",
+      position
+    );
+
+
+    /*
+      1 / 4 / 7 / 10...
+      -> SHOPEE
+    */
+
+    if (
+      position === 1
+    ) {
+
+      showShopeeState();
 
     }
 
 
     /*
-      BẮT ĐẦU
+      2 / 3
+      5 / 6
+      8 / 9...
+      -> MONKEYD
     */
 
-    startVisit();
+    else {
+
+      showStoryState();
+
+    }
+
+  }
 
 
-  </script>
+  /* =====================================
+     QUAN TRỌNG
 
+     pageshow chạy:
+     - mở trang lần đầu
+     - reload
+     - quay Back từ MonkeyD
 
-</body>
+     => vòng không bị đứng nữa.
+  ===================================== */
 
-</html>
+  window.addEventListener(
+    "pageshow",
+    function () {
+
+      startVisit();
+
+    }
+  );
+
+</script>
