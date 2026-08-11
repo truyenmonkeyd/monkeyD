@@ -11,7 +11,11 @@
 
   <title>CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN</title>
 
-  <!-- PREVIEW KHI GỬI LINK -->
+
+  <!-- =========================
+       PREVIEW KHI GỬI LINK
+  ========================== -->
+
   <meta
     property="og:title"
     content="CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN"
@@ -40,7 +44,6 @@
     * {
       box-sizing: border-box;
     }
-
 
     html,
     body {
@@ -89,16 +92,8 @@
     }
 
 
-    /* TRUYỆN FULL MÀU XANH */
-
     .brand {
       color: #09a5e5;
-
-      font-family:
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        sans-serif;
 
       font-size: 27px;
 
@@ -106,13 +101,13 @@
 
       line-height: 1;
 
-      letter-spacing: 0;
-
       white-space: nowrap;
     }
 
 
-    /* Ô TÌM KIẾM */
+    /* =========================
+       SEARCH
+    ========================== */
 
     .search-box {
       width: 300px;
@@ -184,7 +179,7 @@
       background: #ffffff;
 
       border-top: 1px solid #f1f1f3;
-      border-bottom: 1px solid #ddddE7;
+      border-bottom: 1px solid #dddde7;
     }
 
 
@@ -213,8 +208,6 @@
       text-decoration: none;
 
       white-space: nowrap;
-
-      transition: background .15s ease;
     }
 
 
@@ -224,7 +217,7 @@
 
 
     /* =========================
-       NỘI DUNG CHÍNH
+       MAIN
     ========================== */
 
     .container {
@@ -281,12 +274,6 @@
 
       color: #111;
 
-      font-family:
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        sans-serif;
-
       font-size: 30px;
 
       font-weight: 700;
@@ -294,8 +281,6 @@
       line-height: 1.35;
 
       letter-spacing: 0;
-
-      word-spacing: normal;
     }
 
 
@@ -465,10 +450,6 @@
       font-size: 19px;
 
       font-weight: 750;
-
-      transition:
-        transform .15s ease,
-        background .15s ease;
     }
 
 
@@ -508,7 +489,7 @@
 
 
     /* =========================
-       SAU KHI QUAY LẠI
+       SAU KHI MỞ SHOPEE
     ========================== */
 
     .ready-box {
@@ -572,7 +553,6 @@
       margin: 0 auto;
 
       display: flex;
-
       justify-content: space-between;
 
       gap: 35px;
@@ -689,7 +669,6 @@
     }
 
   </style>
-
 </head>
 
 
@@ -705,14 +684,10 @@
     <div class="header-top">
 
 
-      <!-- CHỈ ĐỔI CHỖ NÀY THÀNH TRUYỆN FULL -->
-
       <div class="brand">
         TRUYỆN FULL
       </div>
 
-
-      <!-- Ô TÌM KIẾM -->
 
       <div class="search-box">
 
@@ -816,16 +791,12 @@
     <section class="story-card">
 
 
-      <!-- TÊN TRUYỆN -->
-
       <h1 class="story-title">
 
         CHỒNG TÔI SAU KHI HỌP LỚP LIỀN ĐÒI LY HÔN
 
       </h1>
 
-
-      <!-- THÔNG TIN -->
 
       <div class="info-box">
 
@@ -839,8 +810,6 @@
 
       </div>
 
-
-      <!-- HƯỚNG DẪN -->
 
       <div
         class="instruction"
@@ -871,7 +840,7 @@
 
 
       <!-- =========================
-           ẢNH - BẤM ĐƯỢC
+           ẢNH - CÓ THỂ BẤM
       ========================== -->
 
       <div class="cover-area">
@@ -914,7 +883,7 @@
 
 
       <!-- =========================
-           QUAY LẠI TỪ SHOPEE
+           SAU KHI MỞ SHOPEE
       ========================== -->
 
       <div
@@ -922,7 +891,7 @@
         id="readyMessage"
       >
 
-        ✓ Bạn đã mở liên kết Shopee.
+        ✓ Liên kết Shopee đã được mở ở tab mới.
 
         <br>
 
@@ -932,7 +901,7 @@
 
 
       <!-- =========================
-           NÚT
+           BUTTON
       ========================== -->
 
       <div class="actions">
@@ -1015,7 +984,7 @@
 
 
   <!-- =========================
-       SCRIPT
+       JAVASCRIPT
   ========================== -->
 
   <script>
@@ -1029,9 +998,17 @@
       "https://monkeydd.com/chong-toi-sau-khi-hop-lop-lien-doi-ly-hon.html";
 
 
-    const STORAGE_KEY =
-      "chong_toi_hop_lop_shopee_v6";
+    /*
+      Key mới để test lại từ đầu.
+    */
 
+    const STORAGE_KEY =
+      "chong_toi_hop_lop_shopee_v7";
+
+
+    /* =========================
+       KIỂM TRA TRẠNG THÁI
+    ========================== */
 
     function hasOpenedShopee() {
 
@@ -1043,6 +1020,10 @@
 
     }
 
+
+    /* =========================
+       ĐỔI GIAO DIỆN
+    ========================== */
 
     function updatePage() {
 
@@ -1095,11 +1076,16 @@
 
 
     /* =========================
-       BẤM SHOPEE
+       MỞ SHOPEE Ở TAB MỚI
     ========================== */
 
     function openShopee() {
 
+
+      /*
+        Đánh dấu người dùng
+        đã bấm Shopee.
+      */
 
       localStorage.setItem(
         STORAGE_KEY,
@@ -1107,19 +1093,40 @@
       );
 
 
-      window.location.href =
-        SHOPEE_LINK;
+      /*
+        Đổi trang trung gian
+        sang trạng thái đọc truyện
+        ngay lập tức.
+      */
+
+      updatePage();
+
+
+      /*
+        Mở Shopee ở TAB MỚI.
+      */
+
+      window.open(
+        SHOPEE_LINK,
+        "_blank",
+        "noopener,noreferrer"
+      );
 
 
     }
 
 
     /* =========================
-       BẤM ẢNH
+       BẤM VÀO ẢNH
     ========================== */
 
     function coverAction() {
 
+
+      /*
+        Nếu đã mở Shopee rồi
+        thì bấm ảnh sẽ sang MonkeyD.
+      */
 
       if (hasOpenedShopee()) {
 
@@ -1128,7 +1135,16 @@
           STORY_LINK;
 
 
-      } else {
+      }
+
+
+      /*
+        Nếu chưa mở Shopee
+        thì bấm ảnh mở Shopee
+        ở tab mới.
+      */
+
+      else {
 
 
         openShopee();
@@ -1141,7 +1157,7 @@
 
 
     /* =========================
-       QUAY LẠI TRANG
+       CẬP NHẬT KHI QUAY LẠI TAB
     ========================== */
 
     window.addEventListener(
@@ -1166,7 +1182,9 @@
           "visible"
         ) {
 
+
           updatePage();
+
 
         }
 
