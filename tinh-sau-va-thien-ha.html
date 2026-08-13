@@ -18,7 +18,7 @@
 
   <meta
     property="og:description"
-    content="TRUYỆN ĐANG PHÁT HÀNH"
+    content="TRUYỆN ĐÃ HOÀN THÀNH"
   >
 
   <meta
@@ -48,7 +48,7 @@
 
   <meta
     name="twitter:description"
-    content="TRUYỆN ĐANG PHÁT HÀNH"
+    content="TRUYỆN ĐÃ HOÀN THÀNH"
   >
 
   <meta
@@ -56,235 +56,139 @@
     content="https://cdn.monkeydarchive.com/images/story/2026/08/13/1786585531-tinh-sau-va-thien-ha.jpg"
   >
 
-
   <style>
 
     * {
       box-sizing: border-box;
     }
 
-
     html,
     body {
       margin: 0;
       padding: 0;
-
       background: #f5f5fb;
-
       color: #181818;
-
-      font-family:
-        "Segoe UI",
-        Tahoma,
-        Arial,
-        Helvetica,
-        sans-serif;
-
+      font-family: "Segoe UI", Tahoma, Arial, Helvetica, sans-serif;
       font-synthesis: none;
     }
-
 
     a {
       color: inherit;
     }
 
-
-    /* =========================
-       HEADER
-    ========================== */
-
     .header {
       width: 100%;
-
       background: #ffffff;
-
-      border-bottom:
-        1px solid #e1e1e8;
+      border-bottom: 1px solid #e1e1e8;
     }
-
 
     .header-top {
       width: 100%;
-
       max-width: 1180px;
-
       margin: 0 auto;
-
       padding: 10px 18px;
-
       display: flex;
-
       align-items: center;
-
       gap: 22px;
     }
 
-
     .brand {
       color: #09a5e5;
-
       font-size: 27px;
-
       font-weight: 800;
-
       line-height: 1;
-
       white-space: nowrap;
     }
 
-
     .search-box {
       width: 300px;
-
       max-width: 100%;
-
       height: 39px;
-
       display: flex;
-
       align-items: center;
-
       padding: 0 13px;
-
-      border:
-        1px solid #d6d8df;
-
+      border: 1px solid #d6d8df;
       border-radius: 6px;
-
       background: #ffffff;
     }
 
-
     .search-icon {
       margin-right: 8px;
-
       color: #555;
-
       font-size: 16px;
     }
 
-
     .search {
       width: 100%;
-
       border: none;
-
       outline: none;
-
       background: transparent;
-
       color: #333;
-
       font-family: inherit;
-
       font-size: 14px;
     }
-
 
     .search::placeholder {
       color: #999;
     }
 
-
     .account {
       margin-left: auto;
-
       color: #555;
-
       font-size: 13px;
-
       white-space: nowrap;
     }
-
-
-    /* =========================
-       MENU
-    ========================== */
 
     .nav {
       width: 100%;
-
       background: #ffffff;
-
-      border-top:
-        1px solid #f1f1f3;
-
-      border-bottom:
-        1px solid #dddde7;
+      border-top: 1px solid #f1f1f3;
+      border-bottom: 1px solid #dddde7;
     }
-
 
     .nav-inner {
       width: 100%;
-
       max-width: 1180px;
-
       margin: 0 auto;
-
       padding: 0 8px;
-
       display: flex;
-
       align-items: center;
-
       overflow-x: auto;
     }
 
-
     .nav-item {
       padding: 14px 15px;
-
       color: #111;
-
       font-size: 14px;
-
       text-decoration: none;
-
       white-space: nowrap;
     }
-
 
     .nav-item:hover {
       background: #f4f4f7;
     }
 
-
-    /* =========================
-       MAIN
-    ========================== */
-
     .container {
       width: 100%;
-
       max-width: 1080px;
-
       margin: 22px auto 50px;
-
       padding: 0 14px;
     }
 
-
     .breadcrumb {
-      margin:
-        0 0 13px 8px;
-
+      margin: 0 0 13px 8px;
       color: #555;
-
       font-size: 13px;
-
       line-height: 1.6;
     }
-
 
     .state {
       display: none;
     }
 
-
     .state.active {
       display: block;
     }
-
 
     /* =========================
        TRANG TRUYỆN
@@ -292,198 +196,111 @@
 
     .story-card {
       width: 100%;
-
-      padding:
-        20px 22px 30px;
-
+      padding: 20px 22px 30px;
       background: #ffffff;
-
-      border:
-        1px solid #e1e1ec;
-
+      border: 1px solid #e1e1ec;
       border-radius: 7px;
-
-      box-shadow:
-        0 3px 11px
-        rgba(50, 50, 90, .07);
+      box-shadow: 0 3px 11px rgba(50, 50, 90, .07);
     }
 
-
     .story-title {
-      margin:
-        0 0 15px;
-
+      margin: 0 0 15px;
       color: #111;
-
       font-size: 30px;
-
       font-weight: 700;
-
       line-height: 1.4;
     }
 
-
     .info-box {
       width: 100%;
-
       margin-bottom: 26px;
-
-      padding:
-        14px 16px;
-
+      padding: 14px 16px;
       border-radius: 8px;
-
       background: #d5f3fa;
-
       color: #222;
-
       font-size: 14px;
-
       line-height: 1.7;
     }
 
-
     .cover-area {
       width: 100%;
-
-      margin:
-        19px auto 8px;
-
+      margin: 19px auto 8px;
       display: flex;
-
       justify-content: center;
     }
-
 
     .cover-link {
       width: 340px;
-
       max-width: 100%;
-
       display: block;
-
       border-radius: 7px;
-
       cursor: pointer;
-
       text-decoration: none;
     }
-
 
     .cover {
       width: 100%;
-
       height: auto;
-
       display: block;
-
       border-radius: 7px;
-
-      box-shadow:
-        0 4px 15px
-        rgba(0, 0, 0, .13);
-
-      transition:
-        transform .15s ease,
-        box-shadow .15s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, .13);
+      transition: transform .15s ease, box-shadow .15s ease;
     }
-
 
     .cover-link:hover .cover {
-      transform:
-        translateY(-2px);
-
-      box-shadow:
-        0 7px 20px
-        rgba(0, 0, 0, .17);
+      transform: translateY(-2px);
+      box-shadow: 0 7px 20px rgba(0, 0, 0, .17);
     }
-
 
     .image-note {
       margin-top: 12px;
-
       color: #777;
-
       text-align: center;
-
       font-size: 13px;
-
       line-height: 1.5;
     }
 
-
     .actions {
       width: 540px;
-
       max-width: 100%;
-
-      margin:
-        25px auto 9px;
+      margin: 25px auto 9px;
     }
-
 
     .button {
       width: 100%;
-
       min-height: 62px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
-      padding:
-        18px 25px;
-
+      padding: 18px 25px;
       border: none;
-
       border-radius: 9px;
-
       cursor: pointer;
-
       text-align: center;
-
       text-decoration: none;
-
       font-family: inherit;
-
       font-size: 19px;
-
       font-weight: 750;
-
       line-height: 1.3;
     }
 
-
     .story-button {
       color: #ffffff;
-
       background: #11aa31;
-
-      box-shadow:
-        0 6px 18px
-        rgba(17, 170, 49, .16);
+      box-shadow: 0 6px 18px rgba(17, 170, 49, .16);
     }
-
 
     .story-button:hover {
       background: #0e962b;
     }
 
-
-    .status-bottom {
+    .completed {
       margin-top: 23px;
-
-      color: #ee7a00;
-
+      color: #0878ee;
       text-align: center;
-
       font-size: 17px;
-
-      font-weight: 700;
+      font-weight: 650;
     }
-
 
     /* =========================
        SHOPEE
@@ -491,66 +308,37 @@
 
     .blur-panel {
       position: relative;
-
       min-height: 650px;
-
       overflow: hidden;
-
       border-radius: 17px;
-
-      border:
-        1px solid #e3e3ea;
-
+      border: 1px solid #e3e3ea;
       background: #eeeef4;
     }
 
-
     .blur-grid {
       position: absolute;
-
       inset: 0;
-
       padding: 14px;
-
       display: grid;
-
-      grid-template-columns:
-        repeat(5, 1fr);
-
+      grid-template-columns: repeat(5, 1fr);
       gap: 10px;
-
       opacity: .76;
-
-      filter:
-        blur(.45px);
-
-      transform:
-        scale(1.012);
+      filter: blur(.45px);
+      transform: scale(1.012);
     }
-
 
     .blur-grid img {
       width: 100%;
-
       height: 100%;
-
       min-height: 175px;
-
       object-fit: cover;
-
       border-radius: 9px;
-
-      box-shadow:
-        0 4px 14px
-        rgba(0, 0, 0, .13);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, .13);
     }
-
 
     .blur-shade {
       position: absolute;
-
       inset: 0;
-
       background:
         linear-gradient(
           to bottom,
@@ -560,129 +348,71 @@
         );
     }
 
-
     .cta-holder {
       position: relative;
-
       z-index: 2;
-
       min-height: 650px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
       padding: 22px;
     }
 
-
     .cta-box {
       width: 585px;
-
       max-width: 96%;
-
-      padding:
-        28px 26px;
-
+      padding: 28px 26px;
       border-radius: 17px;
-
       text-align: center;
-
-      background:
-        rgba(255,255,255,.93);
-
-      border:
-        1px solid
-        rgba(230,230,238,.96);
-
-      box-shadow:
-        0 17px 42px
-        rgba(26,26,60,.18);
-
-      backdrop-filter:
-        blur(4px);
+      background: rgba(255,255,255,.93);
+      border: 1px solid rgba(230,230,238,.96);
+      box-shadow: 0 17px 42px rgba(26,26,60,.18);
+      backdrop-filter: blur(4px);
     }
 
-
     .cta-title {
-      margin:
-        0 0 9px;
-
+      margin: 0 0 9px;
       color: #222;
-
       font-size: 24px;
-
       font-weight: 800;
-
       line-height: 1.45;
     }
 
-
     .cta-sub {
-      margin:
-        0 auto 21px;
-
+      margin: 0 auto 21px;
       max-width: 520px;
-
       color: #555;
-
       font-size: 15px;
-
       line-height: 1.7;
     }
 
-
     .shopee-button {
       width: 100%;
-
       min-height: 62px;
-
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
-      padding:
-        17px 22px;
-
+      padding: 17px 22px;
       border-radius: 10px;
-
       background: #ee4d2d;
-
       color: #ffffff;
-
       text-decoration: none;
-
       font-size: 18px;
-
       font-weight: 800;
-
       line-height: 1.35;
-
-      box-shadow:
-        0 7px 20px
-        rgba(238,77,45,.25);
+      box-shadow: 0 7px 20px rgba(238,77,45,.25);
     }
-
 
     .shopee-button:hover {
       background: #dc4529;
     }
 
-
     .tiny-note {
       margin-top: 12px;
-
       color: #888;
-
       font-size: 12px;
-
       line-height: 1.5;
     }
-
 
     /* =========================
        PROFILE
@@ -690,88 +420,48 @@
 
     .profile-card {
       width: 100%;
-
       margin-bottom: 16px;
-
-      padding:
-        19px 20px;
-
+      padding: 19px 20px;
       display: flex;
-
       align-items: center;
-
       gap: 17px;
-
       background: #ffffff;
-
-      border:
-        1px solid #e1e1e9;
-
+      border: 1px solid #e1e1e9;
       border-radius: 11px;
     }
 
-
     .profile-avatar {
       width: 82px;
-
       height: 82px;
-
       flex: 0 0 auto;
-
       display: grid;
-
       place-items: center;
-
       border-radius: 50%;
-
-      background:
-        linear-gradient(
-          145deg,
-          #09a5e5,
-          #81d7f7
-        );
-
+      background: linear-gradient(145deg, #09a5e5, #81d7f7);
       color: #ffffff;
-
       font-size: 30px;
-
       font-weight: 900;
     }
 
-
     .profile-title {
-      margin:
-        0 0 6px;
-
+      margin: 0 0 6px;
       font-size: 28px;
     }
 
-
     .profile-desc {
-      margin:
-        0 0 10px;
-
+      margin: 0 0 10px;
       color: #555;
-
       font-size: 13px;
-
       line-height: 1.55;
     }
 
-
     .profile-stats {
       display: flex;
-
       flex-wrap: wrap;
-
-      gap:
-        7px 15px;
-
+      gap: 7px 15px;
       color: #666;
-
       font-size: 13px;
     }
-
 
     /* =========================
        LIBRARY
@@ -779,265 +469,145 @@
 
     .library-card {
       width: 100%;
-
       padding: 18px;
-
       background: #ffffff;
-
-      border:
-        1px solid #e1e1e9;
-
+      border: 1px solid #e1e1e9;
       border-radius: 11px;
     }
 
-
     .library-header {
       margin-bottom: 15px;
-
       display: flex;
-
       align-items: center;
-
-      justify-content:
-        space-between;
-
+      justify-content: space-between;
       gap: 16px;
     }
 
-
     .library-header h2 {
       margin: 0;
-
       font-size: 21px;
     }
 
-
     .team-link {
       color: #0878ee;
-
       font-size: 12px;
-
       text-decoration: none;
     }
-
 
     .live-row {
       margin-bottom: 16px;
-
-      padding:
-        11px 13px;
-
+      padding: 11px 13px;
       display: flex;
-
       align-items: center;
-
       gap: 9px;
-
       flex-wrap: wrap;
-
       border-radius: 8px;
-
       background: #edf8ef;
-
       color: #357245;
-
       font-size: 12px;
     }
 
-
     .live-dot {
       width: 9px;
-
       height: 9px;
-
       flex: 0 0 auto;
-
       border-radius: 50%;
-
       background: #19b74a;
-
-      box-shadow:
-        0 0 0 4px
-        rgba(25,183,74,.12);
+      box-shadow: 0 0 0 4px rgba(25,183,74,.12);
     }
-
 
     .story-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(
-          5,
-          minmax(0,1fr)
-        );
-
-      gap:
-        18px 13px;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap: 18px 13px;
     }
-
 
     .library-story {
       display: block;
-
       min-width: 0;
-
       text-decoration: none;
     }
 
-
     .library-cover {
       position: relative;
-
       width: 100%;
-
-      aspect-ratio:
-        2 / 3;
-
+      aspect-ratio: 2 / 3;
       overflow: hidden;
-
       border-radius: 8px;
-
       background: #eeeeee;
-
-      box-shadow:
-        0 4px 12px
-        rgba(0,0,0,.10);
+      box-shadow: 0 4px 12px rgba(0,0,0,.10);
     }
-
 
     .library-cover img {
       width: 100%;
-
       height: 100%;
-
       object-fit: cover;
-
       display: block;
-
-      transition:
-        transform .16s ease;
+      transition: transform .16s ease;
     }
 
-
-    .library-story:hover
-    .library-cover img {
-      transform:
-        scale(1.025);
+    .library-story:hover .library-cover img {
+      transform: scale(1.025);
     }
 
-
-    .full-badge,
-    .updating-badge {
+    .full-badge {
       position: absolute;
-
       top: 7px;
-
       left: 7px;
-
-      padding:
-        4px 7px;
-
+      padding: 4px 7px;
       border-radius: 5px;
-
+      background: rgba(8,120,238,.92);
       color: #ffffff;
-
       font-size: 10px;
-
       font-weight: 800;
     }
 
-
-    .full-badge {
-      background:
-        rgba(8,120,238,.92);
-    }
-
-
-    .updating-badge {
-      background:
-        rgba(238,77,45,.94);
-    }
-
-
     .library-title {
       margin-top: 8px;
-
       font-size: 13px;
-
       font-weight: 750;
-
       line-height: 1.45;
-
-      display:
-        -webkit-box;
-
+      display: -webkit-box;
       -webkit-line-clamp: 3;
-
-      -webkit-box-orient:
-        vertical;
-
+      -webkit-box-orient: vertical;
       overflow: hidden;
     }
 
-
     .library-meta {
       margin-top: 4px;
-
       color: #888;
-
       font-size: 11px;
     }
-
 
     .extra-story {
       display: none;
     }
 
-
     .extra-story.show {
       display: block;
     }
 
-
     .load-more {
       width: 280px;
-
       max-width: 100%;
-
       min-height: 48px;
-
-      margin:
-        26px auto 4px;
-
+      margin: 26px auto 4px;
       display: flex;
-
       align-items: center;
-
       justify-content: center;
-
-      border:
-        1px solid #cfd0da;
-
+      border: 1px solid #cfd0da;
       border-radius: 8px;
-
       background: #ffffff;
-
       color: #222;
-
       font-family: inherit;
-
       font-size: 14px;
-
       font-weight: 750;
-
       cursor: pointer;
     }
-
 
     .load-more:hover {
       background: #f6f6f9;
     }
-
 
     /* =========================
        FOOTER
@@ -1045,56 +615,34 @@
 
     .footer {
       width: 100%;
-
       margin-top: 55px;
-
-      padding:
-        30px 20px;
-
+      padding: 30px 20px;
       background: #ffffff;
-
-      border-top:
-        1px solid #dedee8;
+      border-top: 1px solid #dedee8;
     }
-
 
     .footer-inner {
       width: 100%;
-
       max-width: 1080px;
-
       margin: 0 auto;
-
       display: flex;
-
-      justify-content:
-        space-between;
-
+      justify-content: space-between;
       gap: 35px;
     }
 
-
     .footer-title {
       color: #09a5e5;
-
       font-size: 25px;
-
       font-weight: 800;
-
       white-space: nowrap;
     }
 
-
     .footer-text {
       max-width: 520px;
-
       color: #555;
-
       font-size: 12px;
-
       line-height: 1.7;
     }
-
 
     /* =========================
        MOBILE
@@ -1104,226 +652,150 @@
 
       .header-top {
         flex-wrap: wrap;
-
-        padding:
-          11px 12px;
-
+        padding: 11px 12px;
         gap: 10px;
       }
-
 
       .brand {
         font-size: 23px;
       }
 
-
       .account {
         font-size: 12px;
       }
 
-
       .search-box {
         order: 3;
-
         width: 100%;
       }
 
-
       .nav-inner {
-        padding:
-          0 4px;
+        padding: 0 4px;
       }
 
-
       .nav-item {
-        padding:
-          11px 12px;
-
+        padding: 11px 12px;
         font-size: 13px;
       }
 
-
       .container {
         margin-top: 14px;
-
-        padding:
-          0 8px;
+        padding: 0 8px;
       }
-
 
       .story-card {
-        padding:
-          15px 13px 25px;
+        padding: 15px 13px 25px;
       }
-
 
       .story-title {
         font-size: 23px;
-
         line-height: 1.45;
       }
-
 
       .cover-link {
         width: 300px;
       }
 
-
       .button {
         min-height: 58px;
-
         font-size: 17px;
       }
-
 
       .blur-panel,
       .cta-holder {
         min-height: 610px;
       }
 
-
       .blur-grid {
-        grid-template-columns:
-          repeat(3,1fr);
-
+        grid-template-columns: repeat(3,1fr);
         gap: 7px;
-
         padding: 8px;
       }
 
-
-      .blur-grid
-      img:nth-child(n+10) {
+      .blur-grid img:nth-child(n+10) {
         display: none;
       }
-
 
       .cta-holder {
         padding: 13px;
       }
 
-
       .cta-box {
-        padding:
-          24px 17px;
+        padding: 24px 17px;
       }
-
 
       .cta-title {
         font-size: 20px;
       }
 
-
       .cta-sub {
         font-size: 14px;
       }
 
-
       .shopee-button {
         min-height: 58px;
-
         font-size: 16px;
       }
 
-
       .profile-card {
-        align-items:
-          flex-start;
-
+        align-items: flex-start;
         padding: 15px;
       }
 
-
       .profile-avatar {
         width: 62px;
-
         height: 62px;
-
         font-size: 24px;
       }
-
 
       .profile-title {
         font-size: 22px;
       }
 
-
       .library-card {
-        padding:
-          13px 10px;
+        padding: 13px 10px;
       }
-
 
       .story-grid {
-        grid-template-columns:
-          repeat(
-            3,
-            minmax(0,1fr)
-          );
-
-        gap:
-          16px 9px;
+        grid-template-columns: repeat(3, minmax(0,1fr));
+        gap: 16px 9px;
       }
-
 
       .library-title {
         font-size: 12px;
       }
 
-
       .footer-inner {
-        flex-direction:
-          column;
+        flex-direction: column;
       }
-
     }
-
 
     @media (max-width: 390px) {
 
       .story-grid {
-        grid-template-columns:
-          repeat(
-            2,
-            minmax(0,1fr)
-          );
+        grid-template-columns: repeat(2, minmax(0,1fr));
       }
-
     }
 
   </style>
-
 </head>
 
 
 <body>
 
-
-  <!-- =========================
-       HEADER
-  ========================== -->
-
   <header class="header">
 
     <div class="header-top">
 
-
       <div class="brand">
-
         TRUYỆN FULL
-
       </div>
-
 
       <div class="search-box">
 
-
         <span class="search-icon">
-
           ⌕
-
         </span>
-
 
         <input
           class="search"
@@ -1331,70 +803,52 @@
           placeholder="Tìm truyện"
         >
 
-
       </div>
-
 
       <div class="account">
-
         Tủ truyện của bạn
-
       </div>
-
 
     </div>
 
   </header>
 
 
-  <!-- =========================
-       MENU
-  ========================== -->
-
   <nav class="nav">
 
     <div class="nav-inner">
-
 
       <a class="nav-item" href="#">
         Trang chủ
       </a>
 
-
       <a class="nav-item" href="#">
         Truyện mới
       </a>
-
 
       <a class="nav-item" href="#">
         ☰ &nbsp;Thể loại
       </a>
 
-
       <a class="nav-item" href="#">
         Truyện Full
       </a>
-
 
       <a class="nav-item" href="#">
         ☆ &nbsp;Truyện Sáng Tác
       </a>
 
-
       <a class="nav-item" href="#">
         Team
       </a>
-
 
       <a class="nav-item" href="#">
         🔊 &nbsp;Nghe Audio
       </a>
 
-
       <a class="nav-item" href="#">
         ▣ &nbsp;Tủ truyện
       </a>
-
 
     </div>
 
@@ -1406,7 +860,6 @@
 
     <!-- =========================
          STATE 1
-         TRANG TRUYỆN
     ========================== -->
 
     <section
@@ -1414,15 +867,12 @@
       id="storyState"
     >
 
-
       <div class="breadcrumb">
 
         Trang chủ
         &nbsp;›&nbsp;
-
         Truyện Full
         &nbsp;›&nbsp;
-
         Tình Sâu Và Thiên Hạ
 
       </div>
@@ -1440,21 +890,16 @@
 
         <div class="info-box">
 
-          Trạng thái: Đang phát hành
+          Trạng thái: Đã đủ bộ
 
           <br>
 
-          Hiện có: 9 phần
-
-          <br>
-
-          Nội dung: Các chương truyện hiện có đã sẵn sàng.
+          Nội dung: Toàn bộ chương truyện đã sẵn sàng.
 
         </div>
 
 
         <div class="cover-area">
-
 
           <a
             class="cover-link"
@@ -1468,7 +913,6 @@
             data-story-link
           >
 
-
             <img
               class="cover"
 
@@ -1477,9 +921,7 @@
               alt="Tình Sâu Và Thiên Hạ"
             >
 
-
           </a>
-
 
         </div>
 
@@ -1492,7 +934,6 @@
 
 
         <div class="actions">
-
 
           <a
             class="button story-button"
@@ -1510,19 +951,17 @@
 
           </a>
 
-
         </div>
 
 
-        <div class="status-bottom">
+        <div class="completed">
 
-          TRUYỆN ĐANG PHÁT HÀNH
+          TRUYỆN ĐÃ HOÀN THÀNH
 
         </div>
 
 
       </div>
-
 
     </section>
 
@@ -1537,9 +976,7 @@
       id="shopeeState"
     >
 
-
       <div class="blur-panel">
-
 
         <div
           class="blur-grid"
@@ -1551,7 +988,6 @@
 
 
         <div class="cta-holder">
-
 
           <div class="cta-box">
 
@@ -1597,12 +1033,9 @@
 
           </div>
 
-
         </div>
 
-
       </div>
-
 
     </section>
 
@@ -1616,7 +1049,6 @@
       class="state"
       id="libraryState"
     >
-
 
       <div class="profile-card">
 
@@ -1649,31 +1081,21 @@
           <div class="profile-stats">
 
             <span>
-
               ♡ 24 lượt theo dõi
-
             </span>
 
-
             <span>
-
               👁 2.691.572 lượt xem
-
             </span>
-
 
             <span>
-
               📚 776 truyện
-
             </span>
-
 
           </div>
 
 
         </div>
-
 
       </div>
 
@@ -1746,19 +1168,13 @@
 
       </div>
 
-
     </section>
 
 
   </main>
 
 
-  <!-- =========================
-       FOOTER
-  ========================== -->
-
   <footer class="footer">
-
 
     <div class="footer-inner">
 
@@ -1783,19 +1199,12 @@
 
     </div>
 
-
   </footer>
 
 
   <script>
 
-
-    /* ==================================================
-       DANH SÁCH TRUYỆN
-    ================================================== */
-
     const STORIES = [
-
 
       {
         title:
@@ -1811,7 +1220,7 @@
           "9 phần",
 
         full:
-          false
+          true
       },
 
 
@@ -2066,293 +1475,180 @@
           true
       }
 
-
     ];
 
 
-    const INITIAL_VISIBLE =
-      10;
+    const INITIAL_VISIBLE = 10;
 
-
-    /* ==================================================
-       ELEMENT
-    ================================================== */
 
     const storyState =
-      document.getElementById(
-        "storyState"
-      );
+      document.getElementById("storyState");
 
 
     const shopeeState =
-      document.getElementById(
-        "shopeeState"
-      );
+      document.getElementById("shopeeState");
 
 
     const libraryState =
-      document.getElementById(
-        "libraryState"
-      );
+      document.getElementById("libraryState");
 
 
     const shopeeLink =
-      document.getElementById(
-        "shopeeLink"
-      );
+      document.getElementById("shopeeLink");
 
 
     const storyGrid =
-      document.getElementById(
-        "storyGrid"
-      );
+      document.getElementById("storyGrid");
 
 
     const blurGrid =
-      document.getElementById(
-        "blurGrid"
-      );
+      document.getElementById("blurGrid");
 
 
     const loadMore =
-      document.getElementById(
-        "loadMore"
-      );
+      document.getElementById("loadMore");
 
 
-    let pendingReturn =
-      null;
+    let pendingReturn = null;
 
+    let pageWentHidden = false;
 
-    let pageWentHidden =
-      false;
-
-
-    /* ==================================================
-       ESCAPE
-    ================================================== */
 
     function escapeHtml(text) {
 
-
       return String(text)
-        .replace(
-          /&/g,
-          "&amp;"
-        )
-        .replace(
-          /</g,
-          "&lt;"
-        )
-        .replace(
-          />/g,
-          "&gt;"
-        )
-        .replace(
-          /"/g,
-          "&quot;"
-        )
-        .replace(
-          /'/g,
-          "&#039;"
-        );
-
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
 
     }
 
 
-    /* ==================================================
-       NỀN BÌA
-    ================================================== */
-
     function renderBlurGrid() {
 
-
-      blurGrid.innerHTML =
-        "";
+      blurGrid.innerHTML = "";
 
 
       STORIES
         .slice(0, 15)
-        .forEach(
-          function (story) {
+        .forEach(function(story) {
+
+          const img =
+            document.createElement("img");
 
 
-            const img =
-              document.createElement(
-                "img"
-              );
+          img.src = story.cover;
+
+          img.alt = "";
+
+          img.loading = "lazy";
 
 
-            img.src =
-              story.cover;
+          blurGrid.appendChild(img);
 
-
-            img.alt =
-              "";
-
-
-            img.loading =
-              "lazy";
-
-
-            blurGrid.appendChild(
-              img
-            );
-
-
-          }
-        );
-
+        });
 
     }
 
 
-    /* ==================================================
-       THƯ VIỆN
-    ================================================== */
-
     function renderLibrary() {
 
-
-      storyGrid.innerHTML =
-        "";
+      storyGrid.innerHTML = "";
 
 
-      STORIES.forEach(
-        function (
-          story,
-          index
-        ) {
+      STORIES.forEach(function(story, index) {
+
+        const card =
+          document.createElement("a");
 
 
-          const card =
-            document.createElement(
-              "a"
-            );
+        card.className =
+          "library-story";
 
 
-          card.className =
-            "library-story";
+        if (index >= INITIAL_VISIBLE) {
 
-
-          if (
-            index >=
-            INITIAL_VISIBLE
-          ) {
-
-
-            card.classList.add(
-              "extra-story"
-            );
-
-
-          }
-
-
-          card.href =
-            story.url;
-
-
-          card.target =
-            "_blank";
-
-
-          card.rel =
-            "noopener noreferrer";
-
-
-          card.setAttribute(
-            "data-library-story",
-            ""
+          card.classList.add(
+            "extra-story"
           );
-
-
-          const badgeClass =
-            story.full
-              ? "full-badge"
-              : "updating-badge";
-
-
-          const badgeText =
-            story.full
-              ? "FULL"
-              : "ĐANG RA";
-
-
-          const metaText =
-            story.full
-              ? story.chapters + " · FULL"
-              : story.chapters + " · ĐANG RA";
-
-
-          card.innerHTML =
-            `
-
-              <div class="library-cover">
-
-                <img
-                  src="${story.cover}"
-                  alt="${escapeHtml(story.title)}"
-                  loading="lazy"
-                >
-
-                <span class="${badgeClass}">
-
-                  ${badgeText}
-
-                </span>
-
-              </div>
-
-
-              <div class="library-title">
-
-                ${escapeHtml(story.title)}
-
-              </div>
-
-
-              <div class="library-meta">
-
-                ${escapeHtml(metaText)}
-
-              </div>
-
-            `;
-
-
-          storyGrid.appendChild(
-            card
-          );
-
 
         }
-      );
+
+
+        card.href =
+          story.url;
+
+
+        card.target =
+          "_blank";
+
+
+        card.rel =
+          "noopener noreferrer";
+
+
+        card.setAttribute(
+          "data-library-story",
+          ""
+        );
+
+
+        card.innerHTML = `
+
+          <div class="library-cover">
+
+            <img
+              src="${story.cover}"
+              alt="${escapeHtml(story.title)}"
+              loading="lazy"
+            >
+
+            <span class="full-badge">
+
+              FULL
+
+            </span>
+
+          </div>
+
+
+          <div class="library-title">
+
+            ${escapeHtml(story.title)}
+
+          </div>
+
+
+          <div class="library-meta">
+
+            ${escapeHtml(story.chapters)} · FULL
+
+          </div>
+
+        `;
+
+
+        storyGrid.appendChild(card);
+
+      });
 
 
       bindLibraryStories();
 
-
     }
 
 
-    /* ==================================================
-       CHUYỂN STATE
-    ================================================== */
-
     function showState(target) {
-
 
       storyState.classList.remove(
         "active"
       );
 
-
       shopeeState.classList.remove(
         "active"
       );
-
 
       libraryState.classList.remove(
         "active"
@@ -2365,165 +1661,109 @@
 
 
       window.scrollTo({
-
         top: 0,
-
-        behavior:
-          "smooth"
-
+        behavior: "smooth"
       });
-
 
     }
 
 
-    /* ==================================================
-       CHỜ QUAY LẠI
-    ================================================== */
-
-    function armReturn(
-      nextState
-    ) {
-
+    function armReturn(nextState) {
 
       pendingReturn =
         nextState;
 
-
       pageWentHidden =
         false;
 
-
     }
 
-
-    /* ==================================================
-       BẤM TRUYỆN ĐẦU
-    ================================================== */
 
     document
       .querySelectorAll(
         "[data-story-link]"
       )
-      .forEach(
-        function (link) {
+      .forEach(function(link) {
 
+        link.addEventListener(
+          "click",
+          function() {
 
-          link.addEventListener(
-            "click",
-            function () {
+            armReturn(
+              "shopee"
+            );
 
+          }
+        );
 
-              armReturn(
-                "shopee"
-              );
+      });
 
-
-            }
-          );
-
-
-        }
-      );
-
-
-    /* ==================================================
-       SHOPEE
-    ================================================== */
 
     shopeeLink.addEventListener(
       "click",
-      function () {
-
+      function() {
 
         armReturn(
           "library"
         );
 
-
       }
     );
 
 
-    /* ==================================================
-       TRUYỆN THƯ VIỆN
-    ================================================== */
-
     function bindLibraryStories() {
-
 
       document
         .querySelectorAll(
           "[data-library-story]"
         )
-        .forEach(
-          function (link) {
+        .forEach(function(link) {
+
+          if (
+            link.dataset.bound === "1"
+          ) {
+            return;
+          }
 
 
-            if (
-              link.dataset.bound ===
-              "1"
-            ) {
+          link.dataset.bound =
+            "1";
 
 
-              return;
+          link.addEventListener(
+            "click",
+            function() {
 
+              armReturn(
+                "shopee"
+              );
 
             }
+          );
 
-
-            link.dataset.bound =
-              "1";
-
-
-            link.addEventListener(
-              "click",
-              function () {
-
-
-                armReturn(
-                  "shopee"
-                );
-
-
-              }
-            );
-
-
-          }
-        );
-
+        });
 
     }
 
 
-    /* ==================================================
-       THEO DÕI TAB
-    ================================================== */
-
     document.addEventListener(
       "visibilitychange",
-      function () {
-
+      function() {
 
         if (
           document.hidden &&
           pendingReturn
         ) {
 
-
           pageWentHidden =
             true;
 
-
           return;
-
 
         }
 
 
         handleReturn();
-
 
       }
     );
@@ -2531,20 +1771,16 @@
 
     window.addEventListener(
       "blur",
-      function () {
-
+      function() {
 
         if (
           pendingReturn
         ) {
 
-
           pageWentHidden =
             true;
 
-
         }
-
 
       }
     );
@@ -2552,31 +1788,20 @@
 
     window.addEventListener(
       "focus",
-      function () {
-
+      function() {
 
         handleReturn();
-
 
       }
     );
 
 
-    /* ==================================================
-       QUAY LẠI TAB
-    ================================================== */
-
     function handleReturn() {
-
 
       if (
         document.hidden
       ) {
-
-
         return;
-
-
       }
 
 
@@ -2584,11 +1809,7 @@
         !pendingReturn ||
         !pageWentHidden
       ) {
-
-
         return;
-
-
       }
 
 
@@ -2605,63 +1826,46 @@
 
 
       if (
-        next ===
-        "shopee"
+        next === "shopee"
       ) {
-
 
         showState(
           shopeeState
         );
 
-
         return;
-
 
       }
 
 
       if (
-        next ===
-        "library"
+        next === "library"
       ) {
-
 
         showState(
           libraryState
         );
 
-
       }
-
 
     }
 
 
-    /* ==================================================
-       XEM THÊM
-    ================================================== */
-
     loadMore.addEventListener(
       "click",
-      function () {
-
+      function() {
 
         document
           .querySelectorAll(
             ".extra-story"
           )
-          .forEach(
-            function (card) {
+          .forEach(function(card) {
 
+            card.classList.add(
+              "show"
+            );
 
-              card.classList.add(
-                "show"
-              );
-
-
-            }
-          );
+          });
 
 
         loadMore.textContent =
@@ -2671,22 +1875,15 @@
         loadMore.disabled =
           true;
 
-
       }
     );
 
-
-    /* ==================================================
-       KHỞI TẠO
-    ================================================== */
 
     renderBlurGrid();
 
     renderLibrary();
 
-
   </script>
-
 
 </body>
 
