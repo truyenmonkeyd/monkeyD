@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>PHU XE TRẠNG NGUYÊN CỦA ĐẠI TIỂU THƯ</title>
+
+<style>
+*{box-sizing:border-box}
+
+html,body{
+margin:0;
+padding:0;
+background:#f5f5fb;
+color:#181818;
+font-family:"Segoe UI",Arial,sans-serif
+}
+
+a{color:inherit}
+
+.header{
+background:#fff;
+border-bottom:1px solid #ddd
+}
+
+.header-top{
+max-width:1180px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+align-items:center;
+gap:20px
+}
+
+.brand{
+font-size:27px;
+font-weight:800;
+color:#09a5e5;
+white-space:nowrap
+}
+
+.search-box{
+width:300px;
+height:40px;
+border:1px solid #ddd;
+border-radius:7px;
+display:flex;
+align-items:center;
+padding:0 12px
+}
+
+.search-box input{
+border:0;
+outline:0;
+width:100%
+}
+
+.account{
+margin-left:auto;
+font-size:13px;
+color:#666
+}
+
+.nav{
+background:#fff;
+border-bottom:1px solid #ddd
+}
+
+.nav-inner{
+max-width:1180px;
+margin:auto;
+display:flex;
+overflow-x:auto
+}
+
+.nav-item{
+padding:14px 15px;
+text-decoration:none;
+white-space:nowrap;
+font-size:14px
+}
+
+.container{
+max-width:1080px;
+margin:22px auto 50px;
+padding:0 14px
+}
+
+.state{display:none}
+.state.active{display:block}
+
+.gate-panel{
+position:relative;
+min-height:720px;
+overflow:hidden;
+background:#eeeef4;
+border-radius:17px
+}
+
+.blur-grid{
+position:absolute;
+inset:0;
+padding:14px;
+display:grid;
+grid-template-columns:repeat(5,1fr);
+gap:10px;
+opacity:.72;
+filter:blur(.7px)
+}
+
+.blur-grid img{
+width:100%;
+height:100%;
+min-height:170px;
+object-fit:cover;
+border-radius:9px
+}
+
+.blur-shade{
+position:absolute;
+inset:0;
+background:rgba(255,255,255,.32)
+}
+
+.gate-holder{
+position:relative;
+z-index:2;
+min-height:720px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:22px
+}
+
+.gate-box{
+width:610px;
+max-width:96%;
+padding:26px;
+background:rgba(255,255,255,.96);
+border-radius:18px;
+box-shadow:0 18px 45px rgba(30,30,70,.18);
+text-align:center
+}
+
+.gate-title{
+margin:0 0 8px;
+font-size:24px;
+line-height:1.4
+}
+
+.gate-sub{
+color:#666;
+font-size:14px;
+line-height:1.7
+}
+
+.story-cover{
+width:220px;
+max-width:65%;
+margin:17px auto
+}
+
+.story-cover img{
+width:100%;
+display:block;
+border-radius:9px;
+box-shadow:0 5px 18px rgba(0,0,0,.17)
+}
+
+.story-title{
+font-size:21px;
+font-weight:850;
+line-height:1.45
+}
+
+.story-meta{
+margin:7px 0 19px;
+color:#0878ee;
+font-size:13px;
+font-weight:700
+}
+
+.shopee-button{
+width:100%;
+min-height:62px;
+padding:17px 20px;
+display:flex;
+align-items:center;
+justify-content:center;
+background:#ee4d2d;
+color:#fff;
+border-radius:10px;
+text-decoration:none;
+font-size:18px;
+font-weight:850
+}
+
+.shopee-button:hover{
+background:#d94326
+}
+
+.note{
+margin-top:12px;
+color:#888;
+font-size:12px;
+line-height:1.6
+}
+
+.unlock-card{
+max-width:760px;
+margin:auto;
+padding:32px 25px;
+background:#fff;
+border-radius:15px;
+text-align:center;
+box-shadow:0 8px 25px rgba(40,40,80,.09)
+}
+
+.check{
+width:70px;
+height:70px;
+margin:auto;
+display:grid;
+place-items:center;
+border-radius:50%;
+background:#e7f9eb;
+color:#16a33c;
+font-size:35px;
+font-weight:900
+}
+
+.unlock-title{
+margin:15px 0 8px;
+font-size:27px
+}
+
+.unlock-sub{
+color:#666;
+line-height:1.7;
+font-size:14px
+}
+
+.read-button{
+width:540px;
+max-width:100%;
+min-height:62px;
+margin:20px auto 0;
+padding:18px;
+display:flex;
+justify-content:center;
+align-items:center;
+background:#11aa31;
+color:#fff;
+border-radius:9px;
+text-decoration:none;
+font-size:19px;
+font-weight:850
+}
+
+.profile-card{
+padding:20px;
+background:#fff;
+border-radius:11px;
+display:flex;
+gap:17px;
+align-items:center;
+margin-bottom:16px
+}
+
+.avatar{
+width:82px;
+height:82px;
+border-radius:50%;
+display:grid;
+place-items:center;
+background:linear-gradient(145deg,#09a5e5,#81d7f7);
+color:#fff;
+font-size:30px;
+font-weight:900
+}
+
+.profile-title{
+margin:0 0 7px;
+font-size:28px
+}
+
+.profile-desc{
+font-size:13px;
+line-height:1.6;
+color:#555
+}
+
+.profile-stats{
+margin-top:8px;
+font-size:13px;
+color:#777
+}
+
+.library{
+padding:18px;
+background:#fff;
+border-radius:11px
+}
+
+.library-head{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
+margin-bottom:16px
+}
+
+.library-head h2{
+margin:0
+}
+
+.team-link{
+font-size:13px;
+font-weight:700;
+color:#0878ee;
+text-decoration:none
+}
+
+.story-grid{
+display:grid;
+grid-template-columns:repeat(5,minmax(0,1fr));
+gap:14px
+}
+
+.library-story{
+border:0;
+background:none;
+padding:0;
+text-align:left;
+cursor:pointer
+}
+
+.library-cover{
+position:relative;
+aspect-ratio:3/4;
+overflow:hidden;
+border-radius:8px;
+background:#eee
+}
+
+.library-cover img{
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.full{
+position:absolute;
+right:7px;
+top:7px;
+background:#11aa31;
+color:#fff;
+padding:3px 6px;
+border-radius:5px;
+font-size:10px;
+font-weight:800
+}
+
+.library-title{
+margin-top:8px;
+font-size:13px;
+font-weight:800;
+line-height:1.4
+}
+
+.library-meta{
+font-size:11px;
+color:#777;
+margin-top:4px
+}
+
+@media(max-width:680px){
+.account{display:none}
+
+.story-grid,
+.blur-grid{
+grid-template-columns:repeat(3,1fr)
+}
+}
+
+@media(max-width:470px){
+.story-grid,
+.blur-grid{
+grid-template-columns:repeat(2,1fr)
+}
+
+.gate-box{
+padding:20px 15px
+}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+
+<div class="header-top">
+
+<div class="brand">
+TRUYỆN FULL
+</div>
+
+<div class="search-box">
+<input type="text" placeholder="Tìm truyện">
+</div>
+
+<div class="account">
+Tủ truyện của bạn
+</div>
+
+</div>
+
+</header>
+
+<nav class="nav">
+
+<div class="nav-inner">
+
+<a class="nav-item" href="#">Trang chủ</a>
+
+<a class="nav-item" href="#">Truyện mới</a>
+
+<a class="nav-item" href="#">☰ Thể loại</a>
+
+<a class="nav-item" href="#">Truyện Full</a>
+
+<a class="nav-item" href="#">☆ Truyện Sáng Tác</a>
+
+<a class="nav-item" href="#">Team</a>
+
+<a class="nav-item" href="#">🔊 Nghe Audio</a>
+
+<a class="nav-item" href="#">▣ Tủ truyện</a>
+
+</div>
+
+</nav>
+
+<main class="container">
+
+<!-- SHOPEE GATE -->
+
+<section
+class="state active"
+id="gateState"
+>
+
+<div class="gate-panel">
+
+<div
+class="blur-grid"
+id="blurGrid"
+></div>
+
+<div class="blur-shade"></div>
+
+<div class="gate-holder">
+
+<div class="gate-box">
+
+<h1 class="gate-title">
+MONG BẠN BẤM VÀO SHOPEE ĐỂ ĐỌC TRUYỆN NÀY 💗
+</h1>
+
+<div class="gate-sub">
+Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.
+</div>
+
+<div class="story-cover">
+
+<img
+src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786799629-phu-xe-trang-nguyen-cua-dai-tieu-thu.jpg"
+alt="PHU XE TRẠNG NGUYÊN CỦA ĐẠI TIỂU THƯ"
+>
+
+</div>
+
+<div class="story-title">
+PHU XE TRẠNG NGUYÊN CỦA ĐẠI TIỂU THƯ
+</div>
+
+<div class="story-meta">
+9 phần · FULL
+</div>
+
+<a
+class="shopee-button"
+id="shopeeButton"
+href="https://s.shopee.vn/6fgOjn0ABK"
+target="_blank"
+rel="noopener noreferrer"
+>
+🛍 MỞ SHOPEE ĐỂ TIẾP TỤC ĐỌC
+</a>
+
+<div class="note">
+Shopee sẽ mở ở tab kế bên.<br>
+Sau đó quay lại tab này để tiếp tục đọc truyện.
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- UNLOCK -->
+
+<section
+class="state"
+id="unlockState"
+>
+
+<div class="unlock-card">
+
+<div class="check">
+✓
+</div>
+
+<h2 class="unlock-title">
+ĐÃ SẴN SÀNG ĐỌC TRUYỆN 💗
+</h2>
+
+<div class="unlock-sub">
+Cảm ơn bạn đã ghé Shopee.<br>
+Bây giờ bạn có thể mở truyện để đọc.
+</div>
+
+<div class="story-cover">
+
+<img
+src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786799629-phu-xe-trang-nguyen-cua-dai-tieu-thu.jpg"
+alt="PHU XE TRẠNG NGUYÊN CỦA ĐẠI TIỂU THƯ"
+>
+
+</div>
+
+<div class="story-title">
+PHU XE TRẠNG NGUYÊN CỦA ĐẠI TIỂU THƯ
+</div>
+
+<a
+class="read-button"
+id="readButton"
+href="https://monkeydd.com/phu-xe-trang-nguyen-cua-dai-tieu-thu.html"
+target="_blank"
+rel="noopener noreferrer"
+>
+ĐỌC TRUYỆN NGAY
+</a>
+
+<div class="note">
+Truyện sẽ mở ở tab khác.<br>
+Khi quay lại tab này, bạn sẽ thấy thư viện Tí Hay Đọc.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- LIBRARY -->
+
+<section
+class="state"
+id="libraryState"
+>
+
+<div class="profile-card">
+
+<div class="avatar">
+TÍ
+</div>
+
+<div>
+
+<h1 class="profile-title">
+Tí Hay Đọc
+</h1>
+
+<div class="profile-desc">
+CHÀO CÁC BÁC ĐÃ GHÉ Ổ CỦA TÍ,<br>
+TÍ CHÚC CÁC BÁC ĐỌC TRUYỆN VUI VẺ ẠAA
+</div>
+
+<div class="profile-stats">
+♡ 24 lượt theo dõi ·
+👁 2.747.799 lượt xem ·
+📚 787 truyện
+</div>
+
+</div>
+
+</div>
+
+<div class="library">
+
+<div class="library-head">
+
+<h2>
+Đọc thêm truyện của Tí Hay Đọc
+</h2>
+
+<a
+class="team-link"
+href="https://monkeydd.com/nhom-dich/56768"
+target="_blank"
+rel="noopener noreferrer"
+>
+Xem trang nhóm ↗
+</a>
+
+</div>
+
+<div
+class="story-grid"
+id="storyGrid"
+></div>
+
+</div>
+
+</section>
+
+</main>
+
+<script>
+
+const STORIES = [
+
+{
+title:"CẨM NIÊN KÝ",
+url:"https://monkeydd.com/cam-nien-ky-vhab.html",
+cover:"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786779980-cam-nien-ky-vhab.jpg",
+chapters:"10 phần"
+},
+
+{
+title:"HOÁN KIM THOA",
+url:"https://monkeydd.com/hoan-kim-thoa.html",
+cover:"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786776121-hoan-kim-thoa.jpg",
+chapters:"13 phần"
+},
+
+{
+title:"PHIẾU THA THỨ HẾT HẠN",
+url:"https://monkeydd.com/phieu-tha-thu-het-han.html",
+cover:"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786770149-phieu-tha-thu-het-han.jpg",
+chapters:"7 phần"
+},
+
+{
+title:"ĐOẠN THANH VÂN",
+url:"https://monkeydd.com/doan-thanh-van.html",
+cover:"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786769598-doan-thanh-van.jpg",
+chapters:"6 phần"
+},
+
+{
+title:"A KHUYẾT",
+url:"https://monkeydd.com/a-khuyet.html",
+cover:"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786711816-a-khuyet.jpg",
+chapters:"18 phần"
+}
+
+];
+
+
+const gateState =
+document.getElementById("gateState");
+
+const unlockState =
+document.getElementById("unlockState");
+
+const libraryState =
+document.getElementById("libraryState");
+
+const shopeeButton =
+document.getElementById("shopeeButton");
+
+const readButton =
+document.getElementById("readButton");
+
+const blurGrid =
+document.getElementById("blurGrid");
+
+const storyGrid =
+document.getElementById("storyGrid");
+
+
+let pendingReturn = null;
+
+let pageWentHidden = false;
+
+
+function showState(state){
+
+gateState.classList.remove("active");
+
+unlockState.classList.remove("active");
+
+libraryState.classList.remove("active");
+
+state.classList.add("active");
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* BACKGROUND */
+
+STORIES.forEach(story=>{
+
+const image =
+document.createElement("img");
+
+image.src =
+story.cover;
+
+image.alt = "";
+
+blurGrid.appendChild(image);
+
+});
+
+
+/* LIBRARY */
+
+STORIES.forEach(story=>{
+
+const card =
+document.createElement("button");
+
+card.type =
+"button";
+
+card.className =
+"library-story";
+
+card.innerHTML = `
+
+<div class="library-cover">
+
+<img
+src="${story.cover}"
+alt="${story.title}"
+loading="lazy"
+>
+
+<span class="full">
+FULL
+</span>
+
+</div>
+
+<div class="library-title">
+${story.title}
+</div>
+
+<div class="library-meta">
+${story.chapters} · FULL
+</div>
+
+`;
+
+card.addEventListener(
+"click",
+()=>{
+
+window.open(
+story.url,
+"_blank"
+);
+
+}
+);
+
+storyGrid.appendChild(card);
+
+});
+
+
+/* BẤM SHOPEE */
+
+shopeeButton.addEventListener(
+"click",
+()=>{
+
+pendingReturn =
+"unlock";
+
+pageWentHidden =
+false;
+
+}
+);
+
+
+/* BẤM ĐỌC TRUYỆN */
+
+readButton.addEventListener(
+"click",
+()=>{
+
+pendingReturn =
+"library";
+
+pageWentHidden =
+false;
+
+}
+);
+
+
+/* PHÁT HIỆN RỜI TAB */
+
+document.addEventListener(
+"visibilitychange",
+()=>{
+
+if(
+document.hidden &&
+pendingReturn
+){
+
+pageWentHidden =
+true;
+
+return;
+
+}
+
+handleReturn();
+
+}
+);
+
+
+window.addEventListener(
+"blur",
+()=>{
+
+if(pendingReturn){
+
+pageWentHidden =
+true;
+
+}
+
+}
+);
+
+
+window.addEventListener(
+"focus",
+handleReturn
+);
+
+
+/* QUAY LẠI TAB */
+
+function handleReturn(){
+
+if(
+document.hidden ||
+!pendingReturn ||
+!pageWentHidden
+){
+
+return;
+
+}
+
+const next =
+pendingReturn;
+
+pendingReturn =
+null;
+
+pageWentHidden =
+false;
+
+
+if(
+next === "unlock"
+){
+
+showState(
+unlockState
+);
+
+return;
+
+}
+
+
+if(
+next === "library"
+){
+
+showState(
+libraryState
+);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
