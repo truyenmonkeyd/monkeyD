@@ -6,65 +6,88 @@
 
 <title>CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM</title>
 
+<meta property="og:title" content="CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM">
+<meta property="og:description" content="TRUYỆN ĐÃ HOÀN THÀNH">
+<meta property="og:image" content="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786801530-chau-ngoc-co-gia-chan-tam-lai-bi-dem-lam-mon-tang-kem.jpg">
+<meta property="og:type" content="website">
+
 <style>
-*{box-sizing:border-box}
+*{
+box-sizing:border-box
+}
 
 html,body{
 margin:0;
 padding:0;
 background:#f5f5fb;
 color:#181818;
-font-family:"Segoe UI",Arial,sans-serif
+font-family:"Segoe UI",Tahoma,Arial,sans-serif
 }
 
-a{color:inherit}
+a{
+color:inherit
+}
+
+/* =========================
+HEADER
+========================= */
 
 .header{
 background:#fff;
-border-bottom:1px solid #ddd
+border-bottom:1px solid #e2e2e8
 }
 
 .header-top{
+width:100%;
 max-width:1180px;
 margin:auto;
-padding:12px 18px;
+padding:11px 18px;
 display:flex;
 align-items:center;
-gap:20px
+gap:22px
 }
 
 .brand{
 font-size:27px;
-font-weight:800;
+font-weight:900;
 color:#09a5e5;
 white-space:nowrap
 }
 
 .search-box{
 width:300px;
+max-width:100%;
 height:40px;
-border:1px solid #ddd;
-border-radius:7px;
 display:flex;
 align-items:center;
-padding:0 12px
+padding:0 13px;
+border:1px solid #d8d8df;
+border-radius:7px;
+background:#fff
 }
 
 .search-box input{
+width:100%;
 border:0;
 outline:0;
-width:100%
+font-size:14px;
+background:transparent
 }
 
 .account{
 margin-left:auto;
+color:#666;
 font-size:13px;
-color:#666
+white-space:nowrap
 }
+
+/* =========================
+NAV
+========================= */
 
 .nav{
 background:#fff;
-border-bottom:1px solid #ddd
+border-bottom:1px solid #dedee5
 }
 
 .nav-inner{
@@ -81,9 +104,18 @@ white-space:nowrap;
 font-size:14px
 }
 
+.nav-item:hover{
+background:#f5f5f7
+}
+
+/* =========================
+LAYOUT
+========================= */
+
 .container{
+width:100%;
 max-width:1080px;
-margin:22px auto 50px;
+margin:22px auto 55px;
 padding:0 14px
 }
 
@@ -95,12 +127,17 @@ display:none
 display:block
 }
 
+/* =========================
+SHOPEE GATE
+========================= */
+
 .gate-panel{
 position:relative;
 min-height:720px;
 overflow:hidden;
-background:#eeeef4;
-border-radius:17px
+border:1px solid #e3e3ea;
+border-radius:17px;
+background:#eeeef4
 }
 
 .blur-grid{
@@ -110,7 +147,7 @@ padding:14px;
 display:grid;
 grid-template-columns:repeat(5,1fr);
 gap:10px;
-opacity:.72;
+opacity:.70;
 filter:blur(.7px)
 }
 
@@ -125,7 +162,7 @@ border-radius:9px
 .blur-shade{
 position:absolute;
 inset:0;
-background:rgba(255,255,255,.32)
+background:rgba(255,255,255,.34)
 }
 
 .gate-holder{
@@ -139,13 +176,13 @@ padding:22px
 }
 
 .gate-box{
-width:610px;
+width:620px;
 max-width:96%;
-padding:26px;
+padding:28px;
 background:rgba(255,255,255,.96);
 border-radius:18px;
-box-shadow:0 18px 45px rgba(30,30,70,.18);
-text-align:center
+text-align:center;
+box-shadow:0 18px 45px rgba(30,30,70,.18)
 }
 
 .gate-title{
@@ -155,6 +192,8 @@ line-height:1.4
 }
 
 .gate-sub{
+margin:0 auto 18px;
+max-width:520px;
 color:#666;
 font-size:14px;
 line-height:1.7
@@ -162,47 +201,58 @@ line-height:1.7
 
 .story-cover{
 width:220px;
-max-width:65%;
-margin:17px auto
+max-width:62%;
+margin:0 auto 16px
 }
 
 .story-cover img{
-width:100%;
 display:block;
-border-radius:9px;
+width:100%;
+aspect-ratio:3/4;
+object-fit:cover;
+border-radius:10px;
 box-shadow:0 5px 18px rgba(0,0,0,.17)
 }
 
 .story-title{
 font-size:21px;
-font-weight:850;
+font-weight:900;
 line-height:1.45
 }
 
 .story-meta{
-margin:7px 0 19px;
+margin:7px 0 5px;
 color:#0878ee;
 font-size:13px;
-font-weight:700
+font-weight:800
+}
+
+.finished-text{
+margin-bottom:18px;
+font-size:12px;
+font-weight:900;
+color:#18a346;
+letter-spacing:.4px
 }
 
 .shopee-button{
 width:100%;
 min-height:62px;
-padding:17px 20px;
 display:flex;
 align-items:center;
 justify-content:center;
+padding:17px 20px;
+border-radius:10px;
 background:#ee4d2d;
 color:#fff;
-border-radius:10px;
 text-decoration:none;
 font-size:18px;
-font-weight:850
+font-weight:900;
+box-shadow:0 7px 20px rgba(238,77,45,.24)
 }
 
 .shopee-button:hover{
-background:#d94326
+background:#dc4529
 }
 
 .note{
@@ -212,14 +262,20 @@ font-size:12px;
 line-height:1.6
 }
 
+/* =========================
+UNLOCK
+========================= */
+
 .unlock-card{
-max-width:760px;
+width:760px;
+max-width:100%;
 margin:auto;
-padding:32px 25px;
+padding:32px 25px 35px;
 background:#fff;
+border:1px solid #e1e1e9;
 border-radius:15px;
-text-align:center;
-box-shadow:0 8px 25px rgba(40,40,80,.09)
+box-shadow:0 8px 25px rgba(40,40,80,.09);
+text-align:center
 }
 
 .check{
@@ -241,9 +297,10 @@ font-size:27px
 }
 
 .unlock-sub{
+margin-bottom:20px;
 color:#666;
-line-height:1.7;
-font-size:14px
+font-size:14px;
+line-height:1.7
 }
 
 .read-button{
@@ -251,37 +308,49 @@ width:540px;
 max-width:100%;
 min-height:62px;
 margin:20px auto 0;
-padding:18px;
 display:flex;
-justify-content:center;
 align-items:center;
+justify-content:center;
+padding:18px;
 background:#11aa31;
 color:#fff;
 border-radius:9px;
 text-decoration:none;
 font-size:19px;
-font-weight:850
+font-weight:900;
+box-shadow:0 6px 18px rgba(17,170,49,.16)
 }
 
+.read-button:hover{
+background:#0e962b
+}
+
+/* =========================
+PROFILE TÍ
+========================= */
+
 .profile-card{
+width:100%;
+margin-bottom:16px;
 padding:20px;
-background:#fff;
-border-radius:11px;
 display:flex;
-gap:17px;
 align-items:center;
-margin-bottom:16px
+gap:18px;
+background:#fff;
+border:1px solid #e1e1e9;
+border-radius:12px
 }
 
 .avatar{
 width:82px;
 height:82px;
-border-radius:50%;
+flex:0 0 auto;
 display:grid;
 place-items:center;
-background:linear-gradient(145deg,#09a5e5,#81d7f7);
+border-radius:50%;
+background:linear-gradient(145deg,#09a5e5,#6ed1f5);
 color:#fff;
-font-size:30px;
+font-size:29px;
 font-weight:900
 }
 
@@ -291,93 +360,209 @@ font-size:28px
 }
 
 .profile-desc{
+margin:0 0 10px;
 font-size:13px;
-line-height:1.6;
+line-height:1.55;
 color:#555
 }
 
 .profile-stats{
-margin-top:8px;
-font-size:13px;
-color:#777
+display:flex;
+flex-wrap:wrap;
+gap:7px 16px;
+color:#666;
+font-size:13px
 }
 
-.library{
-padding:18px;
+/* =========================
+LIBRARY
+========================= */
+
+.library-card{
+width:100%;
+padding:20px;
 background:#fff;
-border-radius:11px
+border:1px solid #e1e1e9;
+border-radius:12px
 }
 
-.library-head{
+.library-header{
+margin-bottom:15px;
 display:flex;
 align-items:center;
 justify-content:space-between;
-gap:15px;
-margin-bottom:16px
+gap:16px
 }
 
-.library-head h2{
-margin:0
+.library-header h2{
+margin:0;
+font-size:22px;
+line-height:1.4
 }
 
 .team-link{
-font-size:13px;
-font-weight:700;
 color:#0878ee;
-text-decoration:none
+font-size:13px;
+font-weight:800;
+text-decoration:none;
+white-space:nowrap
 }
+
+.team-link:hover{
+text-decoration:underline
+}
+
+.library-note{
+margin-bottom:17px;
+padding:10px 12px;
+background:#f7fbff;
+border-radius:8px;
+font-size:13px;
+color:#57606a
+}
+
+.green-dot{
+display:inline-block;
+width:8px;
+height:8px;
+margin-right:7px;
+border-radius:50%;
+background:#18a957
+}
+
+/* 5 CỘT DESKTOP */
 
 .story-grid{
 display:grid;
 grid-template-columns:repeat(5,minmax(0,1fr));
-gap:14px
+gap:18px 14px
 }
 
 .library-story{
-border:0;
-background:none;
+display:block;
+width:100%;
 padding:0;
+border:0;
+background:transparent;
 text-align:left;
 cursor:pointer
 }
 
 .library-cover{
 position:relative;
+width:100%;
 aspect-ratio:3/4;
 overflow:hidden;
-border-radius:8px;
-background:#eee
+border-radius:9px;
+background:#eee;
+box-shadow:0 2px 8px rgba(0,0,0,.08)
 }
 
 .library-cover img{
 width:100%;
 height:100%;
-object-fit:cover
+display:block;
+object-fit:cover;
+transition:transform .2s ease
 }
 
-.full{
+.library-story:hover .library-cover img{
+transform:scale(1.025)
+}
+
+.full-badge{
 position:absolute;
 right:7px;
 top:7px;
-background:#11aa31;
-color:#fff;
-padding:3px 6px;
+padding:4px 7px;
 border-radius:5px;
+background:rgba(17,170,49,.94);
+color:#fff;
 font-size:10px;
-font-weight:800
+font-weight:900
 }
 
 .library-title{
 margin-top:8px;
 font-size:13px;
-font-weight:800;
+font-weight:900;
 line-height:1.4
 }
 
 .library-meta{
-font-size:11px;
+margin-top:4px;
 color:#777;
-margin-top:4px
+font-size:11px
+}
+
+.extra-story{
+display:none
+}
+
+.extra-story.show{
+display:block
+}
+
+.load-more{
+width:100%;
+margin-top:22px;
+padding:14px;
+border:1px solid #d9dce5;
+border-radius:8px;
+background:#fafafa;
+color:#333;
+font-size:13px;
+font-weight:900;
+cursor:pointer
+}
+
+.load-more:hover{
+background:#f3f3f5
+}
+
+.load-more:disabled{
+cursor:default;
+color:#777
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer{
+padding:0 14px 40px
+}
+
+.footer-inner{
+max-width:1080px;
+margin:auto;
+padding-top:18px;
+border-top:1px solid #dddde5;
+color:#777;
+font-size:12px;
+line-height:1.6
+}
+
+.footer-title{
+font-size:15px;
+font-weight:900;
+color:#333
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+.story-grid{
+grid-template-columns:repeat(4,minmax(0,1fr))
+}
+
+.blur-grid{
+grid-template-columns:repeat(4,1fr)
+}
+
 }
 
 @media(max-width:680px){
@@ -386,25 +571,93 @@ margin-top:4px
 display:none
 }
 
-.story-grid,
+.brand{
+font-size:22px
+}
+
+.search-box{
+flex:1
+}
+
+.story-grid{
+grid-template-columns:repeat(3,minmax(0,1fr))
+}
+
 .blur-grid{
 grid-template-columns:repeat(3,1fr)
+}
+
+.library-header{
+align-items:flex-start
 }
 
 }
 
 @media(max-width:470px){
 
-.story-grid,
+/* MOBILE 2 CỘT */
+
+.story-grid{
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:18px 12px
+}
+
 .blur-grid{
 grid-template-columns:repeat(2,1fr)
 }
 
+.profile-card{
+align-items:flex-start;
+padding:17px
+}
+
+.avatar{
+width:64px;
+height:64px;
+font-size:23px
+}
+
+.profile-title{
+font-size:23px
+}
+
+.profile-stats{
+gap:5px 10px;
+font-size:12px
+}
+
+.library-card{
+padding:16px
+}
+
+.library-header{
+display:block
+}
+
+.library-header h2{
+font-size:20px;
+margin-bottom:7px
+}
+
 .gate-box{
-padding:20px 15px
+padding:21px 16px
+}
+
+.gate-title{
+font-size:21px
+}
+
+.story-cover{
+max-width:67%
+}
+
+.shopee-button,
+.read-button{
+font-size:16px
 }
 
 }
+
 </style>
 </head>
 
@@ -436,20 +689,13 @@ Tủ truyện của bạn
 <div class="nav-inner">
 
 <a class="nav-item" href="#">Trang chủ</a>
-
 <a class="nav-item" href="#">Truyện mới</a>
-
-<a class="nav-item" href="#">☰ Thể loại</a>
-
+<a class="nav-item" href="#">☰ &nbsp;Thể loại</a>
 <a class="nav-item" href="#">Truyện Full</a>
-
-<a class="nav-item" href="#">☆ Truyện Sáng Tác</a>
-
+<a class="nav-item" href="#">☆ &nbsp;Truyện Sáng Tác</a>
 <a class="nav-item" href="#">Team</a>
-
-<a class="nav-item" href="#">🔊 Nghe Audio</a>
-
-<a class="nav-item" href="#">▣ Tủ truyện</a>
+<a class="nav-item" href="#">🔊 &nbsp;Nghe Audio</a>
+<a class="nav-item" href="#">▣ &nbsp;Tủ truyện</a>
 
 </div>
 
@@ -459,7 +705,9 @@ Tủ truyện của bạn
 <main class="container">
 
 
-<!-- SHOPEE GATE -->
+<!-- =====================================================
+SHOPEE GATE
+===================================================== -->
 
 <section
 class="state active"
@@ -475,36 +723,47 @@ id="blurGrid"
 
 <div class="blur-shade"></div>
 
+
 <div class="gate-holder">
 
 <div class="gate-box">
+
 
 <h1 class="gate-title">
 MONG BẠN BẤM VÀO SHOPEE ĐỂ ĐỌC TRUYỆN NÀY 💗
 </h1>
 
-<div class="gate-sub">
+
+<p class="gate-sub">
 Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.
-</div>
+</p>
 
 
 <div class="story-cover">
 
 <img
-src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786801530-chau-ngoc-co-gia-chan-tam-lai-bi-dem-lam-mon-tang-kem.jpg"
-alt="CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM"
+id="gateCover"
+src=""
+alt=""
 >
 
 </div>
 
 
-<div class="story-title">
-CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM
-</div>
+<div
+class="story-title"
+id="gateTitle"
+></div>
 
 
-<div class="story-meta">
-7 phần · FULL
+<div
+class="story-meta"
+id="gateMeta"
+></div>
+
+
+<div class="finished-text">
+TRUYỆN ĐÃ HOÀN THÀNH
 </div>
 
 
@@ -524,6 +783,7 @@ Shopee sẽ mở ở tab kế bên.<br>
 Sau đó quay lại tab này để tiếp tục đọc truyện.
 </div>
 
+
 </div>
 
 </div>
@@ -534,7 +794,9 @@ Sau đó quay lại tab này để tiếp tục đọc truyện.
 
 
 
-<!-- UNLOCK -->
+<!-- =====================================================
+UNLOCK
+===================================================== -->
 
 <section
 class="state"
@@ -542,6 +804,7 @@ id="unlockState"
 >
 
 <div class="unlock-card">
+
 
 <div class="check">
 ✓
@@ -562,22 +825,29 @@ Bây giờ bạn có thể mở truyện để đọc.
 <div class="story-cover">
 
 <img
-src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786801530-chau-ngoc-co-gia-chan-tam-lai-bi-dem-lam-mon-tang-kem.jpg"
-alt="CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM"
+id="unlockCover"
+src=""
+alt=""
 >
 
 </div>
 
 
-<div class="story-title">
-CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM
+<div
+class="story-title"
+id="unlockTitle"
+></div>
+
+
+<div class="finished-text">
+TRUYỆN ĐÃ HOÀN THÀNH
 </div>
 
 
 <a
 class="read-button"
 id="readButton"
-href="https://monkeydd.com/chau-ngoc-co-gia-chan-tam-lai-bi-dem-lam-mon-tang-kem.html"
+href="#"
 target="_blank"
 rel="noopener noreferrer"
 >
@@ -590,18 +860,24 @@ Truyện sẽ mở ở tab khác.<br>
 Khi quay lại tab này, bạn sẽ thấy thư viện Tí Hay Đọc.
 </div>
 
+
 </div>
 
 </section>
 
 
 
-<!-- LIBRARY -->
+<!-- =====================================================
+THƯ VIỆN TÍ HAY ĐỌC
+===================================================== -->
 
 <section
 class="state"
 id="libraryState"
 >
+
+
+<!-- PROFILE FULL -->
 
 <div class="profile-card">
 
@@ -612,6 +888,7 @@ TÍ
 
 
 <div>
+
 
 <h1 class="profile-title">
 Tí Hay Đọc
@@ -625,20 +902,29 @@ TÍ CHÚC CÁC BÁC ĐỌC TRUYỆN VUI VẺ ẠAA
 
 
 <div class="profile-stats">
-♡ 24 lượt theo dõi ·
-👁 2.747.799 lượt xem ·
-📚 787 truyện
+
+<span>♡ 24 lượt theo dõi</span>
+
+<span>👁 2.747.799 lượt xem</span>
+
+<span>📚 787 truyện</span>
+
+</div>
+
+
 </div>
 
 </div>
 
-</div>
 
 
-<div class="library">
+<!-- LIBRARY FULL -->
+
+<div class="library-card">
 
 
-<div class="library-head">
+<div class="library-header">
+
 
 <h2>
 Đọc thêm truyện của Tí Hay Đọc
@@ -654,6 +940,16 @@ rel="noopener noreferrer"
 Xem trang nhóm ↗
 </a>
 
+
+</div>
+
+
+<div class="library-note">
+
+<span class="green-dot"></span>
+
+Chọn một truyện bên dưới để tiếp tục đọc.
+
 </div>
 
 
@@ -663,7 +959,17 @@ id="storyGrid"
 ></div>
 
 
+<button
+class="load-more"
+id="loadMore"
+type="button"
+>
+XEM THÊM TRUYỆN ↓
+</button>
+
+
 </div>
+
 
 </section>
 
@@ -671,7 +977,52 @@ id="storyGrid"
 </main>
 
 
+<footer class="footer">
+
+<div class="footer-inner">
+
+<div class="footer-title">
+TRUYỆN FULL
+</div>
+
+<div>
+Trang hỗ trợ điều hướng nội dung truyện.
+</div>
+
+</div>
+
+</footer>
+
+
+
 <script>
+
+/* =====================================================
+TRUYỆN CHÍNH
+===================================================== */
+
+const PRIMARY_STORY = {
+
+title:
+"CHÂU NGỌC CÓ GIÁ, CHÂN TÂM LẠI BỊ ĐEM LÀM MÓN TẶNG KÈM",
+
+url:
+"https://monkeydd.com/chau-ngoc-co-gia-chan-tam-lai-bi-dem-lam-mon-tang-kem.html",
+
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786801530-chau-ngoc-co-gia-chan-tam-lai-bi-dem-lam-mon-tang-kem.jpg",
+
+chapters:
+"7 phần"
+
+};
+
+
+/* =====================================================
+THƯ VIỆN
+15 TRUYỆN
+10 TRUYỆN ĐẦU HIỆN SẴN
+===================================================== */
 
 const STORIES = [
 
@@ -704,14 +1055,115 @@ chapters:"6 phần"
 },
 
 {
+title:
+"ANH BỎ TRỐN KHỎI ĐÁM CƯỚI, TÔI LIỀN TẶNG ANH MỘT MÓN QUÀ LỚN",
+url:
+"https://monkeydd.com/anh-bo-tron-khoi-dam-cuoi-toi-lien-tang-anh-mot-mon-qua-lon.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786763446-anh-bo-tron-khoi-dam-cuoi-toi-lien-tang-anh-mot-mon-qua-lon.jpg",
+chapters:"10 phần"
+},
+
+{
+title:
+"PHU QUÂN GIẢ TÀN, CHỈ ĐỂ ÉP TA HẠ ĐƯỜNG",
+url:
+"https://monkeydd.com/phu-quan-gia-tan-chi-de-ep-ta-ha-duong.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786757490-phu-quan-gia-tan-chi-de-ep-ta-ha-duong.jpg",
+chapters:"9 phần"
+},
+
+{
+title:
+"LỠ TRÊU CHỌC CHỈ HUY SỨ MẶT SẮT RỒI !",
+url:
+"https://monkeydd.com/lo-treu-choc-chi-huy-su-mat-sat-roi.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/15/1786727736-lo-treu-choc-chi-huy-su-mat-sat-roi.jpg",
+chapters:"6 phần"
+},
+
+{
+title:
+"KỶ NIỆM NGÀY CƯỚI, CHỒNG ĐƯA MỐI TÌNH ĐẦU VỀ MẶC VÁY NGỦ CỦA TÔI",
+url:
+"https://monkeydd.com/ky-niem-ngay-cuoi-chong-dua-moi-tinh-dau-ve-mac-vay-ngu-cua-toi.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786726739-ky-niem-ngay-cuoi-chong-dua-moi-tinh-dau-ve-mac-vay-ngu-cua-toi.jpg",
+chapters:"8 phần"
+},
+
+{
+title:"LÂM KÝ",
+url:"https://monkeydd.com/lam-ky.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786725699-lam-ky.jpg",
+chapters:"9 phần"
+},
+
+{
+title:
+"CÓ GÌ THÌ NÓI VỚI BẢY MƯƠI VẠN ĐẠI QUÂN CỦA TRẪM ĐI",
+url:
+"https://monkeydd.com/co-gi-thi-noi-voi-bay-muoi-van-dai-quan-cua-tram-di.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786724327-co-gi-thi-noi-voi-bay-muoi-van-dai-quan-cua-tram-di.jpg",
+chapters:"7 phần"
+},
+
+{
+title:
+"AI CŨNG NGHĨ TÔI YÊU ANH, TIẾC LÀ TÔI CHỈ COI ANH LÀ MÓN ĐỒ, DƠ THÌ VỨT!",
+url:
+"https://monkeydd.com/ai-cung-nghi-toi-yeu-anh-tiec-la-toi-chi-coi-anh-la-mon-do-do-thi-vut.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786721263-ai-cung-nghi-toi-yeu-anh-tiec-la-toi-chi-coi-anh-la-mon-do-do-thi-vut.jpg",
+chapters:"8 phần"
+},
+
+{
 title:"A KHUYẾT",
 url:"https://monkeydd.com/a-khuyet.html",
-cover:"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786711816-a-khuyet.jpg",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786711816-a-khuyet.jpg",
 chapters:"18 phần"
+},
+
+{
+title:
+"TẶNG PHU QUÂN MƯỜI NÀNG THIẾP",
+url:
+"https://monkeydd.com/tang-phu-quan-muoi-nang-thiep.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786710378-tang-phu-quan-muoi-nang-thiep.jpg",
+chapters:"7 phần"
+},
+
+{
+title:"PHINH ĐÌNH",
+url:"https://monkeydd.com/phinh-dinh.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786696356-phinh-dinh.jpg",
+chapters:"6 phần"
+},
+
+{
+title:
+"CHỒNG NGOẠI TÌNH RỒI QUAY ĐẦU, CUỐI CÙNG LẠI VÌ TIỂU TAM ĐÁM CƯỚI MÀ BỎ ĐI",
+url:
+"https://monkeydd.com/chong-ngoai-tinh-roi-quay-dau-cuoi-cung-lai-vi-tieu-tam-dam-cuoi-ma-bo-di.html",
+cover:
+"https://cdn.monkeydarchive.com/images/story/2026/08/14/1786695979-chong-ngoai-tinh-roi-quay-dau-cuoi-cung-lai-vi-tieu-tam-dam-cuoi-ma-bo-di.jpg",
+chapters:"8 phần"
 }
 
 ];
 
+
+/* =====================================================
+DOM
+===================================================== */
 
 const gateState =
 document.getElementById("gateState");
@@ -721,6 +1173,21 @@ document.getElementById("unlockState");
 
 const libraryState =
 document.getElementById("libraryState");
+
+const gateCover =
+document.getElementById("gateCover");
+
+const gateTitle =
+document.getElementById("gateTitle");
+
+const gateMeta =
+document.getElementById("gateMeta");
+
+const unlockCover =
+document.getElementById("unlockCover");
+
+const unlockTitle =
+document.getElementById("unlockTitle");
 
 const shopeeButton =
 document.getElementById("shopeeButton");
@@ -734,19 +1201,37 @@ document.getElementById("blurGrid");
 const storyGrid =
 document.getElementById("storyGrid");
 
+const loadMore =
+document.getElementById("loadMore");
 
-let pendingReturn = null;
 
-let pageWentHidden = false;
+/* =====================================================
+STATE
+===================================================== */
 
+let selectedStory =
+PRIMARY_STORY;
+
+let pendingReturn =
+null;
+
+let pageWentHidden =
+false;
+
+
+/* =====================================================
+SHOW STATE
+===================================================== */
 
 function showState(state){
 
-gateState.classList.remove("active");
-
-unlockState.classList.remove("active");
-
-libraryState.classList.remove("active");
+[
+gateState,
+unlockState,
+libraryState
+].forEach(el=>
+el.classList.remove("active")
+);
 
 state.classList.add("active");
 
@@ -758,27 +1243,94 @@ behavior:"smooth"
 }
 
 
-/* BACKGROUND */
+/* =====================================================
+PREPARE GATE
+===================================================== */
 
-STORIES.forEach(story=>{
+function prepareGate(){
 
-const image =
-document.createElement("img");
+gateCover.src =
+selectedStory.cover;
 
-image.src =
-story.cover;
+gateCover.alt =
+selectedStory.title;
 
-image.alt =
+gateTitle.textContent =
+selectedStory.title;
+
+gateMeta.textContent =
+selectedStory.chapters +
+" · Đã đủ bộ · FULL";
+
+}
+
+
+/* =====================================================
+PREPARE UNLOCK
+===================================================== */
+
+function prepareUnlock(){
+
+unlockCover.src =
+selectedStory.cover;
+
+unlockCover.alt =
+selectedStory.title;
+
+unlockTitle.textContent =
+selectedStory.title;
+
+readButton.href =
+selectedStory.url;
+
+}
+
+
+/* =====================================================
+BACKGROUND GATE
+===================================================== */
+
+function renderBlurGrid(){
+
+blurGrid.innerHTML =
 "";
 
-blurGrid.appendChild(image);
+STORIES
+.slice(0,15)
+.forEach(story=>{
+
+const img =
+document.createElement("img");
+
+img.src =
+story.cover;
+
+img.alt =
+"";
+
+img.loading =
+"lazy";
+
+blurGrid.appendChild(
+img
+);
 
 });
 
+}
 
-/* LIBRARY */
 
-STORIES.forEach(story=>{
+/* =====================================================
+LIBRARY
+===================================================== */
+
+function renderLibrary(){
+
+storyGrid.innerHTML =
+"";
+
+STORIES.forEach(
+(story,index)=>{
 
 const card =
 document.createElement("button");
@@ -788,6 +1340,17 @@ card.type =
 
 card.className =
 "library-story";
+
+
+/* 10 TRUYỆN ĐẦU HIỆN SẴN */
+
+if(index >= 10){
+
+card.classList.add(
+"extra-story"
+);
+
+}
 
 
 card.innerHTML = `
@@ -800,7 +1363,7 @@ alt="${story.title}"
 loading="lazy"
 >
 
-<span class="full">
+<span class="full-badge">
 FULL
 </span>
 
@@ -817,25 +1380,44 @@ ${story.chapters} · FULL
 `;
 
 
+/* QUAN TRỌNG:
+KHÔNG MỞ THẲNG MONKEYD
+
+BẤM TRUYỆN TRONG THƯ VIỆN
+=> QUAY LẠI GATE SHOPEE
+*/
+
 card.addEventListener(
 "click",
 ()=>{
 
-window.open(
-story.url,
-"_blank"
+selectedStory =
+story;
+
+prepareGate();
+
+prepareUnlock();
+
+showState(
+gateState
 );
 
 }
 );
 
 
-storyGrid.appendChild(card);
+storyGrid.appendChild(
+card
+);
 
 });
 
+}
 
-/* BẤM SHOPEE */
+
+/* =====================================================
+BẤM SHOPEE
+===================================================== */
 
 shopeeButton.addEventListener(
 "click",
@@ -851,7 +1433,9 @@ false;
 );
 
 
-/* BẤM ĐỌC TRUYỆN */
+/* =====================================================
+BẤM ĐỌC TRUYỆN
+===================================================== */
 
 readButton.addEventListener(
 "click",
@@ -867,7 +1451,9 @@ false;
 );
 
 
-/* PHÁT HIỆN NGƯỜI DÙNG RỜI TAB */
+/* =====================================================
+PHÁT HIỆN RỜI TAB
+===================================================== */
 
 document.addEventListener(
 "visibilitychange",
@@ -895,7 +1481,9 @@ window.addEventListener(
 "blur",
 ()=>{
 
-if(pendingReturn){
+if(
+pendingReturn
+){
 
 pageWentHidden =
 true;
@@ -912,7 +1500,9 @@ handleReturn
 );
 
 
-/* QUAY LẠI TAB */
+/* =====================================================
+QUAY LẠI TAB
+===================================================== */
 
 function handleReturn(){
 
@@ -942,6 +1532,8 @@ if(
 next === "unlock"
 ){
 
+prepareUnlock();
+
 showState(
 unlockState
 );
@@ -962,6 +1554,50 @@ libraryState
 }
 
 }
+
+
+/* =====================================================
+XEM THÊM
+===================================================== */
+
+loadMore.addEventListener(
+"click",
+()=>{
+
+document
+.querySelectorAll(
+".extra-story"
+)
+.forEach(card=>{
+
+card.classList.add(
+"show"
+);
+
+});
+
+
+loadMore.textContent =
+"ĐÃ HIỆN THÊM TRUYỆN ✓";
+
+loadMore.disabled =
+true;
+
+}
+);
+
+
+/* =====================================================
+START
+===================================================== */
+
+prepareGate();
+
+prepareUnlock();
+
+renderBlurGrid();
+
+renderLibrary();
 
 </script>
 
