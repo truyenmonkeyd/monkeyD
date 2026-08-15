@@ -3,20 +3,36 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>XỨNG ĐÁNG VỚI GIANG SƠN</title>
+<title>TRO NGƯỜI TRỞ VỀ DƯỚI MƯA ĐÀO</title>
 
 <style>
 *{box-sizing:border-box}
 body{margin:0;background:#f5f5fb;color:#181818;font-family:"Segoe UI",Arial,sans-serif}
-header{background:#fff;border-bottom:1px solid #ddd}.top{max-width:1100px;margin:auto;padding:13px 16px;display:flex;align-items:center;gap:18px}.logo{color:#09a5e5;font-size:26px;font-weight:900}.search{width:300px;padding:10px;border:1px solid #ddd;border-radius:7px}.account{margin-left:auto;color:#666;font-size:13px}
-nav{background:#fff;border-bottom:1px solid #ddd}.nav{max-width:1100px;margin:auto;display:flex;overflow:auto}.nav a{padding:14px;text-decoration:none;color:#222;white-space:nowrap}
-main{max-width:1050px;margin:22px auto 50px;padding:0 14px}.state{display:none}.state.active{display:block}
-.panel{position:relative;min-height:700px;background:#eeeef4;border-radius:17px;overflow:hidden}.bg{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px;opacity:.65;filter:blur(.7px)}.bg img{width:100%;height:100%;object-fit:cover;border-radius:8px}.shade{position:absolute;inset:0;background:rgba(255,255,255,.37)}
-.center{position:relative;z-index:2;min-height:700px;display:flex;align-items:center;justify-content:center;padding:20px}.box,.unlock{max-width:620px;width:100%;margin:auto;padding:28px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.12)}
-.cover{width:220px;max-width:65%;margin:18px auto}.cover img{width:100%;display:block;border-radius:9px}.title{font-size:22px;font-weight:900;line-height:1.45}.meta{margin:8px 0 20px;color:#0878ee;font-size:13px;font-weight:800}
-.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:62px;padding:17px;border-radius:10px;color:#fff;text-decoration:none;font-size:18px;font-weight:900}.shopee{background:#ee4d2d}.read{background:#11aa31;margin-top:20px}.note{margin-top:12px;color:#888;font-size:12px;line-height:1.6}
+header{background:#fff;border-bottom:1px solid #ddd}
+.top{max-width:1100px;margin:auto;padding:13px 16px;display:flex;align-items:center;gap:18px}
+.logo{color:#09a5e5;font-size:26px;font-weight:900}
+.search{width:300px;padding:10px;border:1px solid #ddd;border-radius:7px}
+.account{margin-left:auto;color:#666;font-size:13px}
+nav{background:#fff;border-bottom:1px solid #ddd}
+.nav{max-width:1100px;margin:auto;display:flex;overflow:auto}
+.nav a{padding:14px;text-decoration:none;color:#222;white-space:nowrap}
+main{max-width:1050px;margin:22px auto 50px;padding:0 14px}
+.state{display:none}.state.active{display:block}
+.panel{position:relative;min-height:700px;background:#eeeef4;border-radius:17px;overflow:hidden}
+.bg{position:absolute;inset:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;padding:12px;opacity:.65;filter:blur(.7px)}
+.bg img{width:100%;height:100%;object-fit:cover;border-radius:8px}
+.shade{position:absolute;inset:0;background:rgba(255,255,255,.37)}
+.center{position:relative;z-index:2;min-height:700px;display:flex;align-items:center;justify-content:center;padding:20px}
+.box,.unlock{max-width:620px;width:100%;margin:auto;padding:28px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 15px 40px rgba(0,0,0,.12)}
+.cover{width:220px;max-width:65%;margin:18px auto}.cover img{width:100%;display:block;border-radius:9px}
+.title{font-size:22px;font-weight:900;line-height:1.45}
+.meta{margin:8px 0 20px;color:#0878ee;font-size:13px;font-weight:800}
+.btn{display:flex;align-items:center;justify-content:center;width:100%;min-height:62px;padding:17px;border-radius:10px;color:#fff;text-decoration:none;font-size:18px;font-weight:900}
+.shopee{background:#ee4d2d}.read{background:#11aa31;margin-top:20px}
+.note{margin-top:12px;color:#888;font-size:12px;line-height:1.6}
 .check{width:70px;height:70px;margin:auto;border-radius:50%;background:#e7f9eb;color:#16a33c;display:grid;place-items:center;font-size:35px;font-weight:900}
-.profile,.library{background:#fff;padding:20px;border-radius:11px;margin-bottom:16px}.profile{display:flex;gap:17px;align-items:center}.avatar{width:80px;height:80px;border-radius:50%;background:#09a5e5;color:#fff;display:grid;place-items:center;font-size:28px;font-weight:900}
+.profile,.library{background:#fff;padding:20px;border-radius:11px;margin-bottom:16px}
+.profile{display:flex;gap:17px;align-items:center}.avatar{width:80px;height:80px;border-radius:50%;background:#09a5e5;color:#fff;display:grid;place-items:center;font-size:28px;font-weight:900}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.card{border:0;background:none;text-align:left;padding:0;cursor:pointer}.card img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:8px}.name{font-size:13px;font-weight:800;margin-top:7px}.small{font-size:11px;color:#777}
 @media(max-width:600px){.account{display:none}.grid,.bg{grid-template-columns:repeat(2,1fr)}}
 </style>
@@ -30,28 +46,30 @@ main{max-width:1050px;margin:22px auto 50px;padding:0 14px}.state{display:none}.
 <main>
 
 <section class="state active" id="gate">
-<div class="panel"><div class="bg" id="bg"></div><div class="shade"></div>
+<div class="panel">
+<div class="bg" id="bg"></div><div class="shade"></div>
 <div class="center"><div class="box">
 
 <h1>MONG BẠN BẤM VÀO SHOPEE ĐỂ ĐỌC TRUYỆN NÀY 💗</h1>
 <p>Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.</p>
 
 <div class="cover">
-<img src="https://cdn.monkeydarchive.com/images/story/2026/08/13/1786615889-xung-dang-voi-giang-son.jpg">
+<img src="https://cdn.monkeydarchive.com/images/story/2026/08/13/1786616735-tro-nguoi-tro-ve-duoi-mua-dao.jpg">
 </div>
 
-<div class="title">XỨNG ĐÁNG VỚI GIANG SƠN</div>
-<div class="meta">10 phần · FULL</div>
+<div class="title">TRO NGƯỜI TRỞ VỀ DƯỚI MƯA ĐÀO</div>
+<div class="meta">14 phần · FULL</div>
 
 <a id="shopee" class="btn shopee"
-href="https://s.shopee.vn/7AcfKhyGAP"
+href="https://s.shopee.vn/70JF8OytVM"
 target="_blank" rel="noopener noreferrer">
 🛍 MỞ SHOPEE ĐỂ TIẾP TỤC ĐỌC
 </a>
 
 <div class="note">Shopee sẽ mở ở tab kế bên.<br>Sau đó quay lại tab này để tiếp tục đọc truyện.</div>
 
-</div></div></div>
+</div></div>
+</div>
 </section>
 
 <section class="state" id="unlock">
@@ -62,13 +80,13 @@ target="_blank" rel="noopener noreferrer">
 <p>Cảm ơn bạn đã ghé Shopee.<br>Bây giờ bạn có thể mở truyện để đọc.</p>
 
 <div class="cover">
-<img src="https://cdn.monkeydarchive.com/images/story/2026/08/13/1786615889-xung-dang-voi-giang-son.jpg">
+<img src="https://cdn.monkeydarchive.com/images/story/2026/08/13/1786616735-tro-nguoi-tro-ve-duoi-mua-dao.jpg">
 </div>
 
-<div class="title">XỨNG ĐÁNG VỚI GIANG SƠN</div>
+<div class="title">TRO NGƯỜI TRỞ VỀ DƯỚI MƯA ĐÀO</div>
 
 <a id="read" class="btn read"
-href="https://monkeydd.com/xung-dang-voi-giang-son.html"
+href="https://monkeydd.com/tro-nguoi-tro-ve-duoi-mua-dao.html"
 target="_blank" rel="noopener noreferrer">
 ĐỌC TRUYỆN NGAY
 </a>
