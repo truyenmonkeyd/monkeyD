@@ -36,6 +36,10 @@
       color: inherit;
     }
 
+    /* =========================
+       HEADER
+    ========================= */
+
     .header {
       width: 100%;
       background: #fff;
@@ -99,6 +103,10 @@
       white-space: nowrap;
     }
 
+    /* =========================
+       NAV
+    ========================= */
+
     .nav {
       width: 100%;
       background: #fff;
@@ -128,18 +136,15 @@
       background: #f4f4f7;
     }
 
+    /* =========================
+       MAIN
+    ========================= */
+
     .container {
       width: 100%;
       max-width: 1080px;
       margin: 22px auto 50px;
       padding: 0 14px;
-    }
-
-    .breadcrumb {
-      margin: 0 0 13px 8px;
-      color: #555;
-      font-size: 13px;
-      line-height: 1.6;
     }
 
     .state {
@@ -151,137 +156,15 @@
     }
 
     /* =========================
-       STORY
+       SHOPEE GATE
     ========================= */
 
-    .story-card {
-      width: 100%;
-      padding: 20px 22px 30px;
-      background: #fff;
-      border: 1px solid #e1e1ec;
-      border-radius: 7px;
-      box-shadow: 0 3px 11px rgba(50,50,90,.07);
-    }
-
-    .story-title {
-      margin: 0 0 15px;
-      color: #111;
-      font-size: 30px;
-      font-weight: 700;
-      line-height: 1.4;
-    }
-
-    .info-box {
-      width: 100%;
-      margin-bottom: 26px;
-      padding: 14px 16px;
-      border-radius: 8px;
-      background: #d5f3fa;
-      color: #222;
-      font-size: 14px;
-      line-height: 1.7;
-    }
-
-    .cover-area {
-      width: 100%;
-      margin: 19px auto 8px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .cover-button {
-      width: 340px;
-      max-width: 100%;
-      padding: 0;
-      display: block;
-      border: none;
-      background: transparent;
-      border-radius: 7px;
-      cursor: pointer;
-    }
-
-    .cover {
-      width: 100%;
-      height: auto;
-      display: block;
-      border-radius: 7px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.13);
-      transition: transform .15s ease, box-shadow .15s ease;
-    }
-
-    .cover-button:hover .cover {
-      transform: translateY(-2px);
-      box-shadow: 0 7px 20px rgba(0,0,0,.17);
-    }
-
-    .cover-button:active .cover {
-      transform: scale(.99);
-    }
-
-    .image-note {
-      margin-top: 12px;
-      color: #777;
-      text-align: center;
-      font-size: 13px;
-      line-height: 1.5;
-    }
-
-    .actions {
-      width: 540px;
-      max-width: 100%;
-      margin: 25px auto 9px;
-    }
-
-    .button {
-      width: 100%;
-      min-height: 62px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 18px 25px;
-      border: none;
-      border-radius: 9px;
-      cursor: pointer;
-      text-align: center;
-      text-decoration: none;
-      font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-      font-size: 19px;
-      font-weight: 750;
-      line-height: 1.3;
-    }
-
-    .button:active {
-      transform: scale(.99);
-    }
-
-    .story-button {
-      color: #fff;
-      background: #11aa31;
-      box-shadow: 0 6px 18px rgba(17,170,49,.16);
-    }
-
-    .story-button:hover {
-      background: #0e962b;
-    }
-
-    .completed {
-      margin-top: 23px;
-      color: #0878ee;
-      text-align: center;
-      font-size: 17px;
-      font-weight: 650;
-    }
-
-    /* =========================
-       SHOPEE
-    ========================= */
-
-    .blur-panel {
+    .gate-panel {
       position: relative;
-      min-height: 650px;
+      min-height: 720px;
       overflow: hidden;
-      border-radius: 17px;
       border: 1px solid #e3e3ea;
+      border-radius: 17px;
       background: #eeeef4;
     }
 
@@ -290,10 +173,10 @@
       inset: 0;
       padding: 14px;
       display: grid;
-      grid-template-columns: repeat(5,1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 10px;
-      opacity: .76;
-      filter: blur(.45px);
+      opacity: .73;
+      filter: blur(.55px);
       transform: scale(1.012);
     }
 
@@ -312,48 +195,77 @@
       background:
         linear-gradient(
           to bottom,
-          rgba(255,255,255,.05),
-          rgba(255,255,255,.20) 45%,
-          rgba(255,255,255,.38)
+          rgba(255,255,255,.08),
+          rgba(255,255,255,.25) 45%,
+          rgba(255,255,255,.42)
         );
     }
 
-    .cta-holder {
+    .gate-holder {
       position: relative;
       z-index: 2;
-      min-height: 650px;
+      min-height: 720px;
       display: flex;
       align-items: center;
       justify-content: center;
       padding: 22px;
     }
 
-    .cta-box {
-      width: 585px;
+    .gate-box {
+      width: 610px;
       max-width: 96%;
-      padding: 28px 26px;
-      border-radius: 17px;
-      text-align: center;
-      background: rgba(255,255,255,.93);
-      border: 1px solid rgba(230,230,238,.96);
-      box-shadow: 0 17px 42px rgba(26,26,60,.18);
+      padding: 26px;
+      background: rgba(255,255,255,.95);
+      border: 1px solid rgba(230,230,238,.97);
+      border-radius: 18px;
+      box-shadow: 0 18px 45px rgba(30,30,70,.18);
       backdrop-filter: blur(4px);
+      text-align: center;
     }
 
-    .cta-title {
-      margin: 0 0 9px;
+    .gate-title {
+      margin: 0 0 7px;
       color: #222;
       font-size: 24px;
-      font-weight: 800;
+      font-weight: 850;
+      line-height: 1.4;
+    }
+
+    .gate-sub {
+      margin: 0 auto 17px;
+      max-width: 520px;
+      color: #666;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .gate-story-cover {
+      width: 220px;
+      max-width: 58%;
+      margin: 0 auto 15px;
+    }
+
+    .gate-story-cover img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 9px;
+      box-shadow: 0 5px 17px rgba(0,0,0,.16);
+    }
+
+    .gate-story-title {
+      margin: 0 0 5px;
+      color: #111;
+      font-size: 21px;
+      font-weight: 850;
       line-height: 1.45;
     }
 
-    .cta-sub {
-      margin: 0 auto 21px;
-      max-width: 520px;
-      color: #555;
-      font-size: 15px;
-      line-height: 1.7;
+    .gate-story-meta {
+      margin-bottom: 19px;
+      color: #0878ee;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .shopee-button {
@@ -368,7 +280,7 @@
       color: #fff;
       text-decoration: none;
       font-size: 18px;
-      font-weight: 800;
+      font-weight: 850;
       line-height: 1.35;
       box-shadow: 0 7px 20px rgba(238,77,45,.25);
     }
@@ -381,7 +293,7 @@
       margin-top: 12px;
       color: #888;
       font-size: 12px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     /* =========================
@@ -392,7 +304,7 @@
       width: 760px;
       max-width: 100%;
       margin: 0 auto;
-      padding: 30px 25px 32px;
+      padding: 31px 25px 33px;
       background: #fff;
       border: 1px solid #e1e1ec;
       border-radius: 14px;
@@ -420,7 +332,7 @@
     }
 
     .unlock-sub {
-      margin: 0 auto 22px;
+      margin: 0 auto 21px;
       max-width: 550px;
       color: #666;
       font-size: 14px;
@@ -428,23 +340,54 @@
     }
 
     .unlock-story-preview {
-      width: 180px;
+      width: 200px;
       max-width: 60%;
-      margin: 0 auto 18px;
+      margin: 0 auto 17px;
     }
 
     .unlock-story-preview img {
       width: 100%;
       display: block;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,.13);
+      border-radius: 9px;
+      box-shadow: 0 5px 16px rgba(0,0,0,.14);
     }
 
     .unlock-story-name {
       margin: 0 0 20px;
-      font-size: 18px;
-      font-weight: 800;
+      font-size: 19px;
+      font-weight: 850;
       line-height: 1.5;
+    }
+
+    .actions {
+      width: 540px;
+      max-width: 100%;
+      margin: 20px auto 7px;
+    }
+
+    .story-button {
+      width: 100%;
+      min-height: 62px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px 25px;
+      border-radius: 9px;
+      background: #11aa31;
+      color: #fff;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: 800;
+      line-height: 1.3;
+      box-shadow: 0 6px 18px rgba(17,170,49,.16);
+    }
+
+    .story-button:hover {
+      background: #0e962b;
+    }
+
+    .story-button:active {
+      transform: scale(.99);
     }
 
     /* =========================
@@ -721,27 +664,9 @@
         padding: 0 8px;
       }
 
-      .story-card {
-        padding: 15px 13px 25px;
-      }
-
-      .story-title {
-        font-size: 23px;
-        line-height: 1.45;
-      }
-
-      .cover-button {
-        width: 300px;
-      }
-
-      .button {
-        min-height: 58px;
-        font-size: 17px;
-      }
-
-      .blur-panel,
-      .cta-holder {
-        min-height: 610px;
+      .gate-panel,
+      .gate-holder {
+        min-height: 650px;
       }
 
       .blur-grid {
@@ -754,20 +679,24 @@
         display: none;
       }
 
-      .cta-holder {
-        padding: 13px;
+      .gate-holder {
+        padding: 12px;
       }
 
-      .cta-box {
-        padding: 24px 17px;
+      .gate-box {
+        padding: 22px 15px;
       }
 
-      .cta-title {
+      .gate-title {
         font-size: 20px;
       }
 
-      .cta-sub {
-        font-size: 14px;
+      .gate-story-cover {
+        width: 185px;
+      }
+
+      .gate-story-title {
+        font-size: 18px;
       }
 
       .shopee-button {
@@ -781,6 +710,11 @@
 
       .unlock-title {
         font-size: 22px;
+      }
+
+      .story-button {
+        min-height: 58px;
+        font-size: 17px;
       }
 
       .profile-card {
@@ -864,12 +798,19 @@
   <div class="nav-inner">
 
     <a class="nav-item" href="#">Trang chủ</a>
+
     <a class="nav-item" href="#">Truyện mới</a>
+
     <a class="nav-item" href="#">☰ &nbsp;Thể loại</a>
+
     <a class="nav-item" href="#">Truyện Full</a>
+
     <a class="nav-item" href="#">☆ &nbsp;Truyện Sáng Tác</a>
+
     <a class="nav-item" href="#">Team</a>
+
     <a class="nav-item" href="#">🔊 &nbsp;Nghe Audio</a>
+
     <a class="nav-item" href="#">▣ &nbsp;Tủ truyện</a>
 
   </div>
@@ -880,112 +821,18 @@
 <main class="container">
 
 
-  <!-- =========================
+  <!-- =====================================================
        STATE 1
-       TRANG TRUYỆN BAN ĐẦU
-  ========================= -->
+       MỞ LINK LÀ THẤY SHOPEE GATE NGAY
+  ====================================================== -->
 
   <section
     class="state active"
-    id="storyState"
+    id="gateState"
   >
 
-    <div class="breadcrumb">
+    <div class="gate-panel">
 
-      Trang chủ
-      &nbsp;›&nbsp;
-      Truyện Full
-      &nbsp;›&nbsp;
-      Hoán Kim Thoa
-
-    </div>
-
-
-    <div class="story-card">
-
-      <h1 class="story-title">
-        HOÁN KIM THOA
-      </h1>
-
-
-      <div class="info-box">
-
-        Trạng thái: Đã đủ bộ
-
-        <br>
-
-        Nội dung: Toàn bộ 13 phần truyện đã sẵn sàng.
-
-      </div>
-
-
-      <div class="cover-area">
-
-        <!--
-          QUAN TRỌNG:
-          ẢNH BÌA KHÔNG mở MonkeyD.
-          Nó chỉ chuyển sang màn Shopee.
-        -->
-
-        <button
-          class="cover-button"
-          type="button"
-          data-start-reading
-        >
-
-          <img
-            class="cover"
-            src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786776121-hoan-kim-thoa.jpg"
-            alt="Hoán Kim Thoa"
-          >
-
-        </button>
-
-      </div>
-
-
-      <div class="image-note">
-        Bấm vào ảnh hoặc nút bên dưới để tiếp tục.
-      </div>
-
-
-      <div class="actions">
-
-        <!--
-          NÚT NÀY CŨNG KHÔNG mở MonkeyD.
-        -->
-
-        <button
-          class="button story-button"
-          type="button"
-          data-start-reading
-        >
-          TIẾP TỤC ĐỌC TRUYỆN
-        </button>
-
-      </div>
-
-
-      <div class="completed">
-        TRUYỆN ĐÃ HOÀN THÀNH
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- =========================
-       STATE 2
-       SHOPEE
-  ========================= -->
-
-  <section
-    class="state"
-    id="shopeeState"
-  >
-
-    <div class="blur-panel">
 
       <div
         class="blur-grid"
@@ -996,20 +843,55 @@
       <div class="blur-shade"></div>
 
 
-      <div class="cta-holder">
-
-        <div class="cta-box">
-
-          <h2 class="cta-title">
-            MONG BẠN GHÉ SHOPEE TRƯỚC KHI ĐỌC TRUYỆN 💗
-          </h2>
+      <div class="gate-holder">
 
 
-          <p class="cta-sub">
+        <div class="gate-box">
+
+
+          <h1 class="gate-title">
+
+            MONG BẠN BẤM VÀO SHOPEE ĐỂ ĐỌC TRUYỆN NÀY 💗
+
+          </h1>
+
+
+          <p class="gate-sub">
 
             Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.
 
           </p>
+
+
+          <div class="gate-story-cover">
+
+            <img
+              id="gateStoryCover"
+              src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786776121-hoan-kim-thoa.jpg"
+              alt="Hoán Kim Thoa"
+            >
+
+          </div>
+
+
+          <div
+            class="gate-story-title"
+            id="gateStoryTitle"
+          >
+
+            HOÁN KIM THOA
+
+          </div>
+
+
+          <div
+            class="gate-story-meta"
+            id="gateStoryMeta"
+          >
+
+            13 phần · FULL
+
+          </div>
 
 
           <a
@@ -1019,35 +901,41 @@
             target="_blank"
             rel="noopener noreferrer"
           >
-            🛍 MỞ SHOPEE TRƯỚC KHI ĐỌC
+
+            🛍 MỞ SHOPEE ĐỂ TIẾP TỤC ĐỌC
+
           </a>
 
 
           <div class="tiny-note">
 
-            Shopee sẽ mở ở tab mới.
-            Khi quay lại tab này, truyện sẽ sẵn sàng để đọc.
+            Shopee sẽ mở ở tab kế bên.
+            Sau đó quay lại tab này để tiếp tục đọc truyện.
 
           </div>
 
+
         </div>
 
+
       </div>
+
 
     </div>
 
   </section>
 
 
-  <!-- =========================
-       STATE 3
-       UNLOCK TRUYỆN
-  ========================= -->
+  <!-- =====================================================
+       STATE 2
+       QUAY LẠI TỪ SHOPEE -> ĐỌC TRUYỆN
+  ====================================================== -->
 
   <section
     class="state"
-    id="unlockedState"
+    id="unlockState"
   >
+
 
     <div class="unlock-card">
 
@@ -1058,14 +946,16 @@
 
 
       <h2 class="unlock-title">
+
         ĐÃ SẴN SÀNG ĐỌC TRUYỆN 💗
+
       </h2>
 
 
       <p class="unlock-sub">
 
         Cảm ơn bạn đã ghé Shopee.
-        Bây giờ bạn có thể tiếp tục đọc truyện.
+        Bây giờ bạn có thể mở truyện để đọc.
 
       </p>
 
@@ -1073,9 +963,9 @@
       <div class="unlock-story-preview">
 
         <img
-          id="unlockedCover"
+          id="unlockStoryCover"
           src="https://cdn.monkeydarchive.com/images/story/2026/08/15/1786776121-hoan-kim-thoa.jpg"
-          alt=""
+          alt="Hoán Kim Thoa"
         >
 
       </div>
@@ -1083,26 +973,26 @@
 
       <div
         class="unlock-story-name"
-        id="unlockedTitle"
+        id="unlockStoryTitle"
       >
+
         HOÁN KIM THOA
+
       </div>
 
 
       <div class="actions">
 
-        <!--
-          CHỈ TỚI ĐÂY MỚI CÓ LINK MONKEYD THẬT.
-        -->
-
         <a
-          class="button story-button"
-          id="storyUnlockedLink"
+          class="story-button"
+          id="readStoryLink"
           href="https://monkeydd.com/hoan-kim-thoa.html"
           target="_blank"
           rel="noopener noreferrer"
         >
+
           ĐỌC TRUYỆN NGAY
+
         </a>
 
       </div>
@@ -1110,27 +1000,31 @@
 
       <div class="tiny-note">
 
-        Truyện sẽ mở trong tab mới.
-        Khi quay lại, bạn sẽ thấy thư viện Tí Hay Đọc.
+        Truyện sẽ mở ở tab khác.
+        Khi quay lại tab này, bạn sẽ thấy thư viện Tí Hay Đọc.
 
       </div>
 
+
     </div>
+
 
   </section>
 
 
-  <!-- =========================
-       STATE 4
-       THƯ VIỆN TÍ
-  ========================= -->
+  <!-- =====================================================
+       STATE 3
+       QUAY LẠI TỪ TRUYỆN -> TÍ HAY ĐỌC
+  ====================================================== -->
 
   <section
     class="state"
     id="libraryState"
   >
 
+
     <div class="profile-card">
+
 
       <div class="profile-avatar">
         TÍ
@@ -1138,6 +1032,7 @@
 
 
       <div>
+
 
         <h1 class="profile-title">
           Tí Hay Đọc
@@ -1159,19 +1054,27 @@
           </span>
 
           <span>
-            📚 Nhiều truyện hay
+            👁 2.747.799 lượt xem
+          </span>
+
+          <span>
+            📚 787 truyện
           </span>
 
         </div>
 
+
       </div>
+
 
     </div>
 
 
     <div class="library-card">
 
+
       <div class="library-header">
+
 
         <h2>
           Đọc thêm truyện của Tí Hay Đọc
@@ -1184,19 +1087,27 @@
           target="_blank"
           rel="noopener noreferrer"
         >
+
           Xem trang nhóm ↗
+
         </a>
+
 
       </div>
 
 
       <div class="snapshot-row">
 
+
         <span class="snapshot-dot"></span>
 
+
         <span>
-          Chọn một truyện bên dưới để tiếp tục.
+
+          Chọn một truyện bên dưới để tiếp tục đọc.
+
         </span>
+
 
       </div>
 
@@ -1212,10 +1123,14 @@
         id="loadMore"
         type="button"
       >
+
         XEM THÊM TRUYỆN ↓
+
       </button>
 
+
     </div>
+
 
   </section>
 
@@ -1225,7 +1140,9 @@
 
 <footer class="footer">
 
+
   <div class="footer-inner">
+
 
     <div class="footer-title">
       TRUYỆN FULL
@@ -1242,7 +1159,9 @@
 
     </div>
 
+
   </div>
+
 
 </footer>
 
@@ -1250,11 +1169,13 @@
 <script>
 
 /* =========================================================
-   TRUYỆN BAN ĐẦU
+   TRUYỆN GỐC
 ========================================================= */
 
 const PRIMARY_STORY = {
-  title: "HOÁN KIM THOA",
+
+  title:
+    "HOÁN KIM THOA",
 
   url:
     "https://monkeydd.com/hoan-kim-thoa.html",
@@ -1264,14 +1185,31 @@ const PRIMARY_STORY = {
 
   chapters:
     "13 phần"
+
 };
 
 
 /* =========================================================
-   THƯ VIỆN TÍ
+   SNAPSHOT TÍ HAY ĐỌC
 ========================================================= */
 
 const STORIES = [
+
+
+  {
+    title:
+      "CẨM NIÊN KÝ",
+
+    url:
+      "https://monkeydd.com/cam-nien-ky-vhab.html",
+
+    cover:
+      "https://cdn.monkeydarchive.com/images/story/2026/08/15/1786779980-cam-nien-ky-vhab.jpg",
+
+    chapters:
+      "10 phần"
+  },
+
 
   {
     title:
@@ -1470,31 +1408,16 @@ const STORIES = [
 
   {
     title:
-      "BÍCH HÀ",
+      "CHỒNG NGOẠI TÌNH RỒI QUAY ĐẦU, CUỐI CÙNG LẠI VÌ TIỂU TAM ĐÁM CƯỚI MÀ BỎ ĐI",
 
     url:
-      "https://monkeydd.com/bich-ha.html",
+      "https://monkeydd.com/chong-ngoai-tinh-roi-quay-dau-cuoi-cung-lai-vi-tieu-tam-dam-cuoi-ma-bo-di.html",
 
     cover:
-      "https://cdn.monkeydarchive.com/images/story/2026/08/14/1786692362-bich-ha.jpg",
+      "https://cdn.monkeydarchive.com/images/story/2026/08/14/1786695979-chong-ngoai-tinh-roi-quay-dau-cuoi-cung-lai-vi-tieu-tam-dam-cuoi_ma_bo_di.jpg",
 
     chapters:
-      "10 phần"
-  },
-
-
-  {
-    title:
-      "TA NẠP LÃO THIẾP CHO PHU QUÂN",
-
-    url:
-      "https://monkeydd.com/ta-nap-lao-thiep-cho-phu-quan.html",
-
-    cover:
-      "https://cdn.monkeydarchive.com/images/story/2026/08/14/1786672804-ta-nap-lao-thiep-cho-phu-quan.jpg",
-
-    chapters:
-      "7 phần"
+      "8 phần"
   }
 
 ];
@@ -1507,14 +1430,11 @@ const INITIAL_VISIBLE = 10;
    ELEMENTS
 ========================================================= */
 
-const storyState =
-  document.getElementById("storyState");
+const gateState =
+  document.getElementById("gateState");
 
-const shopeeState =
-  document.getElementById("shopeeState");
-
-const unlockedState =
-  document.getElementById("unlockedState");
+const unlockState =
+  document.getElementById("unlockState");
 
 const libraryState =
   document.getElementById("libraryState");
@@ -1522,14 +1442,23 @@ const libraryState =
 const shopeeLink =
   document.getElementById("shopeeLink");
 
-const storyUnlockedLink =
-  document.getElementById("storyUnlockedLink");
+const readStoryLink =
+  document.getElementById("readStoryLink");
 
-const unlockedTitle =
-  document.getElementById("unlockedTitle");
+const gateStoryCover =
+  document.getElementById("gateStoryCover");
 
-const unlockedCover =
-  document.getElementById("unlockedCover");
+const gateStoryTitle =
+  document.getElementById("gateStoryTitle");
+
+const gateStoryMeta =
+  document.getElementById("gateStoryMeta");
+
+const unlockStoryCover =
+  document.getElementById("unlockStoryCover");
+
+const unlockStoryTitle =
+  document.getElementById("unlockStoryTitle");
 
 const storyGrid =
   document.getElementById("storyGrid");
@@ -1542,7 +1471,7 @@ const loadMore =
 
 
 /* =========================================================
-   STATE VARIABLES
+   VARIABLES
 ========================================================= */
 
 let selectedStory =
@@ -1556,7 +1485,7 @@ let pageWentHidden =
 
 
 /* =========================================================
-   HELPERS
+   ESCAPE
 ========================================================= */
 
 function escapeHtml(text) {
@@ -1572,12 +1501,15 @@ function escapeHtml(text) {
 }
 
 
+/* =========================================================
+   STATE SWITCH
+========================================================= */
+
 function showState(target) {
 
   [
-    storyState,
-    shopeeState,
-    unlockedState,
+    gateState,
+    unlockState,
     libraryState
   ].forEach(function(el) {
 
@@ -1601,6 +1533,10 @@ function showState(target) {
 }
 
 
+/* =========================================================
+   RETURN ARM
+========================================================= */
+
 function armReturn(nextState) {
 
   pendingReturn =
@@ -1613,41 +1549,67 @@ function armReturn(nextState) {
 
 
 /* =========================================================
-   UPDATE UNLOCKED STORY
+   PREPARE GATE
 ========================================================= */
 
-function prepareUnlockedStory() {
+function prepareGateStory() {
 
-  unlockedTitle.textContent =
+  gateStoryTitle.textContent =
     selectedStory.title;
 
 
-  unlockedCover.src =
+  gateStoryMeta.textContent =
+    selectedStory.chapters + " · FULL";
+
+
+  gateStoryCover.src =
     selectedStory.cover;
 
 
-  unlockedCover.alt =
+  gateStoryCover.alt =
+    selectedStory.title;
+
+}
+
+
+/* =========================================================
+   PREPARE UNLOCK
+========================================================= */
+
+function prepareUnlockStory() {
+
+  unlockStoryTitle.textContent =
     selectedStory.title;
 
 
-  storyUnlockedLink.href =
+  unlockStoryCover.src =
+    selectedStory.cover;
+
+
+  unlockStoryCover.alt =
+    selectedStory.title;
+
+
+  readStoryLink.href =
     selectedStory.url;
 
 }
 
 
 /* =========================================================
-   BLURRED BACKGROUND
+   BLUR BACKGROUND
 ========================================================= */
 
 function renderBlurGrid() {
 
-  blurGrid.innerHTML = "";
+  blurGrid.innerHTML =
+    "";
 
 
   STORIES
     .slice(0,15)
     .forEach(function(story) {
+
 
       const img =
         document.createElement("img");
@@ -1665,7 +1627,9 @@ function renderBlurGrid() {
         "lazy";
 
 
-      blurGrid.appendChild(img);
+      blurGrid.appendChild(
+        img
+      );
 
     });
 
@@ -1678,10 +1642,12 @@ function renderBlurGrid() {
 
 function renderLibrary() {
 
-  storyGrid.innerHTML = "";
+  storyGrid.innerHTML =
+    "";
 
 
   STORIES.forEach(function(story,index) {
+
 
     const card =
       document.createElement("button");
@@ -1742,30 +1708,37 @@ function renderLibrary() {
     /*
       QUAN TRỌNG:
 
-      Bấm truyện trong thư viện
-      KHÔNG mở MonkeyD.
+      BẤM TRUYỆN TRONG TÍ
+      KHÔNG MỞ MONKEYD NGAY.
 
-      Chọn truyện xong
-      quay về màn Shopee.
+      Nó chọn truyện mới,
+      rồi quay lại SHOPEE GATE.
     */
 
     card.addEventListener(
       "click",
       function() {
 
+
         selectedStory =
           story;
 
 
+        prepareGateStory();
+
+
         showState(
-          shopeeState
+          gateState
         );
+
 
       }
     );
 
 
-    storyGrid.appendChild(card);
+    storyGrid.appendChild(
+      card
+    );
 
   });
 
@@ -1773,37 +1746,7 @@ function renderLibrary() {
 
 
 /* =========================================================
-   STATE 1
-   STORY -> SHOPEE
-========================================================= */
-
-document
-  .querySelectorAll(
-    "[data-start-reading]"
-  )
-  .forEach(function(button) {
-
-    button.addEventListener(
-      "click",
-      function() {
-
-        selectedStory =
-          PRIMARY_STORY;
-
-
-        showState(
-          shopeeState
-        );
-
-      }
-    );
-
-  });
-
-
-/* =========================================================
-   STATE 2
-   SHOPEE -> UNLOCK
+   SHOPEE CLICK
 ========================================================= */
 
 shopeeLink.addEventListener(
@@ -1811,10 +1754,13 @@ shopeeLink.addEventListener(
   function() {
 
     /*
+      Shopee được người đọc
+      chủ động bấm.
+
       Shopee mở tab mới.
 
-      Khi người đọc quay lại tab trung gian,
-      handleReturn() sẽ chuyển sang unlock.
+      Khi quay lại tab này:
+      -> màn ĐỌC TRUYỆN.
     */
 
     armReturn(
@@ -1826,19 +1772,20 @@ shopeeLink.addEventListener(
 
 
 /* =========================================================
-   STATE 3
-   UNLOCK -> STORY
+   READ STORY CLICK
 ========================================================= */
 
-storyUnlockedLink.addEventListener(
+readStoryLink.addEventListener(
   "click",
   function() {
 
     /*
-      MonkeyD mở tab mới.
+      Truyện MonkeyD mở tab mới.
 
-      Khi quay lại tab trung gian,
-      chuyển sang thư viện Tí.
+      Khi người đọc quay lại
+      tab trung gian:
+
+      -> TÍ HAY ĐỌC.
     */
 
     armReturn(
@@ -1850,12 +1797,13 @@ storyUnlockedLink.addEventListener(
 
 
 /* =========================================================
-   TAB / WINDOW DETECTION
+   VISIBILITY
 ========================================================= */
 
 document.addEventListener(
   "visibilitychange",
   function() {
+
 
     if (
       document.hidden &&
@@ -1877,6 +1825,10 @@ document.addEventListener(
 );
 
 
+/* =========================================================
+   BLUR
+========================================================= */
+
 window.addEventListener(
   "blur",
   function() {
@@ -1894,6 +1846,10 @@ window.addEventListener(
 );
 
 
+/* =========================================================
+   FOCUS
+========================================================= */
+
 window.addEventListener(
   "focus",
   handleReturn
@@ -1905,6 +1861,7 @@ window.addEventListener(
 ========================================================= */
 
 function handleReturn() {
+
 
   if (
     document.hidden ||
@@ -1930,19 +1887,23 @@ function handleReturn() {
 
 
   /*
-    Quay lại từ SHOPEE
-    -> unlock truyện đã chọn
+    SHOPEE
+    ↓
+    QUAY LẠI
+    ↓
+    ĐỌC TRUYỆN
   */
 
   if (
     next === "unlock"
   ) {
 
-    prepareUnlockedStory();
+
+    prepareUnlockStory();
 
 
     showState(
-      unlockedState
+      unlockState
     );
 
 
@@ -1952,17 +1913,22 @@ function handleReturn() {
 
 
   /*
-    Quay lại từ MONKEYD
-    -> thư viện Tí
+    MONKEYD
+    ↓
+    QUAY LẠI
+    ↓
+    TÍ HAY ĐỌC
   */
 
   if (
     next === "library"
   ) {
 
+
     showState(
       libraryState
     );
+
 
   }
 
@@ -1977,15 +1943,18 @@ loadMore.addEventListener(
   "click",
   function() {
 
+
     document
       .querySelectorAll(
         ".extra-story"
       )
       .forEach(function(card) {
 
+
         card.classList.add(
           "show"
         );
+
 
       });
 
@@ -2005,11 +1974,13 @@ loadMore.addEventListener(
    START
 ========================================================= */
 
+prepareGateStory();
+
+prepareUnlockStory();
+
 renderBlurGrid();
 
 renderLibrary();
-
-prepareUnlockedStory();
 
 </script>
 
