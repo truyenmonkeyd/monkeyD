@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>THẾ NHÂN SỢ HẮN NHƯ DIÊM VƯƠNG, CHỈ TA BIẾT HẮN CẢ ĐỜI CẦU MỘT CÁI ÔM</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="THẾ NHÂN SỢ HẮN NHƯ DIÊM VƯƠNG, CHỈ TA BIẾT HẮN CẢ ĐỜI CẦU MỘT CÁI ÔM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="THẾ NHÂN SỢ HẮN NHƯ DIÊM VƯƠNG, CHỈ TA BIẾT HẮN CẢ ĐỜI CẦU MỘT CÁI ÔM">
+
+<style>
+*{box-sizing:border-box}
+html,body,button,input,a,div,span,p,h1,h2,h3{
+font-family:Arial,Helvetica,sans-serif;
+font-synthesis:none;
+-webkit-font-smoothing:antialiased;
+-moz-osx-font-smoothing:grayscale
+}
+body{margin:0;background:#f5f5fb;color:#181818}
+.header,.nav{background:#fff;border-bottom:1px solid #ddd}
+.header-top,.nav-inner{max-width:1180px;margin:auto;display:flex;align-items:center}
+.header-top{padding:12px 18px;gap:20px}
+.brand{font-size:27px;font-weight:700;color:#09a5e5}
+.search{width:300px;height:40px;padding:0 12px;border:1px solid #ddd;border-radius:7px}
+.account{margin-left:auto;font-size:13px;color:#666}
+.nav-inner{overflow-x:auto}
+.nav a{padding:14px 15px;text-decoration:none;white-space:nowrap}
+.container{max-width:1080px;margin:22px auto 55px;padding:0 14px}
+.state{display:none}.state.active{display:block}
+.gate{min-height:720px;display:flex;align-items:center;justify-content:center;padding:22px;border-radius:17px;background:#eeeef4}
+.box,.unlock,.last{width:620px;max-width:100%;padding:28px;margin:auto;background:#fff;border-radius:18px;text-align:center;box-shadow:0 18px 45px rgba(30,30,70,.16)}
+.unlock{width:760px}
+.main-title{font-size:24px;font-weight:700;line-height:1.4}
+.sub{font-size:14px;line-height:1.7;color:#666}
+.cover{width:220px;max-width:65%;margin:18px auto}
+.cover img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px}
+.story-name{font-size:21px;font-weight:700;line-height:1.45}
+.story-meta{margin:8px 0 18px;font-size:13px;font-weight:400;color:#777}
+.btn{width:100%;padding:17px;display:flex;justify-content:center;border-radius:10px;text-decoration:none;color:#fff;font-size:18px;font-weight:700}
+.shopee{background:#ee4d2d}.read{background:#11aa31;margin-top:20px}
+.check{width:70px;height:70px;margin:auto;display:grid;place-items:center;border-radius:50%;background:#e7f9eb;color:#16a33c;font-size:35px;font-weight:700}
+@media(max-width:470px){.brand{font-size:21px}.search{width:100%;min-width:0}}
+</style>
+</head>
+
+<body>
+<header class="header"><div class="header-top"><div class="brand">TRUYỆN FULL</div><input class="search" placeholder="Tìm truyện"><div class="account">Tủ truyện của bạn</div></div></header>
+<nav class="nav"><div class="nav-inner"><a>Trang chủ</a><a>Truyện mới</a><a>Thể loại</a><a>Truyện Full</a><a>Tủ truyện</a></div></nav>
+
+<main class="container">
+<section id="gateState" class="state active"><div class="gate"><div class="box">
+<h1 class="main-title">MONG BẠN BẤM VÀO SHOPEE ĐỂ ĐỌC TRUYỆN NÀY 💗</h1>
+<div class="sub">Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.</div>
+<div class="cover"><img id="gateCover"></div>
+<div class="story-name">THẾ NHÂN SỢ HẮN NHƯ DIÊM VƯƠNG, CHỈ TA BIẾT HẮN CẢ ĐỜI CẦU MỘT CÁI ÔM</div>
+<div class="story-meta">TRUYỆN</div>
+<a id="shopeeButton" class="btn shopee" target="_blank">🛍 MỞ SHOPEE ĐỂ TIẾP TỤC ĐỌC</a>
+</div></div></section>
+
+<section id="unlockState" class="state"><div class="unlock">
+<div class="check">✓</div>
+<h2>ĐÃ SẴN SÀNG ĐỌC TRUYỆN 💗</h2>
+<div class="cover"><img id="unlockCover"></div>
+<div class="story-name">THẾ NHÂN SỢ HẮN NHƯ DIÊM VƯƠNG, CHỈ TA BIẾT HẮN CẢ ĐỜI CẦU MỘT CÁI ÔM</div>
+<a id="readButton" class="btn read" target="_blank">ĐỌC TRUYỆN NGAY</a>
+</div></section>
+
+<section id="libraryState" class="state"><div class="last">
+<div class="cover"><img id="lastCover"></div>
+<div class="story-name">THẾ NHÂN SỢ HẮN NHƯ DIÊM VƯƠNG, CHỈ TA BIẾT HẮN CẢ ĐỜI CẦU MỘT CÁI ÔM</div>
+</div></section>
+</main>
+
+<script>
+const SHOPEE="https://s.shopee.vn/6fgOjn0ABK";
+const SOURCE="https://monkeydd.com/the-nhan-so-han-nhu-diem-vuong-chi-ta-biet-han-ca-doi-cau-mot-cai-om.html";
+
+const placeholder="data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(`
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800">
+<rect width="600" height="800" fill="#edf1f6"/>
+<text x="300" y="365" text-anchor="middle" font-family="Arial" font-size="30" font-weight="700" fill="#555">TRUYỆN FULL</text>
+<text x="300" y="420" text-anchor="middle" font-family="Arial" font-size="20" fill="#777">ĐANG CHỜ BÌA</text>
+</svg>`);
+
+["gateCover","unlockCover","lastCover"].forEach(id=>document.getElementById(id).src=placeholder);
+
+const gateState=document.getElementById("gateState");
+const unlockState=document.getElementById("unlockState");
+const libraryState=document.getElementById("libraryState");
+const shopeeButton=document.getElementById("shopeeButton");
+const readButton=document.getElementById("readButton");
+
+let pendingReturn=null;
+let pageWentHidden=false;
+
+shopeeButton.href=SHOPEE;
+readButton.href=SOURCE;
+
+function showState(state){
+[gateState,unlockState,libraryState].forEach(x=>x.classList.remove("active"));
+state.classList.add("active");
+window.scrollTo({top:0,behavior:"smooth"});
+}
+
+shopeeButton.addEventListener("click",()=>{
+pendingReturn="unlock";
+pageWentHidden=false;
+});
+
+readButton.addEventListener("click",()=>{
+pendingReturn="library";
+pageWentHidden=false;
+});
+
+document.addEventListener("visibilitychange",()=>{
+if(document.hidden&&pendingReturn){
+pageWentHidden=true;
+return;
+}
+handleReturn();
+});
+
+window.addEventListener("blur",()=>{
+if(pendingReturn)pageWentHidden=true;
+});
+
+window.addEventListener("focus",handleReturn);
+
+function handleReturn(){
+if(document.hidden||!pendingReturn||!pageWentHidden)return;
+const next=pendingReturn;
+pendingReturn=null;
+pageWentHidden=false;
+if(next==="unlock"){
+showState(unlockState);
+return;
+}
+if(next==="library")showState(libraryState);
+}
+</script>
+</body>
+</html>
