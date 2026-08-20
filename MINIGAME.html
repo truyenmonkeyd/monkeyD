@@ -97,13 +97,10 @@
       position: fixed;
       inset: 0;
       z-index: 9999;
-
       background: rgba(45, 24, 30, 0.55);
-
       display: none;
       align-items: center;
       justify-content: center;
-
       padding: 18px;
     }
 
@@ -114,16 +111,11 @@
     .popup {
       width: min(430px, 94vw);
       position: relative;
-
       background: white;
       border-radius: 30px;
-
       padding: 25px 22px 30px;
-
       text-align: center;
-
       box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
-
       animation: popupAnimation 0.25s ease;
     }
 
@@ -142,10 +134,8 @@
     .popup-logo {
       width: 125px;
       height: 125px;
-
       border-radius: 50%;
       object-fit: cover;
-
       box-shadow: 0 8px 25px rgba(150, 90, 110, 0.2);
     }
 
@@ -157,7 +147,6 @@
     .popup p {
       margin: 0;
       color: #81666f;
-
       font-size: 16px;
       line-height: 1.6;
     }
@@ -166,23 +155,16 @@
 
     .close-button {
       position: absolute;
-
       right: 12px;
       top: 12px;
-
       width: 42px;
       height: 42px;
-
       border: none;
       border-radius: 50%;
-
       background: #f9edf1;
       color: #63363f;
-
       font-size: 25px;
-
       cursor: pointer;
-
       transition: 0.15s ease;
     }
 
@@ -196,16 +178,13 @@
     footer {
       text-align: center;
       color: #a98d95;
-
       font-size: 14px;
-
       padding: 0 0 35px;
     }
 
     /* MOBILE */
 
     @media (max-width: 760px) {
-
       header {
         padding-top: 20px;
       }
@@ -360,38 +339,42 @@
       document.getElementById("closePopup");
 
 
+    /*
+      HIỆN POPUP
+    */
+
     function showPopup() {
-
-      if (
-        sessionStorage.getItem("tiPopupClosed") === "yes"
-      ) {
-        return;
-      }
-
       popup.classList.add("show");
     }
 
 
+    /*
+      ĐÓNG POPUP
+    */
+
     function closePopup() {
-
       popup.classList.remove("show");
-
-      sessionStorage.setItem(
-        "tiPopupClosed",
-        "yes"
-      );
     }
 
 
-    /* POPUP HIỆN SAU 1 GIÂY */
+    /*
+      MỖI LẦN LOAD / RELOAD TRANG
+      SAU 1 GIÂY POPUP SẼ HIỆN
+    */
 
-    setTimeout(
-      showPopup,
-      1000
-    );
+    window.addEventListener("load", function () {
+
+      setTimeout(
+        showPopup,
+        1000
+      );
+
+    });
 
 
-    /* BẤM X */
+    /*
+      BẤM X
+    */
 
     closeButton.addEventListener(
       "click",
@@ -399,7 +382,10 @@
     );
 
 
-    /* BẤM VÙNG TỐI CŨNG ĐÓNG */
+    /*
+      BẤM VÙNG TỐI
+      CŨNG ĐÓNG POPUP
+    */
 
     popup.addEventListener(
       "click",
