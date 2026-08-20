@@ -23,7 +23,9 @@
       margin: auto;
     }
 
-    /* HEADER */
+    /* =========================
+       HEADER
+    ========================= */
 
     header {
       text-align: center;
@@ -35,12 +37,19 @@
       height: 95px;
       border-radius: 50%;
       object-fit: cover;
-      box-shadow: 0 8px 25px rgba(150, 90, 110, 0.18);
+
+      box-shadow:
+        0 8px 25px rgba(150, 90, 110, 0.18);
     }
 
     h1 {
       margin: 12px 0 5px;
-      font-size: clamp(30px, 6vw, 52px);
+
+      font-size: clamp(
+        30px,
+        6vw,
+        52px
+      );
     }
 
     .subtitle {
@@ -49,58 +58,105 @@
       color: #b15f78;
     }
 
-    /* PHẦN QUÀ */
+
+    /* =========================
+       3 PHẦN QUÀ
+    ========================= */
 
     .gift-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 20px;
-      padding: 25px 0 40px;
+
+      padding:
+        25px 0 40px;
     }
 
     .gift-card {
       background: white;
+
       padding: 12px;
+
       border-radius: 25px;
-      border: 1px solid #f2dfe5;
-      box-shadow: 0 14px 35px rgba(110, 60, 75, 0.12);
-      transition: 0.2s ease;
+
+      border:
+        1px solid #f2dfe5;
+
+      box-shadow:
+        0 14px 35px
+        rgba(110, 60, 75, 0.12);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
     }
 
     .gift-card:hover {
-      transform: translateY(-5px);
+      transform:
+        translateY(-5px);
+
+      box-shadow:
+        0 18px 45px
+        rgba(110, 60, 75, 0.18);
     }
 
     .gift-card img {
       display: block;
+
       width: 100%;
-      aspect-ratio: 1 / 1;
+
+      aspect-ratio:
+        1 / 1;
+
       object-fit: cover;
-      border-radius: 18px;
+
+      border-radius:
+        18px;
     }
 
     .gift-card h2 {
-      margin: 14px 0 5px;
+      margin:
+        14px 0 5px;
+
       text-align: center;
-      font-size: 22px;
+
+      font-size:
+        22px;
     }
 
     .gift-card p {
-      margin: 0 0 10px;
+      margin:
+        0 0 10px;
+
       text-align: center;
-      color: #95747e;
+
+      color:
+        #95747e;
     }
 
-    /* POPUP */
+
+    /* =========================
+       POPUP
+    ========================= */
 
     .overlay {
       position: fixed;
+
       inset: 0;
+
       z-index: 9999;
-      background: rgba(45, 24, 30, 0.55);
+
+      background:
+        rgba(45, 24, 30, 0.58);
+
       display: none;
+
       align-items: center;
       justify-content: center;
+
       padding: 18px;
     }
 
@@ -109,118 +165,222 @@
     }
 
     .popup {
-      width: min(430px, 94vw);
+      width:
+        min(430px, 94vw);
+
       position: relative;
+
       background: white;
-      border-radius: 30px;
-      padding: 25px 22px 30px;
+
+      border-radius:
+        30px;
+
+      padding:
+        26px 22px 30px;
+
       text-align: center;
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
-      animation: popupAnimation 0.25s ease;
+
+      box-shadow:
+        0 25px 80px
+        rgba(0, 0, 0, 0.30);
+
+      animation:
+        popupAnimation
+        0.25s ease;
     }
 
     @keyframes popupAnimation {
       from {
         opacity: 0;
-        transform: scale(0.92) translateY(10px);
+
+        transform:
+          scale(0.92)
+          translateY(10px);
       }
 
       to {
         opacity: 1;
-        transform: scale(1) translateY(0);
+
+        transform:
+          scale(1)
+          translateY(0);
       }
     }
+
+
+    /* ẢNH PAGE */
 
     .popup-logo {
       width: 125px;
       height: 125px;
+
       border-radius: 50%;
+
       object-fit: cover;
-      box-shadow: 0 8px 25px rgba(150, 90, 110, 0.2);
+
+      box-shadow:
+        0 8px 25px
+        rgba(150, 90, 110, 0.20);
     }
 
+
     .popup h2 {
-      margin: 15px 0 10px;
-      font-size: 27px;
+      margin:
+        15px 0 10px;
+
+      font-size:
+        27px;
     }
+
 
     .popup p {
       margin: 0;
-      color: #81666f;
-      font-size: 16px;
-      line-height: 1.6;
+
+      color:
+        #81666f;
+
+      font-size:
+        16px;
+
+      line-height:
+        1.6;
     }
 
-    /* NÚT X */
 
-    .close-button {
+    /* =========================
+       NÚT TROLL
+    ========================= */
+
+    .troll-button {
       position: absolute;
+
       right: 12px;
       top: 12px;
-      width: 42px;
-      height: 42px;
+
       border: none;
-      border-radius: 50%;
-      background: #f9edf1;
-      color: #63363f;
-      font-size: 25px;
-      cursor: pointer;
-      transition: 0.15s ease;
+
+      border-radius:
+        999px;
+
+      padding:
+        10px 14px;
+
+      background:
+        #f9edf1;
+
+      color:
+        #63363f;
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+      cursor:
+        pointer;
+
+      transition:
+        transform 0.15s ease,
+        background 0.15s ease;
     }
 
-    .close-button:hover {
-      background: #f1dce4;
-      transform: scale(1.08);
+    .troll-button:hover {
+      transform:
+        scale(1.05);
+
+      background:
+        #f1dce4;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+    ========================= */
 
     footer {
       text-align: center;
-      color: #a98d95;
-      font-size: 14px;
-      padding: 0 0 35px;
+
+      color:
+        #a98d95;
+
+      font-size:
+        14px;
+
+      padding:
+        0 0 35px;
     }
 
-    /* MOBILE */
+
+    /* =========================
+       MOBILE
+    ========================= */
 
     @media (max-width: 760px) {
+
       header {
-        padding-top: 20px;
+        padding-top:
+          20px;
       }
 
       .page-logo {
-        width: 80px;
-        height: 80px;
+        width:
+          80px;
+
+        height:
+          80px;
       }
 
       .gift-grid {
-        grid-template-columns: 1fr;
-        gap: 18px;
+        grid-template-columns:
+          1fr;
+
+        gap:
+          18px;
       }
 
       .gift-card img {
-        aspect-ratio: auto;
+        aspect-ratio:
+          auto;
       }
 
       .popup {
-        width: min(390px, 94vw);
+        width:
+          min(390px, 94vw);
       }
+
+      .troll-button {
+        font-size:
+          13px;
+
+        padding:
+          9px 12px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
+
+
+  <!-- =========================
+       HEADER
+  ========================= -->
 
   <header class="wrap">
 
     <img
-      src="page.png"
+      src="./page.png"
       class="page-logo"
       alt="Cùng Tí Học Tiếng Trung"
     >
 
-    <h1>3 phần quà Mini Game 🎁</h1>
+    <h1>
+      3 phần quà Mini Game 🎁
+    </h1>
 
     <div class="subtitle">
       Bạn thích phần quà nào nhất nè?
@@ -229,57 +389,87 @@
   </header>
 
 
+
+  <!-- =========================
+       PHẦN QUÀ
+  ========================= -->
+
   <main class="wrap">
 
     <section class="gift-grid">
 
+
+      <!-- PHẦN QUÀ 1 -->
+
       <div class="gift-card">
 
         <img
-          src="set1.png"
+          src="./set1.png"
           alt="Phần quà 1"
         >
 
-        <h2>🎁 Phần quà 1</h2>
+        <h2>
+          🎁 Phần quà 1
+        </h2>
 
-        <p>Set Capybara siêu cute</p>
+        <p>
+          Set Capybara siêu cute
+        </p>
 
       </div>
 
 
+
+      <!-- PHẦN QUÀ 2 -->
+
       <div class="gift-card">
 
         <img
-          src="set2.png"
+          src="./set2.png"
           alt="Phần quà 2"
         >
 
-        <h2>🎁 Phần quà 2</h2>
+        <h2>
+          🎁 Phần quà 2
+        </h2>
 
-        <p>Set Hello Kitty tone hồng</p>
+        <p>
+          Set Hello Kitty tone hồng
+        </p>
 
       </div>
 
+
+
+      <!-- PHẦN QUÀ 3 -->
 
       <div class="gift-card">
 
         <img
-          src="set3.png"
+          src="./set3.png"
           alt="Phần quà 3"
         >
 
-        <h2>🎁 Phần quà 3</h2>
+        <h2>
+          🎁 Phần quà 3
+        </h2>
 
-        <p>Set gấu vàng đáng yêu</p>
+        <p>
+          Set gấu vàng đáng yêu
+        </p>
 
       </div>
+
 
     </section>
 
   </main>
 
 
-  <!-- POPUP -->
+
+  <!-- =========================
+       POPUP
+  ========================= -->
 
   <div
     class="overlay"
@@ -288,55 +478,103 @@
 
     <div class="popup">
 
+
+      <!-- NÚT TROLL -->
+
       <button
-        class="close-button"
-        id="closePopup"
-        aria-label="Đóng"
+        class="troll-button"
+        id="trollButton"
       >
-        ×
+        × Troll bạn 😈
       </button>
 
 
+
+      <!-- ẢNH PAGE -->
+
       <img
-        src="page.png"
+        src="./page.png"
         class="popup-logo"
         alt="Cùng Tí Học Tiếng Trung"
       >
 
 
+
+      <!-- NỘI DUNG -->
+
       <h2>
         Chào bạn nhaaa! 🐷💗
       </h2>
 
-
       <p>
+
         Sau đây là
-        <strong>3 phần quà Mini Game.</strong>
+
+        <strong>
+          3 phần quà Mini Game.
+        </strong>
 
         <br><br>
 
         Bạn lựa chọn cho bản thân
-        <strong>1 phần quà</strong>
-        mình thích nhất nhé! 🎁
+
+        <strong>
+          1 phần quà
+        </strong>
+
+        mình thích nhất nhé!
+
+        🎁
+
       </p>
+
 
     </div>
 
   </div>
 
 
+
+  <!-- =========================
+       FOOTER
+  ========================= -->
+
   <footer>
+
     Cùng Tí Học Tiếng Trung 🐷
+
   </footer>
 
 
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================= -->
+
   <script>
 
-    const popup =
-      document.getElementById("welcomePopup");
+    /*
+      LINK TROLL CỦA M
 
-    const closeButton =
-      document.getElementById("closePopup");
+      THAY LINK BÊN DƯỚI
+      BẰNG LINK THẬT
+    */
+
+    const TROLL_LINK =
+      "https://s.shopee.vn/2LXOs0571K";
+
+
+    const popup =
+      document.getElementById(
+        "welcomePopup"
+      );
+
+
+    const trollButton =
+      document.getElementById(
+        "trollButton"
+      );
+
 
 
     /*
@@ -344,8 +582,15 @@
     */
 
     function showPopup() {
-      popup.classList.add("show");
+
+      popup
+        .classList
+        .add(
+          "show"
+        );
+
     }
+
 
 
     /*
@@ -353,52 +598,68 @@
     */
 
     function closePopup() {
-      popup.classList.remove("show");
+
+      popup
+        .classList
+        .remove(
+          "show"
+        );
+
     }
 
 
-    /*
-      MỖI LẦN LOAD / RELOAD TRANG
-      SAU 1 GIÂY POPUP SẼ HIỆN
-    */
-
-    window.addEventListener("load", function () {
-
-      setTimeout(
-        showPopup,
-        1000
-      );
-
-    });
-
 
     /*
-      BẤM X
+      MỖI LẦN LOAD / RELOAD
+
+      SAU 1 GIÂY
+      POPUP SẼ HIỆN
     */
 
-    closeButton.addEventListener(
-      "click",
-      closePopup
+    window.addEventListener(
+      "load",
+      function () {
+
+        setTimeout(
+          showPopup,
+          1000
+        );
+
+      }
     );
 
 
+
     /*
-      BẤM VÙNG TỐI
-      CŨNG ĐÓNG POPUP
+      BẤM "X TROLL BẠN"
+
+      1. MỞ LINK TROLL
+         Ở TAB MỚI
+
+      2. POPUP TỰ ĐÓNG
+
+      3. QUAY LẠI WEB
+         POPUP ĐÃ TẮT
     */
 
-    popup.addEventListener(
+    trollButton.addEventListener(
       "click",
-      function(event) {
+      function () {
 
-        if (event.target === popup) {
-          closePopup();
-        }
+        window.open(
+          TROLL_LINK,
+          "_blank",
+          "noopener,noreferrer"
+        );
+
+
+        closePopup();
 
       }
     );
 
   </script>
+
 
 </body>
 </html>
