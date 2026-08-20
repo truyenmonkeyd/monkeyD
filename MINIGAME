@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Chọn quà cùng Tí 🎁</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #542d35;
+
+      background:
+        linear-gradient(
+          180deg,
+          #fff7f3,
+          #fffdfb
+        );
+    }
+
+    .wrap {
+      width: min(1050px, 92vw);
+      margin: auto;
+    }
+
+
+    /* =========================
+       HEADER
+    ========================= */
+
+    header {
+      text-align: center;
+      padding: 28px 0 10px;
+    }
+
+    .logo {
+      width: 88px;
+      height: 88px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      box-shadow:
+        0 8px 24px
+        rgba(217, 170, 183, 0.35);
+    }
+
+    h1 {
+      margin: 10px 0 5px;
+
+      font-size: clamp(
+        30px,
+        6vw,
+        52px
+      );
+    }
+
+    .sub {
+      font-weight: 800;
+      color: #a45d73;
+    }
+
+
+    /* =========================
+       GIFT GRID
+    ========================= */
+
+    .grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 18px;
+
+      padding:
+        22px 0 36px;
+    }
+
+    .card {
+      background: white;
+
+      padding: 12px;
+
+      border-radius: 24px;
+
+      border:
+        1px solid #f2e0e5;
+
+      box-shadow:
+        0 14px 36px
+        rgba(113, 70, 83, 0.11);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform:
+        translateY(-4px);
+
+      box-shadow:
+        0 18px 40px
+        rgba(113, 70, 83, 0.16);
+    }
+
+    .card img {
+      width: 100%;
+
+      aspect-ratio:
+        1 / 1;
+
+      object-fit: cover;
+
+      border-radius: 18px;
+
+      display: block;
+    }
+
+    .card h2 {
+      text-align: center;
+
+      margin:
+        12px 0 5px;
+
+      font-size: 21px;
+    }
+
+    .card p {
+      text-align: center;
+
+      color: #91747d;
+
+      margin:
+        0 0 8px;
+
+      font-size: 14px;
+    }
+
+
+    /* =========================
+       POPUP
+    ========================= */
+
+    .overlay {
+      position: fixed;
+
+      inset: 0;
+
+      z-index: 999;
+
+      background:
+        rgba(47, 25, 31, 0.52);
+
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+
+      padding: 18px;
+    }
+
+    .overlay.show {
+      display: flex;
+    }
+
+    .modal {
+      width:
+        min(420px, 94vw);
+
+      background: white;
+
+      border-radius: 28px;
+
+      padding:
+        22px 20px 26px;
+
+      text-align: center;
+
+      box-shadow:
+        0 24px 80px
+        rgba(0, 0, 0, 0.28);
+
+      position: relative;
+
+      animation:
+        popupIn 0.25s ease;
+    }
+
+    @keyframes popupIn {
+
+      from {
+        opacity: 0;
+
+        transform:
+          scale(0.94)
+          translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+
+        transform:
+          scale(1)
+          translateY(0);
+      }
+
+    }
+
+
+    /* PAGE IMAGE INSIDE POPUP */
+
+    .modal-logo {
+
+      width: 116px;
+      height: 116px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      border:
+        5px solid white;
+
+      box-shadow:
+        0 8px 25px
+        rgba(125, 72, 84, 0.18);
+    }
+
+
+    .modal h3 {
+
+      font-size: 26px;
+
+      margin:
+        12px 0 8px;
+    }
+
+    .modal p {
+
+      font-size: 16px;
+
+      line-height: 1.6;
+
+      color: #7f646c;
+
+      margin: 0;
+    }
+
+
+    /* CLOSE BUTTON */
+
+    .close {
+
+      position: absolute;
+
+      right: 10px;
+      top: 10px;
+
+      width: 40px;
+      height: 40px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background:
+        #f8edf1;
+
+      color:
+        #60343d;
+
+      font-size: 24px;
+
+      cursor: pointer;
+
+      transition:
+        transform 0.15s ease,
+        background 0.15s ease;
+    }
+
+    .close:hover {
+
+      transform:
+        scale(1.08);
+
+      background:
+        #f2dfe6;
+    }
+
+
+    /* =========================
+       FOOTER
+    ========================= */
+
+    footer {
+
+      text-align: center;
+
+      padding:
+        0 0 30px;
+
+      color:
+        #a38b92;
+
+      font-size:
+        13px;
+    }
+
+
+    /* =========================
+       MOBILE
+    ========================= */
+
+    @media (max-width: 760px) {
+
+      header {
+        padding-top: 20px;
+      }
+
+      .logo {
+        width: 75px;
+        height: 75px;
+      }
+
+      .grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap: 16px;
+      }
+
+      .card img {
+
+        aspect-ratio:
+          auto;
+
+        max-height:
+          520px;
+      }
+
+      .modal {
+
+        width:
+          min(390px, 94vw);
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- ======================
+       HEADER
+  ======================= -->
+
+  <header class="wrap">
+
+    <img
+      class="logo"
+      src="page.png"
+      alt="Cùng Tí Học Tiếng Trung"
+    >
+
+    <h1>
+      3 phần quà Mini Game 🎁
+    </h1>
+
+    <div class="sub">
+      Bạn thích phần quà nào nhất nè?
+    </div>
+
+  </header>
+
+
+
+  <!-- ======================
+       GIFTS
+  ======================= -->
+
+  <main class="wrap">
+
+    <section class="grid">
+
+
+      <!-- QUÀ 1 -->
+
+      <article class="card">
+
+        <img
+          src="set1.png"
+          alt="Phần quà 1"
+        >
+
+        <h2>
+          🎁 Phần quà 1
+        </h2>
+
+        <p>
+          Set Capybara siêu cute
+        </p>
+
+      </article>
+
+
+
+      <!-- QUÀ 2 -->
+
+      <article class="card">
+
+        <img
+          src="set2.png"
+          alt="Phần quà 2"
+        >
+
+        <h2>
+          🎁 Phần quà 2
+        </h2>
+
+        <p>
+          Set Hello Kitty tone hồng
+        </p>
+
+      </article>
+
+
+
+      <!-- QUÀ 3 -->
+
+      <article class="card">
+
+        <img
+          src="set3.png"
+          alt="Phần quà 3"
+        >
+
+        <h2>
+          🎁 Phần quà 3
+        </h2>
+
+        <p>
+          Set gấu vàng đáng yêu
+        </p>
+
+      </article>
+
+
+    </section>
+
+  </main>
+
+
+
+  <!-- ======================
+       POPUP SAU 3 GIÂY
+  ======================= -->
+
+  <div
+    class="overlay"
+    id="overlay"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal"
+      role="dialog"
+      aria-modal="true"
+    >
+
+
+      <!-- X -->
+
+      <button
+        class="close"
+        id="closeBtn"
+        aria-label="Đóng"
+      >
+        ×
+      </button>
+
+
+
+      <!-- ẢNH PAGE -->
+
+      <img
+        class="modal-logo"
+        src="page.png"
+        alt="Cùng Tí Học Tiếng Trung"
+      >
+
+
+
+      <!-- TEXT -->
+
+      <h3>
+        Chào bạn nhaaa! 🐷💗
+      </h3>
+
+      <p>
+
+        Sau đây là
+        <strong>
+          3 phần quà Mini Game.
+        </strong>
+
+        <br><br>
+
+        Bạn lựa chọn cho bản thân
+
+        <strong>
+          1 phần quà
+        </strong>
+
+        mình thích nhất nhé!
+
+        🎁
+
+      </p>
+
+
+    </div>
+
+  </div>
+
+
+
+  <!-- ======================
+       FOOTER
+  ======================= -->
+
+  <footer class="wrap">
+
+    Cùng Tí Học Tiếng Trung 🐷
+
+  </footer>
+
+
+
+  <!-- ======================
+       JAVASCRIPT
+  ======================= -->
+
+  <script>
+
+    const overlay =
+      document.getElementById(
+        "overlay"
+      );
+
+    const closeBtn =
+      document.getElementById(
+        "closeBtn"
+      );
+
+
+
+    /*
+      HIỆN POPUP
+    */
+
+    function showWelcome() {
+
+      /*
+        Nếu popup đã được xem
+        trong phiên hiện tại
+        thì không hiện lại.
+      */
+
+      if (
+        sessionStorage.getItem(
+          "tiWelcomeSeen"
+        ) === "1"
+      ) {
+
+        return;
+
+      }
+
+
+      overlay
+        .classList
+        .add(
+          "show"
+        );
+
+
+      overlay
+        .setAttribute(
+          "aria-hidden",
+          "false"
+        );
+
+    }
+
+
+
+    /*
+      ĐÓNG POPUP
+    */
+
+    function closeWelcome() {
+
+      sessionStorage.setItem(
+        "tiWelcomeSeen",
+        "1"
+      );
+
+
+      overlay
+        .classList
+        .remove(
+          "show"
+        );
+
+
+      overlay
+        .setAttribute(
+          "aria-hidden",
+          "true"
+        );
+
+    }
+
+
+
+    /*
+      SAU 3 GIÂY
+      TỰ ĐỘNG HIỆN POPUP
+    */
+
+    setTimeout(
+      showWelcome,
+      3000
+    );
+
+
+
+    /*
+      CLICK NÚT X
+    */
+
+    closeBtn.addEventListener(
+      "click",
+      closeWelcome
+    );
+
+
+
+    /*
+      CLICK VÙNG TỐI
+      BÊN NGOÀI POPUP
+      CŨNG ĐÓNG
+    */
+
+    overlay.addEventListener(
+      "click",
+      function(event) {
+
+        if (
+          event.target === overlay
+        ) {
+
+          closeWelcome();
+
+        }
+
+      }
+    );
+
+  </script>
+
+
+</body>
+</html>
