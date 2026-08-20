@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>Chọn quà cùng Tí 🎁</title>
 
@@ -13,155 +13,94 @@
 
     body {
       margin: 0;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #542d35;
-
-      background:
-        linear-gradient(
-          180deg,
-          #fff7f3,
-          #fffdfb
-        );
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(180deg, #fff7f4, #fffdfb);
+      color: #5a3038;
     }
 
     .wrap {
-      width: min(1050px, 92vw);
+      width: min(1050px, 92%);
       margin: auto;
     }
 
-
-    /* =========================
-       HEADER
-    ========================= */
+    /* HEADER */
 
     header {
       text-align: center;
-      padding: 28px 0 10px;
+      padding: 28px 0 15px;
     }
 
-    .logo {
-      width: 88px;
-      height: 88px;
-
+    .page-logo {
+      width: 95px;
+      height: 95px;
       border-radius: 50%;
-
       object-fit: cover;
-
-      box-shadow:
-        0 8px 24px
-        rgba(217, 170, 183, 0.35);
+      box-shadow: 0 8px 25px rgba(150, 90, 110, 0.18);
     }
 
     h1 {
-      margin: 10px 0 5px;
-
-      font-size: clamp(
-        30px,
-        6vw,
-        52px
-      );
+      margin: 12px 0 5px;
+      font-size: clamp(30px, 6vw, 52px);
     }
 
-    .sub {
-      font-weight: 800;
-      color: #a45d73;
+    .subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #b15f78;
     }
 
+    /* PHẦN QUÀ */
 
-    /* =========================
-       GIFT GRID
-    ========================= */
-
-    .grid {
+    .gift-grid {
       display: grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap: 18px;
-
-      padding:
-        22px 0 36px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 25px 0 40px;
     }
 
-    .card {
+    .gift-card {
       background: white;
-
       padding: 12px;
-
-      border-radius: 24px;
-
-      border:
-        1px solid #f2e0e5;
-
-      box-shadow:
-        0 14px 36px
-        rgba(113, 70, 83, 0.11);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
+      border-radius: 25px;
+      border: 1px solid #f2dfe5;
+      box-shadow: 0 14px 35px rgba(110, 60, 75, 0.12);
+      transition: 0.2s ease;
     }
 
-    .card:hover {
-      transform:
-        translateY(-4px);
-
-      box-shadow:
-        0 18px 40px
-        rgba(113, 70, 83, 0.16);
+    .gift-card:hover {
+      transform: translateY(-5px);
     }
 
-    .card img {
-      width: 100%;
-
-      aspect-ratio:
-        1 / 1;
-
-      object-fit: cover;
-
-      border-radius: 18px;
-
+    .gift-card img {
       display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 18px;
     }
 
-    .card h2 {
+    .gift-card h2 {
+      margin: 14px 0 5px;
       text-align: center;
-
-      margin:
-        12px 0 5px;
-
-      font-size: 21px;
+      font-size: 22px;
     }
 
-    .card p {
+    .gift-card p {
+      margin: 0 0 10px;
       text-align: center;
-
-      color: #91747d;
-
-      margin:
-        0 0 8px;
-
-      font-size: 14px;
+      color: #95747e;
     }
 
-
-    /* =========================
-       POPUP
-    ========================= */
+    /* POPUP */
 
     .overlay {
       position: fixed;
-
       inset: 0;
+      z-index: 9999;
 
-      z-index: 999;
-
-      background:
-        rgba(47, 25, 31, 0.52);
+      background: rgba(45, 24, 30, 0.55);
 
       display: none;
-
       align-items: center;
       justify-content: center;
 
@@ -172,153 +111,98 @@
       display: flex;
     }
 
-    .modal {
-      width:
-        min(420px, 94vw);
+    .popup {
+      width: min(430px, 94vw);
+      position: relative;
 
       background: white;
+      border-radius: 30px;
 
-      border-radius: 28px;
-
-      padding:
-        22px 20px 26px;
+      padding: 25px 22px 30px;
 
       text-align: center;
 
-      box-shadow:
-        0 24px 80px
-        rgba(0, 0, 0, 0.28);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.3);
 
-      position: relative;
-
-      animation:
-        popupIn 0.25s ease;
+      animation: popupAnimation 0.25s ease;
     }
 
-    @keyframes popupIn {
-
+    @keyframes popupAnimation {
       from {
         opacity: 0;
-
-        transform:
-          scale(0.94)
-          translateY(10px);
+        transform: scale(0.92) translateY(10px);
       }
 
       to {
         opacity: 1;
-
-        transform:
-          scale(1)
-          translateY(0);
+        transform: scale(1) translateY(0);
       }
-
     }
 
-
-    /* PAGE IMAGE INSIDE POPUP */
-
-    .modal-logo {
-
-      width: 116px;
-      height: 116px;
+    .popup-logo {
+      width: 125px;
+      height: 125px;
 
       border-radius: 50%;
-
       object-fit: cover;
 
-      border:
-        5px solid white;
-
-      box-shadow:
-        0 8px 25px
-        rgba(125, 72, 84, 0.18);
+      box-shadow: 0 8px 25px rgba(150, 90, 110, 0.2);
     }
 
-
-    .modal h3 {
-
-      font-size: 26px;
-
-      margin:
-        12px 0 8px;
+    .popup h2 {
+      margin: 15px 0 10px;
+      font-size: 27px;
     }
 
-    .modal p {
+    .popup p {
+      margin: 0;
+      color: #81666f;
 
       font-size: 16px;
-
       line-height: 1.6;
-
-      color: #7f646c;
-
-      margin: 0;
     }
 
+    /* NÚT X */
 
-    /* CLOSE BUTTON */
-
-    .close {
-
+    .close-button {
       position: absolute;
 
-      right: 10px;
-      top: 10px;
+      right: 12px;
+      top: 12px;
 
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
 
       border: none;
-
       border-radius: 50%;
 
-      background:
-        #f8edf1;
+      background: #f9edf1;
+      color: #63363f;
 
-      color:
-        #60343d;
-
-      font-size: 24px;
+      font-size: 25px;
 
       cursor: pointer;
 
-      transition:
-        transform 0.15s ease,
-        background 0.15s ease;
+      transition: 0.15s ease;
     }
 
-    .close:hover {
-
-      transform:
-        scale(1.08);
-
-      background:
-        #f2dfe6;
+    .close-button:hover {
+      background: #f1dce4;
+      transform: scale(1.08);
     }
 
-
-    /* =========================
-       FOOTER
-    ========================= */
+    /* FOOTER */
 
     footer {
-
       text-align: center;
+      color: #a98d95;
 
-      padding:
-        0 0 30px;
+      font-size: 14px;
 
-      color:
-        #a38b92;
-
-      font-size:
-        13px;
+      padding: 0 0 35px;
     }
 
-
-    /* =========================
-       MOBILE
-    ========================= */
+    /* MOBILE */
 
     @media (max-width: 760px) {
 
@@ -326,362 +210,209 @@
         padding-top: 20px;
       }
 
-      .logo {
-        width: 75px;
-        height: 75px;
+      .page-logo {
+        width: 80px;
+        height: 80px;
       }
 
-      .grid {
-
-        grid-template-columns:
-          1fr;
-
-        gap: 16px;
+      .gift-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
       }
 
-      .card img {
-
-        aspect-ratio:
-          auto;
-
-        max-height:
-          520px;
+      .gift-card img {
+        aspect-ratio: auto;
       }
 
-      .modal {
-
-        width:
-          min(390px, 94vw);
+      .popup {
+        width: min(390px, 94vw);
       }
-
     }
-
   </style>
 </head>
 
-
 <body>
-
-
-  <!-- ======================
-       HEADER
-  ======================= -->
 
   <header class="wrap">
 
     <img
-      class="logo"
       src="page.png"
+      class="page-logo"
       alt="Cùng Tí Học Tiếng Trung"
     >
 
-    <h1>
-      3 phần quà Mini Game 🎁
-    </h1>
+    <h1>3 phần quà Mini Game 🎁</h1>
 
-    <div class="sub">
+    <div class="subtitle">
       Bạn thích phần quà nào nhất nè?
     </div>
 
   </header>
 
 
-
-  <!-- ======================
-       GIFTS
-  ======================= -->
-
   <main class="wrap">
 
-    <section class="grid">
+    <section class="gift-grid">
 
-
-      <!-- QUÀ 1 -->
-
-      <article class="card">
+      <div class="gift-card">
 
         <img
           src="set1.png"
           alt="Phần quà 1"
         >
 
-        <h2>
-          🎁 Phần quà 1
-        </h2>
+        <h2>🎁 Phần quà 1</h2>
 
-        <p>
-          Set Capybara siêu cute
-        </p>
+        <p>Set Capybara siêu cute</p>
 
-      </article>
+      </div>
 
 
-
-      <!-- QUÀ 2 -->
-
-      <article class="card">
+      <div class="gift-card">
 
         <img
           src="set2.png"
           alt="Phần quà 2"
         >
 
-        <h2>
-          🎁 Phần quà 2
-        </h2>
+        <h2>🎁 Phần quà 2</h2>
 
-        <p>
-          Set Hello Kitty tone hồng
-        </p>
+        <p>Set Hello Kitty tone hồng</p>
 
-      </article>
+      </div>
 
 
-
-      <!-- QUÀ 3 -->
-
-      <article class="card">
+      <div class="gift-card">
 
         <img
           src="set3.png"
           alt="Phần quà 3"
         >
 
-        <h2>
-          🎁 Phần quà 3
-        </h2>
+        <h2>🎁 Phần quà 3</h2>
 
-        <p>
-          Set gấu vàng đáng yêu
-        </p>
+        <p>Set gấu vàng đáng yêu</p>
 
-      </article>
-
+      </div>
 
     </section>
 
   </main>
 
 
-
-  <!-- ======================
-       POPUP SAU 3 GIÂY
-  ======================= -->
+  <!-- POPUP -->
 
   <div
     class="overlay"
-    id="overlay"
-    aria-hidden="true"
+    id="welcomePopup"
   >
 
-    <div
-      class="modal"
-      role="dialog"
-      aria-modal="true"
-    >
-
-
-      <!-- X -->
+    <div class="popup">
 
       <button
-        class="close"
-        id="closeBtn"
+        class="close-button"
+        id="closePopup"
         aria-label="Đóng"
       >
         ×
       </button>
 
 
-
-      <!-- ẢNH PAGE -->
-
       <img
-        class="modal-logo"
         src="page.png"
+        class="popup-logo"
         alt="Cùng Tí Học Tiếng Trung"
       >
 
 
-
-      <!-- TEXT -->
-
-      <h3>
+      <h2>
         Chào bạn nhaaa! 🐷💗
-      </h3>
+      </h2>
+
 
       <p>
-
         Sau đây là
-        <strong>
-          3 phần quà Mini Game.
-        </strong>
+        <strong>3 phần quà Mini Game.</strong>
 
         <br><br>
 
         Bạn lựa chọn cho bản thân
-
-        <strong>
-          1 phần quà
-        </strong>
-
-        mình thích nhất nhé!
-
-        🎁
-
+        <strong>1 phần quà</strong>
+        mình thích nhất nhé! 🎁
       </p>
-
 
     </div>
 
   </div>
 
 
-
-  <!-- ======================
-       FOOTER
-  ======================= -->
-
-  <footer class="wrap">
-
+  <footer>
     Cùng Tí Học Tiếng Trung 🐷
-
   </footer>
 
 
-
-  <!-- ======================
-       JAVASCRIPT
-  ======================= -->
-
   <script>
 
-    const overlay =
-      document.getElementById(
-        "overlay"
-      );
+    const popup =
+      document.getElementById("welcomePopup");
 
-    const closeBtn =
-      document.getElementById(
-        "closeBtn"
-      );
+    const closeButton =
+      document.getElementById("closePopup");
 
 
-
-    /*
-      HIỆN POPUP
-    */
-
-    function showWelcome() {
-
-      /*
-        Nếu popup đã được xem
-        trong phiên hiện tại
-        thì không hiện lại.
-      */
+    function showPopup() {
 
       if (
-        sessionStorage.getItem(
-          "tiWelcomeSeen"
-        ) === "1"
+        sessionStorage.getItem("tiPopupClosed") === "yes"
       ) {
-
         return;
-
       }
 
-
-      overlay
-        .classList
-        .add(
-          "show"
-        );
-
-
-      overlay
-        .setAttribute(
-          "aria-hidden",
-          "false"
-        );
-
+      popup.classList.add("show");
     }
 
 
+    function closePopup() {
 
-    /*
-      ĐÓNG POPUP
-    */
-
-    function closeWelcome() {
+      popup.classList.remove("show");
 
       sessionStorage.setItem(
-        "tiWelcomeSeen",
-        "1"
+        "tiPopupClosed",
+        "yes"
       );
-
-
-      overlay
-        .classList
-        .remove(
-          "show"
-        );
-
-
-      overlay
-        .setAttribute(
-          "aria-hidden",
-          "true"
-        );
-
     }
 
 
-
-    /*
-      SAU 3 GIÂY
-      TỰ ĐỘNG HIỆN POPUP
-    */
+    /* POPUP HIỆN SAU 1 GIÂY */
 
     setTimeout(
-      showWelcome,
-      3000
+      showPopup,
+      1000
     );
 
 
+    /* BẤM X */
 
-    /*
-      CLICK NÚT X
-    */
-
-    closeBtn.addEventListener(
+    closeButton.addEventListener(
       "click",
-      closeWelcome
+      closePopup
     );
 
 
+    /* BẤM VÙNG TỐI CŨNG ĐÓNG */
 
-    /*
-      CLICK VÙNG TỐI
-      BÊN NGOÀI POPUP
-      CŨNG ĐÓNG
-    */
-
-    overlay.addEventListener(
+    popup.addEventListener(
       "click",
       function(event) {
 
-        if (
-          event.target === overlay
-        ) {
-
-          closeWelcome();
-
+        if (event.target === popup) {
+          closePopup();
         }
 
       }
     );
 
   </script>
-
 
 </body>
 </html>
