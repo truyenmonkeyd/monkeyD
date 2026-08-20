@@ -481,12 +481,13 @@
 
       <!-- NÚT TROLL -->
 
-      <button
-        class="troll-button"
-        id="trollButton"
-      >
-        × Troll bạn 😈
-      </button>
+     <button
+  class="close-button"
+  id="closePopup"
+  aria-label="Đóng"
+>
+  ×
+</button>
 
 
 
@@ -616,17 +617,17 @@
       POPUP SẼ HIỆN
     */
 
-    window.addEventListener(
-      "load",
-      function () {
+  window.addEventListener(
+  "load",
+  function () {
 
-        setTimeout(
-          showPopup,
-          1000
-        );
-
-      }
+    setTimeout(
+      showPopup,
+      200
     );
+
+  }
+);
 
 
 
