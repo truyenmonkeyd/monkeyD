@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TRĂN TRĂN</title>
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="TRĂN TRĂN">
+<meta property="og:url" content="https://truyenmonkeyd.github.io/monkeyD/tran-tran-omjd.html">
+<meta property="og:image" content="https://cdn.monkeydarchive.com/images/story/2026/08/26/1787719506-tran-tran-omjd.jpg">
+<meta property="og:image:secure_url" content="https://cdn.monkeydarchive.com/images/story/2026/08/26/1787719506-tran-tran-omjd.jpg">
+<meta property="og:image:alt" content="TRĂN TRĂN">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="TRĂN TRĂN">
+<meta name="twitter:image" content="https://cdn.monkeydarchive.com/images/story/2026/08/26/1787719506-tran-tran-omjd.jpg">
+<meta name="twitter:image:alt" content="TRĂN TRĂN">
+
+<style>
+*{box-sizing:border-box}
+html,body,button,input,a,div,span,p,h1,h2,h3{
+    font-family:Arial,Helvetica,sans-serif;
+    font-synthesis:none;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+html,body{margin:0;padding:0;background:#f5f5fb;color:#181818}
+button{color:inherit}a{color:inherit}
+.header{background:#fff;border-bottom:1px solid #e2e2e8}
+.header-top{max-width:1180px;margin:auto;padding:12px 18px;display:flex;align-items:center;gap:20px}
+.brand{font-size:27px;font-weight:700;color:#09a5e5;white-space:nowrap}
+.search{width:300px;height:40px;padding:0 12px;border:1px solid #ddd;border-radius:7px;outline:none;background:#fff;font-size:14px;font-weight:400}
+.account{margin-left:auto;font-size:13px;font-weight:400;color:#666;white-space:nowrap}
+.nav{background:#fff;border-bottom:1px solid #ddd}
+.nav-inner{max-width:1180px;margin:auto;display:flex;overflow-x:auto}
+.nav a{padding:14px 15px;font-size:14px;font-weight:400;text-decoration:none;white-space:nowrap}
+.container{max-width:1080px;margin:22px auto 55px;padding:0 14px}
+.state{display:none}.state.active{display:block}
+.gate{position:relative;min-height:720px;overflow:hidden;border:1px solid #e2e2e8;border-radius:17px;background:#eeeef4}
+.bg-grid{position:absolute;inset:0;padding:14px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;opacity:.66;filter:blur(.7px)}
+.bg-grid img{display:block;width:100%;height:100%;min-height:165px;object-fit:cover;border-radius:8px}
+.shade{position:absolute;inset:0;background:rgba(255,255,255,.40)}
+.gate-center{position:relative;z-index:2;min-height:720px;padding:22px;display:flex;align-items:center;justify-content:center}
+.box,.unlock{width:620px;max-width:100%;padding:28px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 18px 45px rgba(30,30,70,.16)}
+.unlock{width:760px;margin:auto}
+.main-title{margin:0 0 10px;font-size:24px;font-weight:700;line-height:1.4}
+.sub{font-size:14px;font-weight:400;line-height:1.7;color:#666}
+.cover{width:220px;max-width:65%;margin:18px auto}
+.cover img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;box-shadow:0 5px 18px rgba(0,0,0,.16)}
+.story-name{font-size:21px;font-weight:700;line-height:1.45}
+.story-meta{margin:7px 0;font-size:13px;font-weight:700;color:#0878ee}
+.done{margin-bottom:18px;font-size:12px;font-weight:700;color:#16a33c}
+.btn{width:100%;min-height:62px;padding:17px;display:flex;align-items:center;justify-content:center;border-radius:10px;color:#fff;font-size:18px;font-weight:700;text-decoration:none}
+.shopee{background:#ee4d2d;box-shadow:0 7px 20px rgba(238,77,45,.22)}
+.shopee:hover{background:#dc4529}
+.read{margin-top:20px;background:#11aa31}
+.read:hover{background:#0e972b}
+.note{margin-top:12px;font-size:12px;font-weight:400;line-height:1.6;color:#888}
+.check{width:70px;height:70px;margin:auto;display:grid;place-items:center;border-radius:50%;background:#e7f9eb;color:#16a33c;font-size:35px;font-weight:700}
+.profile{margin-bottom:16px;padding:20px;display:flex;align-items:center;gap:18px;background:#fff;border:1px solid #e1e1e9;border-radius:12px}
+.avatar{width:82px;height:82px;flex:0 0 auto;overflow:hidden;border-radius:50%;background:#eee}
+.avatar img{display:block;width:100%;height:100%;object-fit:cover}
+.profile h1{margin:0 0 7px;font-size:28px;font-weight:700}
+.profile-desc{margin-bottom:9px;font-size:13px;font-weight:400;line-height:1.55;color:#555}
+.stats{display:flex;flex-wrap:wrap;gap:7px 16px;font-size:13px;font-weight:400;color:#666}
+.library{padding:20px;background:#fff;border:1px solid #e1e1e9;border-radius:12px}
+.lib-head{margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+.lib-head h2{margin:0;font-size:22px;font-weight:700;line-height:1.4}
+.team{font-size:13px;font-weight:700;color:#0878ee;text-decoration:none;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px 14px}
+.card{width:100%;margin:0;padding:0;border:0;background:none;text-align:left;cursor:pointer}
+.card-cover{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:9px;background:#eee;box-shadow:0 2px 8px rgba(0,0,0,.08);cursor:pointer}
+.card-cover img{display:block;width:100%;height:100%;object-fit:cover;cursor:pointer}
+.full-badge{position:absolute;top:7px;right:7px;padding:4px 7px;border-radius:5px;background:#11aa31;color:#fff;font-size:10px;font-weight:700;pointer-events:none}
+.library-title{margin-top:8px;font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;line-height:1.38;letter-spacing:0;word-break:normal;overflow-wrap:break-word}
+.library-meta{margin-top:4px;font-size:11px;font-weight:400;color:#777}
+.extra-story{display:none}.extra-story.show{display:block}
+.more{width:100%;margin-top:22px;padding:14px;border:1px solid #d9dce5;border-radius:8px;background:#fafafa;font-size:13px;font-weight:700;cursor:pointer}
+.more:disabled{cursor:default;color:#777}
+@media(max-width:900px){.grid,.bg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}
+@media(max-width:680px){
+  .account{display:none}
+  .grid,.bg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .profile{align-items:flex-start}
+  .lib-head{display:block}
+  .team{display:inline-block;margin-top:7px}
+}
+@media(max-width:470px){
+  .header-top{gap:10px}.brand{font-size:21px}.search{width:100%;min-width:0}
+  .box,.unlock{padding:22px 16px}.main-title{font-size:21px}
+  .profile{padding:16px}.avatar{width:64px;height:64px}.profile h1{font-size:23px}.library{padding:16px}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="header-top">
+<div class="brand">TRUYỆN FULL</div>
+<input class="search" type="text" placeholder="Tìm truyện">
+<div class="account">Tủ truyện của bạn</div>
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-inner">
+<a href="#">Trang chủ</a>
+<a href="#">Truyện mới</a>
+<a href="#">Thể loại</a>
+<a href="#">Truyện Full</a>
+<a href="#">Truyện Sáng Tác</a>
+<a href="#">Team</a>
+<a href="#">Nghe Audio</a>
+<a href="#">Tủ truyện</a>
+</div>
+</nav>
+
+<main class="container">
+
+<section id="gateState" class="state active">
+<div class="gate">
+<div id="bgGrid" class="bg-grid"></div>
+<div class="shade"></div>
+<div class="gate-center">
+<div class="box">
+
+<h1 class="main-title">MONG BẠN BẤM VÀO SHOPEE ĐỂ ĐỌC TRUYỆN NÀY 💗</h1>
+<div class="sub">Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.</div>
+
+<div class="cover"><img id="gateCover" src="" alt=""></div>
+
+<div id="gateTitle" class="story-name"></div>
+<div id="gateMeta" class="story-meta"></div>
+<div class="done">TRUYỆN ĐÃ HOÀN THÀNH</div>
+
+<a id="shopeeButton" class="btn shopee" href="#" target="_blank" rel="noopener noreferrer">
+🛍 MỞ SHOPEE ĐỂ TIẾP TỤC ĐỌC
+</a>
+
+<div class="note">
+Shopee sẽ mở ở tab hoặc ứng dụng khác.<br>
+Sau đó quay lại trang này để tiếp tục.
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<section id="unlockState" class="state">
+<div class="unlock">
+
+<div class="check">✓</div>
+<h2>ĐÃ SẴN SÀNG ĐỌC TRUYỆN 💗</h2>
+
+<div class="sub">
+Cảm ơn bạn đã ghé Shopee.<br>
+Bây giờ bạn có thể mở truyện để đọc.
+</div>
+
+<div class="cover"><img id="unlockCover" src="" alt=""></div>
+<div id="unlockTitle" class="story-name"></div>
+<div class="done">TRUYỆN ĐÃ HOÀN THÀNH</div>
+
+<a id="readButton" class="btn read" href="#" target="_blank" rel="noopener noreferrer">
+ĐỌC TRUYỆN NGAY
+</a>
+
+<div class="note">
+Truyện sẽ mở ở tab khác.<br>
+Khi quay lại trang này, thư viện Tí Hay Đọc sẽ hiện ra.
+</div>
+
+</div>
+</section>
+
+<section id="libraryState" class="state">
+
+<div class="profile">
+<div class="avatar">
+<img src="https://cdn.monkeydarchive.com/images/avatar/thumbs/230/2025/11/29/1764396590-56768.jpg" alt="Tí Hay Đọc">
+</div>
+
+<div>
+<h1>Tí Hay Đọc</h1>
+<div class="profile-desc">CHÀO CÁC BÁC ĐÃ GHÉ Ổ CỦA TÍ, TÍ CHÚC CÁC BÁC ĐỌC TRUYỆN VUI VẺ ẠAA</div>
+<div class="stats">
+<span>♡ 23 lượt theo dõi</span>
+<span>👁 3.030.543 lượt xem</span>
+<span>📚 866 truyện</span>
+</div>
+</div>
+</div>
+
+<div class="library">
+
+<div class="lib-head">
+<h2>Đọc thêm truyện của Tí Hay Đọc</h2>
+<a class="team" href="https://monkeydd.com/nhom-dich/56768/" target="_blank" rel="noopener noreferrer">Xem trang nhóm ↗</a>
+</div>
+
+<div id="storyGrid" class="grid"></div>
+
+<button id="loadMore" class="more" type="button">
+XEM THÊM TRUYỆN ↓
+</button>
+
+</div>
+</section>
+
+</main>
+
+<script>
+const PRIMARY_SHOPEE=["https://s.shopee.vn/2LXOs0571K", "https://s.shopee.vn/2VqpekcaTm", "https://s.shopee.vn/70JF8OytVM", "https://s.shopee.vn/7AcfKhyGAP", "https://s.shopee.vn/6fgOjn0ABK"];
+const ALL_7_SHOPEE=["https://s.shopee.vn/2LXOs0571K", "https://s.shopee.vn/2VqpekcaTm", "https://s.shopee.vn/70JF8OytVM", "https://s.shopee.vn/7AcfKhyGAP", "https://s.shopee.vn/6fgOjn0ABK", "https://spf.shopee.vn/2BE7YIEKEi", "https://spf.shopee.vn/AUtFTdd7Q1"];
+
+const PRIMARY_STORY={
+  title:"TRĂN TRĂN",
+  url:"https://monkeydd.com/tran-tran-omjd.html",
+  cover:"https://cdn.monkeydarchive.com/images/story/2026/08/26/1787719506-tran-tran-omjd.jpg",
+  parts:"7 phần",
+  shopee:PRIMARY_SHOPEE[Math.floor(Math.random()*PRIMARY_SHOPEE.length)]
+};
+
+const STORIES=[{"title":"LIỄU TRẦN DUYÊN","url":"https://monkeydd.com/lieu-tran-duyen.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/26/1787710219-lieu-tran-duyen.jpg","parts":"12 phần","shopee":"https://s.shopee.vn/2LXOs0571K"},{"title":"BẠO QUÂN LÀ ĐỨA TRẺ NGHỊCH NGỢM","url":"https://monkeydd.com/bao-quan-la-dua-tre-nghich-ngom.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/26/1787705428-bao-quan-la-dua-tre-nghich-ngom.jpg","parts":"8 phần","shopee":"https://s.shopee.vn/2VqpekcaTm"},{"title":"BẠN TRAI BẮT TÔI NGHỈ VIỆC CHĂM CẢ NHÀ","url":"https://monkeydd.com/ban-trai-bat-toi-nghi-viec-cham-ca-nha.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/26/1787703093-ban-trai-bat-toi-nghi-viec-cham-ca-nha.jpg","parts":"9 phần","shopee":"https://s.shopee.vn/70JF8OytVM"},{"title":"TIỂU TÀI THẦN","url":"https://monkeydd.com/tieu-tai-than.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787677193-tieu-tai-than.jpg","parts":"9 phần","shopee":"https://s.shopee.vn/7AcfKhyGAP"},{"title":"CHIÊU HOA VỀ PHÍA TRƯỜNG PHONG","url":"https://monkeydd.com/chieu-hoa-ve-phia-truong-phong.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787671636-chieu-hoa-ve-phia-truong-phong.jpg","parts":"10 phần","shopee":"https://s.shopee.vn/6fgOjn0ABK"},{"title":"NÀNG LÀ NGƯỜI TRỌNG SINH","url":"https://monkeydd.com/nang-la-nguoi-trong-sinh.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787666762-nang-la-nguoi-trong-sinh.jpg","parts":"8 phần","shopee":"https://spf.shopee.vn/2BE7YIEKEi"},{"title":"NAM CHI","url":"https://monkeydd.com/nam-chi-bjms.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787662986-nam-chi-bjms.jpg","parts":"9 phần","shopee":"https://spf.shopee.vn/AUtFTdd7Q1"},{"title":"NGÀY TÔI MANG THAI, CHỒNG ĐEO NHẪN CƯỚI CỦA NGƯỜI KHÁC","url":"https://monkeydd.com/ngay-toi-mang-thai-chong-deo-nhan-cuoi-cua-nguoi-khac.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787657362-ngay-toi-mang-thai-chong-deo-nhan-cuoi-cua-nguoi-khac.jpg","parts":"8 phần","shopee":"https://s.shopee.vn/2LXOs0571K"},{"title":"THÁI HẬU VỀ HƯU, BIẾN ĐIỆN TỪ NINH THÀNH TY TRÔNG TRẺ","url":"https://monkeydd.com/thai-hau-ve-huu-bien-dien-tu-ninh-thanh-ty-trong-tre.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787648467-thai-hau-ve-huu-bien-dien-tu-ninh-thanh-ty-trong-tre.jpg","parts":"9 phần","shopee":"https://s.shopee.vn/2VqpekcaTm"},{"title":"NHỮNG KHOẢN NHỎ PHẢI TÍNH","url":"https://monkeydd.com/nhung-khoan-nho-phai-tinh.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787640554-nhung-khoan-nho-phai-tinh.jpg","parts":"10 phần","shopee":"https://s.shopee.vn/70JF8OytVM"},{"title":"ĐỨA CON BỊ RUỒNG BỎ","url":"https://monkeydd.com/dua-con-bi-ruong-bo.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787639764-dua-con-bi-ruong-bo.jpg","parts":"8 phần","shopee":"https://s.shopee.vn/7AcfKhyGAP"},{"title":"TRỤC THƯỢNG XUÂN LAI","url":"https://monkeydd.com/truc-thuong-xuan-lai.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787630724-truc-thuong-xuan-lai.jpg","parts":"8 phần","shopee":"https://s.shopee.vn/6fgOjn0ABK"},{"title":"LY HẠ","url":"https://monkeydd.com/ly-ha-phco.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787625406-ly-ha-phco.jpg","parts":"10 phần","shopee":"https://spf.shopee.vn/2BE7YIEKEi"},{"title":"KHÓI TAN THẤY XUÂN","url":"https://monkeydd.com/khoi-tan-thay-xuan.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/25/1787619749-khoi-tan-thay-xuan.jpg","parts":"7 phần","shopee":"https://spf.shopee.vn/AUtFTdd7Q1"},{"title":"MƯỢN LÒNG CHÀNG","url":"https://monkeydd.com/muon-long-chang-pect.html","cover":"https://cdn.monkeydarchive.com/images/story/2026/08/24/1787588229-muon-long-chang-pect.jpg","parts":"13 phần","shopee":"https://s.shopee.vn/2LXOs0571K"}];
+
+const FLOW_KEY="monkeydFlow:tran-tran-omjd";
+const STORY_KEY="monkeydStory:tran-tran-omjd";
+
+const gateState=document.getElementById("gateState");
+const unlockState=document.getElementById("unlockState");
+const libraryState=document.getElementById("libraryState");
+
+const gateCover=document.getElementById("gateCover");
+const unlockCover=document.getElementById("unlockCover");
+const gateTitle=document.getElementById("gateTitle");
+const unlockTitle=document.getElementById("unlockTitle");
+const gateMeta=document.getElementById("gateMeta");
+
+const shopeeButton=document.getElementById("shopeeButton");
+const readButton=document.getElementById("readButton");
+
+const storyGrid=document.getElementById("storyGrid");
+const bgGrid=document.getElementById("bgGrid");
+const loadMore=document.getElementById("loadMore");
+
+let selectedStory=PRIMARY_STORY;
+let pendingReturn=null;
+let pageWentHidden=false;
+
+function fallback(){
+  const svg=`
+  <svg xmlns="http://www.w3.org/2000/svg" width="600" height="800">
+    <defs>
+      <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0" stop-color="#f6e7df"/>
+        <stop offset="1" stop-color="#dceaf5"/>
+      </linearGradient>
+    </defs>
+    <rect width="600" height="800" fill="url(#g)"/>
+    <text x="300" y="355" text-anchor="middle" font-family="Arial" font-size="32" font-weight="700" fill="#555">TRUYỆN FULL</text>
+    <text x="300" y="415" text-anchor="middle" font-family="Arial" font-size="22" font-weight="400" fill="#777">TÍ HAY ĐỌC</text>
+  </svg>`;
+
+  return "data:image/svg+xml;charset=UTF-8,"+encodeURIComponent(svg);
+}
+
+function setImage(image,source,altText){
+  image.onerror=()=>{
+    image.onerror=null;
+    image.src=fallback();
+  };
+  image.src=source||fallback();
+  image.alt=altText||"";
+}
+
+function escapeHtml(value){
+  const div=document.createElement("div");
+  div.textContent=value??"";
+  return div.innerHTML;
+}
+
+function showState(state){
+  [gateState,unlockState,libraryState].forEach(item=>item.classList.remove("active"));
+  state.classList.add("active");
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+function prepareGate(){
+  setImage(gateCover,selectedStory.cover,selectedStory.title);
+  gateTitle.textContent=selectedStory.title;
+  gateMeta.textContent=selectedStory.parts+" · Đã đủ bộ · FULL";
+  shopeeButton.href=selectedStory.shopee;
+}
+
+function prepareUnlock(){
+  setImage(unlockCover,selectedStory.cover,selectedStory.title);
+  unlockTitle.textContent=selectedStory.title;
+  readButton.href=selectedStory.url;
+}
+
+function saveSelectedStory(){
+  try{
+    sessionStorage.setItem(STORY_KEY,JSON.stringify(selectedStory));
+  }catch(e){}
+}
+
+function restoreSelectedStory(){
+  try{
+    const saved=sessionStorage.getItem(STORY_KEY);
+    if(saved){
+      const parsed=JSON.parse(saved);
+      if(parsed && parsed.url){
+        selectedStory=parsed;
+      }
+    }
+  }catch(e){}
+}
+
+function rememberFlow(next){
+  pendingReturn=next;
+  pageWentHidden=false;
+  saveSelectedStory();
+
+  try{
+    sessionStorage.setItem(FLOW_KEY,next);
+  }catch(e){}
+}
+
+function clearPending(){
+  pendingReturn=null;
+  pageWentHidden=false;
+
+  try{
+    sessionStorage.removeItem(FLOW_KEY);
+  }catch(e){}
+}
+
+function finishReturn(next){
+  clearPending();
+
+  if(next==="unlock"){
+    prepareUnlock();
+    showState(unlockState);
+    return;
+  }
+
+  if(next==="library"){
+    showState(libraryState);
+  }
+}
+
+function handleReturn(){
+  if(document.hidden) return;
+
+  let next=pendingReturn;
+
+  try{
+    next=next || sessionStorage.getItem(FLOW_KEY);
+  }catch(e){}
+
+  if(!next) return;
+
+  restoreSelectedStory();
+  finishReturn(next);
+}
+
+function renderBlur(){
+  bgGrid.innerHTML="";
+
+  STORIES.forEach(story=>{
+    const image=document.createElement("img");
+    image.loading="lazy";
+    setImage(image,story.cover,"");
+    bgGrid.appendChild(image);
+  });
+}
+
+function renderLibrary(){
+  storyGrid.innerHTML="";
+
+  STORIES.forEach((story,index)=>{
+    const card=document.createElement("button");
+    card.type="button";
+    card.className="card";
+
+    if(index>=10){
+      card.classList.add("extra-story");
+    }
+
+    card.innerHTML=`
+      <div class="card-cover">
+        <img loading="lazy">
+        <span class="full-badge">FULL</span>
+      </div>
+      <div class="library-title">${escapeHtml(story.title)}</div>
+      <div class="library-meta">${escapeHtml(story.parts)} · FULL</div>
+    `;
+
+    setImage(card.querySelector("img"),story.cover,story.title);
+
+    card.addEventListener("click",()=>{
+      selectedStory={
+        ...story,
+        shopee:ALL_7_SHOPEE[index%ALL_7_SHOPEE.length]
+      };
+
+      saveSelectedStory();
+      prepareGate();
+      prepareUnlock();
+      showState(gateState);
+    });
+
+    storyGrid.appendChild(card);
+  });
+}
+
+shopeeButton.addEventListener("click",()=>{
+  rememberFlow("unlock");
+
+  setTimeout(()=>{
+    let next=pendingReturn;
+    try{
+      next=next || sessionStorage.getItem(FLOW_KEY);
+    }catch(e){}
+
+    if(next==="unlock"){
+      finishReturn("unlock");
+    }
+  },650);
+});
+
+readButton.addEventListener("click",()=>{
+  rememberFlow("library");
+
+  setTimeout(()=>{
+    let next=pendingReturn;
+    try{
+      next=next || sessionStorage.getItem(FLOW_KEY);
+    }catch(e){}
+
+    if(next==="library"){
+      finishReturn("library");
+    }
+  },650);
+});
+
+document.addEventListener("visibilitychange",()=>{
+  if(document.hidden && pendingReturn){
+    pageWentHidden=true;
+    return;
+  }
+
+  handleReturn();
+});
+
+window.addEventListener("pagehide",()=>{
+  if(pendingReturn){
+    pageWentHidden=true;
+  }
+});
+
+window.addEventListener("pageshow",()=>{
+  restoreSelectedStory();
+  handleReturn();
+});
+
+window.addEventListener("blur",()=>{
+  if(pendingReturn){
+    pageWentHidden=true;
+  }
+});
+
+window.addEventListener("focus",handleReturn);
+
+loadMore.addEventListener("click",()=>{
+  document.querySelectorAll(".extra-story").forEach(card=>card.classList.add("show"));
+  loadMore.textContent="ĐÃ HIỆN THÊM TRUYỆN ✓";
+  loadMore.disabled=true;
+});
+
+restoreSelectedStory();
+prepareGate();
+prepareUnlock();
+renderBlur();
+renderLibrary();
+
+try{
+  if(sessionStorage.getItem(FLOW_KEY)){
+    setTimeout(handleReturn,120);
+  }
+}catch(e){}
+</script>
+
+</body>
+</html>
