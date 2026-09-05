@@ -8,13 +8,13 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="NGƯỜI PHỤ, NGƯỜI THƯƠNG TRỌN LÒNG">
 <meta property="og:url" content="https://truyenmonkeyd.github.io/monkeyD/nguoi-phu-nguoi-thuong-tron-long.html">
-<meta property="og:image" content="https://monkeydd.com/images/story/2026/05/31/1780207003-nguoi-phu-nguoi-thuong-tron-long.jpg">
-<meta property="og:image:secure_url" content="https://monkeydd.com/images/story/2026/05/31/1780207003-nguoi-phu-nguoi-thuong-tron-long.jpg">
+<meta property="og:image" content="https://monkeydd.com/images/story/2026/05/30/1780150137-nguoi-phu-nguoi-thuong-tron-long.jpg">
+<meta property="og:image:secure_url" content="https://monkeydd.com/images/story/2026/05/30/1780150137-nguoi-phu-nguoi-thuong-tron-long.jpg">
 <meta property="og:image:alt" content="NGƯỜI PHỤ, NGƯỜI THƯƠNG TRỌN LÒNG">
 
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NGƯỜI PHỤ, NGƯỜI THƯƠNG TRỌN LÒNG">
-<meta name="twitter:image" content="https://monkeydd.com/images/story/2026/05/31/1780207003-nguoi-phu-nguoi-thuong-tron-long.jpg">
+<meta name="twitter:image" content="https://monkeydd.com/images/story/2026/05/30/1780150137-nguoi-phu-nguoi-thuong-tron-long.jpg">
 <meta name="twitter:image:alt" content="NGƯỜI PHỤ, NGƯỜI THƯƠNG TRỌN LÒNG">
 
 <style>
@@ -218,7 +218,7 @@ const ALL_AFFILIATE=["https://s.shopee.vn/2qUFETQUlc","https://s.shopee.vn/qjAqp
 const PRIMARY_STORY={
   title:"NGƯỜI PHỤ, NGƯỜI THƯƠNG TRỌN LÒNG",
   url:"https://monkeydd.com/nguoi-phu-nguoi-thuong-tron-long.html",
-  cover:"https://monkeydd.com/images/story/2026/05/31/1780207003-nguoi-phu-nguoi-thuong-tron-long.jpg",
+  cover:"https://monkeydd.com/images/story/2026/05/30/1780150137-nguoi-phu-nguoi-thuong-tron-long.jpg",
   parts:"9 phần",
   shopee:PRIMARY_AFFILIATE[Math.floor(Math.random()*PRIMARY_AFFILIATE.length)]
 };
@@ -283,7 +283,13 @@ function fallback(){
 }
 
 function setImage(image,source,altText){
+  let triedMirror=false;
   image.onerror=()=>{
+    if(!triedMirror && source && source.includes("monkeydd.com/images/story/")){
+      triedMirror=true;
+      image.src=source.replace("https://monkeydd.com/images/story/","https://cdn.monkeydarchive.com/images/story/");
+      return;
+    }
     image.onerror=null;
     image.src=fallback();
   };
