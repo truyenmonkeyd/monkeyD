@@ -216,8 +216,8 @@ const PRIMARY_SHOPEE=["https://s.shopee.vn/2qUFETQUlc", "https://s.shopee.vn/qjA
 const ALL_AFFILIATE=["https://s.shopee.vn/2qUFETQUlc", "https://s.shopee.vn/qjAqpRSRv", "https://s.shopee.vn/3LQZJtz0jv", "https://s.shopee.vn/20vBjT9Whj", "https://vt.tiktok.com/ZS9B9uYcQN7rN-RhYtg/"];
 
 const PRIMARY_STORY={
-  title:"NHỊ PHẨM PHU NHÂN",
-  url:"https://monkeydd.com/nhi-pham-phu-nhan.html",
+  title:"TIẾNG GÕ MÕ",
+  url:"https://monkeydd.com/tieng-go-mo.html",
   cover:"https://monkeydd.com/images/story/2026/09/07/1788779210-tieng-go-mo.jpg",
   parts:"10 phần",
   status:"FULL",
@@ -242,8 +242,8 @@ const STORIES=[
 {title:"TA GẢ CHO TIỂU BÁ VƯƠNG",url:"https://monkeydd.com/ta-ga-cho-tieu-ba-vuong.html",cover:"https://monkeydd.com/images/story/2026/09/06/1788682803-ta-ga-cho-tieu-ba-vuong.jpg",parts:"8 phần",status:"FULL",shopee:"https://vt.tiktok.com/ZS9B9uYcQN7rN-RhYtg/"}
 ];
 
-const FLOW_KEY="monkeydFlow:tieng-go-mo";
-const STORY_KEY="monkeydStory:tieng-go-mo";
+const FLOW_KEY="monkeydFlow:tieng-go-mo:v2";
+const STORY_KEY="monkeydStory:tieng-go-mo:v2";
 
 const gateState=document.getElementById("gateState");
 const unlockState=document.getElementById("unlockState");
@@ -341,11 +341,21 @@ function restoreSelectedStory(){
     const saved=sessionStorage.getItem(STORY_KEY);
     if(saved){
       const parsed=JSON.parse(saved);
-      if(parsed && parsed.url){
+      const isPrimary=parsed && parsed.url===PRIMARY_STORY.url;
+      const isLibraryStory=parsed && STORIES.some(story=>story.url===parsed.url);
+
+      if(parsed && parsed.url && (isPrimary || isLibraryStory)){
         selectedStory=parsed;
+      }else{
+        sessionStorage.removeItem(STORY_KEY);
+        selectedStory=PRIMARY_STORY;
       }
+    }else{
+      selectedStory=PRIMARY_STORY;
     }
-  }catch(e){}
+  }catch(e){
+    selectedStory=PRIMARY_STORY;
+  }
 }
 
 function rememberFlow(next){
