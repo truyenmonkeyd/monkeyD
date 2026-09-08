@@ -242,8 +242,8 @@ const STORIES=[
 {title:"TÔI VỪA HẾT Ở CỮ, MẸ CHỒNG ĐÃ GIỤC TÔI ĐẾN CHĂM CÔ EM CHỒNG ĐANG Ở CỮ",url:"https://monkeydd.com/toi-vua-het-o-cu-me-chong-da-giuc-toi-den-cham-co-em-chong-dang-o-cu.html",cover:"https://monkeydd.com/images/story/2026/08/06/1786034616-toi-vua-het-o-cu-me-chong-da-giuc-toi-den-cham-co-em-chong-dang-o-cu.jpg",parts:"12 phần",status:"FULL",shopee:"https://s.shopee.vn/8plNgvYDYZ"}
 ];
 
-const FLOW_KEY="monkeydFlow:anh-bo-di-cung-con-trai-toi-o-lai-voi-con-gai-tu-ky:v30";
-const STORY_KEY="monkeydStory:anh-bo-di-cung-con-trai-toi-o-lai-voi-con-gai-tu-ky:v30";
+const FLOW_KEY="monkeydFlow:anh-bo-di-cung-con-trai-toi-o-lai-voi-con-gai-tu-ky:v32";
+const STORY_KEY="monkeydStory:anh-bo-di-cung-con-trai-toi-o-lai-voi-con-gai-tu-ky:v32";
 
 const gateState=document.getElementById("gateState");
 const unlockState=document.getElementById("unlockState");
@@ -403,4 +403,125 @@ function renderBlur(){
     const image=document.createElement("img");
     image.loading="lazy";
     setImage(image,story.cover,"");
- 
+    bgGrid.appendChild(image);
+  });
+}
+
+function renderLibrary(){
+  storyGrid.innerHTML="";
+
+  STORIES.forEach((story,index)=>{
+    const card=document.createElement("button");
+    card.type="button";
+    card.className="card";
+
+    if(index>=10){
+      card.classList.add("extra-story");
+    }
+
+    card.innerHTML=`
+      <div class="card-cover">
+        <img loading="lazy">
+        <span class="full-badge">FULL</span>
+      </div>
+      <div class="library-title">${escapeHtml(story.title)}</div>
+      <div class="library-meta">${escapeHtml(story.parts)} · FULL</div>
+    `;
+
+    setImage(card.querySelector("img"),story.cover,story.title);
+
+    card.addEventListener("click",()=>{
+      selectedStory={
+        ...story,
+        shopee:ALL_AFFILIATE[index%ALL_AFFILIATE.length]
+      };
+
+      saveSelectedStory();
+      prepareGate();
+      prepareUnlock();
+      showState(gateState);
+    });
+
+    storyGrid.appendChild(card);
+  });
+}
+
+shopeeButton.addEventListener("click",()=>{
+  rememberFlow("unlock");
+
+  setTimeout(()=>{
+    let next=pendingReturn;
+    try{
+      next=next || sessionStorage.getItem(FLOW_KEY);
+    }catch(e){}
+
+    if(next==="unlock"){
+      finishReturn("unlock");
+    }
+  },650);
+});
+
+readButton.addEventListener("click",()=>{
+  rememberFlow("library");
+
+  setTimeout(()=>{
+    let next=pendingReturn;
+    try{
+      next=next || sessionStorage.getItem(FLOW_KEY);
+    }catch(e){}
+
+    if(next==="library"){
+      finishReturn("library");
+    }
+  },650);
+});
+
+document.addEventListener("visibilitychange",()=>{
+  if(document.hidden && pendingReturn){
+    pageWentHidden=true;
+    return;
+  }
+
+  handleReturn();
+});
+
+window.addEventListener("pagehide",()=>{
+  if(pendingReturn){
+    pageWentHidden=true;
+  }
+});
+
+window.addEventListener("pageshow",()=>{
+  restoreSelectedStory();
+  handleReturn();
+});
+
+window.addEventListener("blur",()=>{
+  if(pendingReturn){
+    pageWentHidden=true;
+  }
+});
+
+window.addEventListener("focus",handleReturn);
+
+loadMore.addEventListener("click",()=>{
+  document.querySelectorAll(".extra-story").forEach(card=>card.classList.add("show"));
+  loadMore.textContent="ĐÃ HIỆN THÊM TRUYỆN ✓";
+  loadMore.disabled=true;
+});
+
+restoreSelectedStory();
+prepareGate();
+prepareUnlock();
+renderBlur();
+renderLibrary();
+
+try{
+  if(sessionStorage.getItem(FLOW_KEY)){
+    setTimeout(handleReturn,120);
+  }
+}catch(e){}
+</script>
+
+</body>
+</html>
