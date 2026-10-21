@@ -31,6 +31,23 @@ html,body{margin:0;padding:0;background:#f5f5fb;color:#181818}button{color:inher
 .library{padding:20px;background:#fff;border:1px solid #e1e1e9;border-radius:12px}.lib-head{margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:15px}.lib-head h2{margin:0;font-size:22px;font-weight:700;line-height:1.4}.team{font-size:13px;font-weight:700;color:#0878ee;text-decoration:none;white-space:nowrap}
 .grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px 14px}.card{width:100%;margin:0;padding:0;border:0;background:none;text-align:left;cursor:pointer}.card-cover{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:9px;background:#eee;box-shadow:0 2px 8px rgba(0,0,0,.08)}.card-cover img{display:block;width:100%;height:100%;object-fit:cover}.full-badge{position:absolute;top:7px;right:7px;padding:4px 7px;border-radius:5px;background:#11aa31;color:#fff;font-size:10px;font-weight:700;pointer-events:none}.library-title{margin-top:8px;font-size:13px;font-weight:700;line-height:1.38;overflow-wrap:break-word}.library-meta{margin-top:4px;font-size:11px;color:#777}.extra-story{display:none}.extra-story.show{display:block}.more{width:100%;margin-top:22px;padding:14px;border:1px solid #d9dce5;border-radius:8px;background:#fafafa;font-size:13px;font-weight:700;cursor:pointer}.more:disabled{cursor:default;color:#777}
 @media(max-width:900px){.grid,.bg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:680px){.account{display:none}.grid,.bg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.profile{align-items:flex-start}.lib-head{display:block}.team{display:inline-block;margin-top:7px}}@media(max-width:470px){.header-top{gap:10px}.brand{font-size:21px}.search{width:100%;min-width:0}.box,.unlock{padding:22px 16px}.main-title{font-size:21px}.profile{padding:16px}.avatar{width:64px;height:64px}.profile h1{font-size:23px}.library{padding:16px}}
+
+/* Ho tro trinh duyet Facebook: chi hien sau khi khach bam DOC TRUYEN NGAY. */
+.external-modal[hidden]{display:none!important}
+.external-modal{position:fixed;inset:0;z-index:9999;display:flex;align-items:center;justify-content:center;padding:16px;background:rgba(15,23,42,.72);overflow:auto}
+.external-card{position:relative;width:100%;max-width:500px;max-height:calc(100dvh - 32px);overflow-y:auto;background:#fff;border-radius:18px;padding:26px 22px 22px;box-shadow:0 24px 68px rgba(0,0,0,.28);text-align:center}
+.external-close{position:absolute;top:9px;right:12px;border:0;background:transparent;color:#555;padding:8px 11px;cursor:pointer;font-size:26px;line-height:1}
+.external-icon{margin:5px auto 12px;font-size:40px;line-height:1}
+.external-title{font-size:21px;line-height:1.3;font-weight:800;margin:0 18px 10px}
+.external-desc{font-size:14px;color:#555;line-height:1.65;margin:0 0 17px}
+.external-step{background:#eff8ff;text-align:left;padding:13px 15px;border-radius:10px;font-size:13px;line-height:1.7;margin:14px 0;color:#265877}
+.external-action{width:100%;display:flex;justify-content:center;align-items:center;min-height:52px;margin:10px 0 0;border:0;border-radius:9px;background:#0b9e39;color:#fff;text-decoration:none;text-align:center;cursor:pointer;font-size:15px;font-weight:750;padding:13px}
+.external-copy{background:#128bd5}.external-inside{background:#f2f3f7;color:#30353e;border:1px solid #e2e4eb}
+.external-url{max-height:65px;overflow:auto;word-break:break-all;background:#f7f7fa;border-radius:7px;padding:11px;margin-top:12px;font-size:12px;color:#424242;text-align:left}
+.external-feedback{font-size:13px;font-weight:700;color:#14843e;min-height:19px;margin-top:6px}
+.external-small{font-size:12px;line-height:1.6;color:#737373;margin:12px 0 0}
+body.external-locked{overflow:hidden}
+@media(max-width:470px){.external-card{padding:23px 16px 18px}.external-title{font-size:19px}}
 </style></head><body>
 
 <header class="header"><div class="header-top"><div class="brand">TRUYỆN FULL</div><input class="search" type="text" placeholder="Tìm truyện"><div class="account">Tủ truyện của bạn</div></div></header>
@@ -60,6 +77,24 @@ html,body{margin:0;padding:0;background:#f5f5fb;color:#181818}button{color:inher
 <a class="team" href="https://monkeydd.com/nhom-dich/56768" target="_blank" rel="noopener noreferrer">Xem trang nhóm ↗</a></div>
 <div id="storyGrid" class="grid"></div><button id="loadMore" class="more" type="button">XEM THÊM TRUYỆN ↓</button></div>
 </section></main>
+
+
+<!-- Bang ho tro khi truyen duoc mo tu trinh duyet tich hop Facebook. -->
+<div id="externalBrowserModal" class="external-modal" role="dialog" aria-modal="true" aria-labelledby="externalModalTitle" hidden>
+  <div class="external-card">
+    <button id="closeBrowserModal" class="external-close" type="button" aria-label="Dong">&times;</button>
+    <div class="external-icon">📖</div>
+    <h2 id="externalModalTitle" class="external-title">MỞ TRUYỆN BẰNG CHROME / SAFARI</h2>
+    <p class="external-desc">MonkeyD không hỗ trợ đọc truyện trong trình duyệt Facebook. Bạn đã tới bước đọc truyện rồi — hãy mở bằng trình duyệt ngoài để đọc bình thường nhé!</p>
+    <a id="openChromeButton" class="external-action" href="#">🌐 THỬ MỞ BẰNG CHROME</a>
+    <div id="browserInstructions" class="external-step"></div>
+    <div id="browserStoryUrl" class="external-url"></div>
+    <button id="copyBrowserLink" type="button" class="external-action external-copy">📋 SAO CHÉP LINK TRUYỆN</button>
+    <div id="browserCopyFeedback" class="external-feedback" role="status" aria-live="polite"></div>
+    <a id="openInsideButton" class="external-action external-inside" href="#" target="_blank" rel="noopener noreferrer">VẪN MỞ TRONG FACEBOOK</a>
+    <p class="external-small">Nếu Chrome không bật lên, hãy chọn “Sao chép link truyện”, mở Safari hoặc Chrome trên điện thoại, rồi dán link để đọc. Không cần ủng hộ lại.</p>
+  </div>
+</div>
 
 <script>
 const PRIMARY_AFFILIATE=["https://s.shopee.vn/6AlFIHjypu","https://s.shopee.vn/50ZHuA14yI","https://s.shopee.vn/2gBN7oftXd","https://s.shopee.vn/8V9A4PUTtQ","https://vt.tiktok.com/ZS9B9uYcQN7rN-RhYtg/"];
@@ -99,7 +134,72 @@ function handleReturn(){if(document.hidden)return;let n=pendingReturn;try{n=n||s
 function renderBlur(){STORIES.forEach(s=>{const i=document.createElement("img");i.loading="lazy";setImage(i,s.cover,"");bgGrid.appendChild(i)})}
 function renderLibrary(){STORIES.forEach((s,idx)=>{const c=document.createElement("button");c.type="button";c.className="card";if(idx>=10)c.classList.add("extra-story");c.innerHTML=`<div class="card-cover"><img loading="lazy"><span class="full-badge">FULL</span></div><div class="library-title">${esc(s.title)}</div><div class="library-meta">${esc(s.parts)} · FULL</div>`;setImage(c.querySelector("img"),s.cover,s.title);c.onclick=()=>{selectedStory={...s,affiliate:ALL_AFFILIATE[Math.floor(Math.random()*ALL_AFFILIATE.length)]};save();prepareGate();prepareUnlock();showState(gateState)};storyGrid.appendChild(c)})}
 affiliateButton.onclick=()=>{remember("unlock");setTimeout(()=>{let n=pendingReturn;try{n=n||sessionStorage.getItem(FLOW_KEY)}catch(e){}if(n==="unlock")finish("unlock")},650)};
-readButton.onclick=()=>{remember("library");setTimeout(()=>{let n=pendingReturn;try{n=n||sessionStorage.getItem(FLOW_KEY)}catch(e){}if(n==="library")finish("library")},650)};
+// Khi o trong Facebook: khong mo MonkeyD trong WebView ma hien cach mo trinh duyet ngoai.
+const externalBrowserModal=document.getElementById("externalBrowserModal");
+const closeBrowserModal=document.getElementById("closeBrowserModal");
+const openChromeButton=document.getElementById("openChromeButton");
+const copyBrowserLink=document.getElementById("copyBrowserLink");
+const browserStoryUrl=document.getElementById("browserStoryUrl");
+const browserInstructions=document.getElementById("browserInstructions");
+const browserCopyFeedback=document.getElementById("browserCopyFeedback");
+const openInsideButton=document.getElementById("openInsideButton");
+const userAgent=navigator.userAgent||"";
+const isEmbeddedBrowser=/(FBAN|FBAV|FB_IAB|FB4A|FBIOS|FB_IAB|Messenger|Instagram)/i.test(userAgent);
+const isIOS=/iPhone|iPad|iPod/i.test(userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
+const isAndroid=/Android/i.test(userAgent);
+function finishReadLater(){remember("library");setTimeout(()=>{let n=pendingReturn;try{n=n||sessionStorage.getItem(FLOW_KEY)}catch(e){}if(n==="library")finish("library")},650)}
+function externalTarget(url){
+  const u=new URL(url);
+  if(u.protocol!=="https:")return url;
+  if(isAndroid){return "intent://"+u.host+u.pathname+u.search+u.hash+"#Intent;scheme=https;action=android.intent.action.VIEW;category=android.intent.category.BROWSABLE;package=com.android.chrome;end"}
+  if(isIOS){return "googlechromes://"+u.host+u.pathname+u.search+u.hash}
+  return url;
+}
+function openBrowserModal(){
+  const url=selectedStory.url;
+  browserStoryUrl.textContent=url;
+  browserCopyFeedback.textContent="";
+  openChromeButton.href=externalTarget(url);
+  openInsideButton.href=url;
+  if(isIOS){
+    browserInstructions.textContent="iPhone/iPad: Nếu đã cài Chrome, bấm nút xanh để thử mở. Nếu không được, hãy sao chép link bên dưới, tự mở Safari/Chrome rồi dán vào thanh địa chỉ. Facebook có thể chặn việc bật trình duyệt ngoài.";
+    openChromeButton.textContent="🌐 THỬ MỞ TRONG CHROME (iPHONE)";
+  }else if(isAndroid){
+    browserInstructions.textContent="Android: Bấm nút xanh để thử mở bằng Chrome. Nếu Facebook không cho chuyển ứng dụng, sao chép link rồi mở Chrome để dán vào.";
+    openChromeButton.textContent="🌐 THỬ MỞ TRONG CHROME (ANDROID)";
+  }else{
+    browserInstructions.textContent="Nếu Facebook không mở Chrome/Safari, hãy sao chép đường dẫn rồi dán trực tiếp vào trình duyệt ngoài.";
+    openChromeButton.textContent="🌐 MỞ TRUYỆN";
+  }
+  externalBrowserModal.hidden=false;
+  document.body.classList.add("external-locked");
+  closeBrowserModal.focus();
+}
+function hideBrowserModal(){externalBrowserModal.hidden=true;document.body.classList.remove("external-locked");readButton.focus()}
+closeBrowserModal.onclick=hideBrowserModal;
+externalBrowserModal.addEventListener("click",e=>{if(e.target===externalBrowserModal)hideBrowserModal()});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!externalBrowserModal.hidden)hideBrowserModal()});
+openChromeButton.addEventListener("click",()=>{
+  // Chrome co the mo; chi danh dau de thu vien hien sau khi khach quay lai.
+  remember("library");
+  // Khong dung setTimeout chuyen trang: neu Facebook chan Chrome, bang huong dan van o lai.
+});
+openInsideButton.addEventListener("click",()=>{hideBrowserModal();finishReadLater()});
+async function copyStoryUrl(){
+  const url=selectedStory.url;
+  let ok=false;
+  try{if(navigator.clipboard&&window.isSecureContext){await navigator.clipboard.writeText(url);ok=true}}catch(e){}
+  if(!ok){
+    const t=document.createElement("textarea");t.value=url;t.setAttribute("readonly","");t.style.position="fixed";t.style.left="-9999px";document.body.appendChild(t);t.select();
+    try{ok=document.execCommand("copy")}catch(e){}t.remove();
+  }
+  browserCopyFeedback.textContent=ok?"✓ Đã sao chép! Mở Safari/Chrome và dán link để đọc nhé.":"Không thể tự sao chép. Hãy nhấn giữ vào đường dẫn phía trên để sao chép.";
+}
+copyBrowserLink.onclick=copyStoryUrl;
+readButton.onclick=e=>{
+  if(isEmbeddedBrowser){e.preventDefault();openBrowserModal();return}
+  finishReadLater();
+};
 document.addEventListener("visibilitychange",handleReturn);window.addEventListener("focus",handleReturn);window.addEventListener("pageshow",()=>{restore();handleReturn()});
 loadMore.onclick=()=>{document.querySelectorAll(".extra-story").forEach(x=>x.classList.add("show"));loadMore.disabled=true;loadMore.textContent="ĐÃ HIỂN THỊ TẤT CẢ TRUYỆN"};
 restore();prepareGate();prepareUnlock();renderBlur();renderLibrary();
