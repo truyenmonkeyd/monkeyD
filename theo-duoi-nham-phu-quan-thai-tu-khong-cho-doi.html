@@ -15,83 +15,469 @@
 <style>
 *{box-sizing:border-box}
 html,body,button,input,a,div,span,p,h1,h2,h3{font-family:Arial,Helvetica,sans-serif;font-synthesis:none;-webkit-font-smoothing:antialiased}
-html,body{margin:0;padding:0;background:#f5f5fb;color:#181818}
+html,body{margin:0;padding:0;background:#f5f5fb;color:#181818;overflow-x:hidden}
 button{color:inherit}
 a{color:inherit}
+
 .header{background:#fff;border-bottom:1px solid #e2e2e8}
-.header-top{max-width:1180px;margin:auto;padding:12px 18px;display:flex;align-items:center;gap:20px}
-.brand{font-size:27px;font-weight:700;color:#09a5e5;white-space:nowrap}
-.search{width:300px;height:40px;padding:0 12px;border:1px solid #ddd;border-radius:7px;outline:none;background:#fff;font-size:14px}
-.account{margin-left:auto;font-size:13px;color:#666;white-space:nowrap}
-.nav{background:#fff;border-bottom:1px solid #ddd}
-.nav-inner{max-width:1180px;margin:auto;display:flex;overflow-x:auto}
-.nav a{padding:14px 15px;font-size:14px;text-decoration:none;white-space:nowrap}
-.container{max-width:1080px;margin:22px auto 55px;padding:0 14px}
+
+.header-top{
+max-width:1180px;
+margin:auto;
+padding:12px 18px;
+display:flex;
+align-items:center;
+gap:20px
+}
+
+.brand{
+font-size:27px;
+font-weight:700;
+color:#09a5e5;
+white-space:nowrap
+}
+
+.search{
+width:300px;
+height:40px;
+padding:0 12px;
+border:1px solid #ddd;
+border-radius:7px;
+outline:none;
+background:#fff;
+font-size:14px
+}
+
+.account{
+margin-left:auto;
+font-size:13px;
+color:#666;
+white-space:nowrap
+}
+
+.nav{
+background:#fff;
+border-bottom:1px solid #ddd
+}
+
+.nav-inner{
+max-width:1180px;
+margin:auto;
+display:flex;
+overflow-x:auto
+}
+
+.nav a{
+padding:14px 15px;
+font-size:14px;
+text-decoration:none;
+white-space:nowrap
+}
+
+.container{
+max-width:1080px;
+margin:22px auto 55px;
+padding:0 14px
+}
+
 .state{display:none}
 .state.active{display:block}
-.gate{position:relative;min-height:720px;overflow:hidden;border:1px solid #e2e2e8;border-radius:17px;background:#eeeef4}
-.bg-grid{position:absolute;inset:0;padding:14px;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;opacity:.66;filter:blur(.7px)}
-.bg-grid img{display:block;width:100%;height:100%;min-height:165px;object-fit:cover;border-radius:8px}
-.shade{position:absolute;inset:0;background:rgba(255,255,255,.40)}
-.gate-center{position:relative;z-index:2;min-height:720px;padding:22px;display:flex;align-items:center;justify-content:center}
-.box,.unlock{width:620px;max-width:100%;padding:28px;background:#fff;border-radius:18px;text-align:center;box-shadow:0 18px 45px rgba(30,30,70,.16)}
-.unlock{width:760px;margin:auto}
-.main-title{margin:0 0 10px;font-size:24px;font-weight:700;line-height:1.4}
-.sub{font-size:14px;line-height:1.7;color:#666}
-.cover{width:220px;max-width:65%;margin:18px auto}
-.cover img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:10px;box-shadow:0 5px 18px rgba(0,0,0,.16)}
-.story-name{font-size:21px;font-weight:700;line-height:1.45}
-.story-meta{margin:7px 0;font-size:13px;font-weight:700;color:#0878ee}
-.done{margin-bottom:18px;font-size:12px;font-weight:700;color:#16a33c}
-.btn{width:100%;min-height:62px;padding:17px;display:flex;align-items:center;justify-content:center;border-radius:10px;color:#fff;font-size:18px;font-weight:700;text-decoration:none}
-.shopee{background:#ee4d2d;box-shadow:0 7px 20px rgba(238,77,45,.22)}
-.read{margin-top:20px;background:#11aa31}
-.note{margin-top:12px;font-size:12px;line-height:1.6;color:#888}
-.check{width:70px;height:70px;margin:auto;display:grid;place-items:center;border-radius:50%;background:#e7f9eb;color:#16a33c;font-size:35px;font-weight:700}
-.profile{margin-bottom:16px;padding:20px;display:flex;align-items:center;gap:18px;background:#fff;border:1px solid #e1e1e9;border-radius:12px}
-.avatar{width:82px;height:82px;flex:0 0 auto;overflow:hidden;border-radius:50%;background:#eee}
-.avatar img{display:block;width:100%;height:100%;object-fit:cover}
-.profile h1{margin:0 0 7px;font-size:28px;font-weight:700}
-.profile-desc{margin-bottom:9px;font-size:13px;line-height:1.55;color:#555}
-.stats{display:flex;flex-wrap:wrap;gap:7px 16px;font-size:13px;color:#666}
-.library{padding:20px;background:#fff;border:1px solid #e1e1e9;border-radius:12px}
-.lib-head{margin-bottom:18px;display:flex;align-items:center;justify-content:space-between;gap:15px}
-.lib-head h2{margin:0;font-size:22px;font-weight:700;line-height:1.4}
-.team{font-size:13px;font-weight:700;color:#0878ee;text-decoration:none;white-space:nowrap}
-.grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:22px 14px}
-.card{width:100%;margin:0;padding:0;border:0;background:none;text-align:left;cursor:pointer}
-.card-cover{position:relative;width:100%;aspect-ratio:3/4;overflow:hidden;border-radius:9px;background:#eee;box-shadow:0 2px 8px rgba(0,0,0,.08)}
-.card-cover img{display:block;width:100%;height:100%;object-fit:cover}
-.full-badge{position:absolute;top:7px;right:7px;padding:4px 7px;border-radius:5px;background:#11aa31;color:#fff;font-size:10px;font-weight:700;pointer-events:none}
-.library-title{margin-top:8px;font-size:13px;font-weight:700;line-height:1.38;overflow-wrap:break-word}
-.library-meta{margin-top:4px;font-size:11px;color:#777}
-.extra-story{display:none}
-.extra-story.show{display:block}
-.more{width:100%;margin-top:22px;padding:14px;border:1px solid #d9dce5;border-radius:8px;background:#fafafa;font-size:13px;font-weight:700;cursor:pointer}
-.more:disabled{cursor:default;color:#777}
+
+.gate{
+position:relative;
+min-height:720px;
+overflow:hidden;
+border:1px solid #e2e2e8;
+border-radius:17px;
+background:#eeeef4
+}
+
+.bg-grid{
+position:absolute;
+inset:0;
+padding:14px;
+display:grid;
+grid-template-columns:repeat(5,minmax(0,1fr));
+gap:10px;
+opacity:.66;
+filter:blur(.7px)
+}
+
+.bg-grid img{
+display:block;
+width:100%;
+height:100%;
+min-height:165px;
+object-fit:cover;
+border-radius:8px
+}
+
+.shade{
+position:absolute;
+inset:0;
+background:rgba(255,255,255,.42)
+}
+
+.gate-center{
+position:relative;
+z-index:2;
+min-height:720px;
+padding:22px;
+display:flex;
+align-items:center;
+justify-content:center
+}
+
+.box,.unlock{
+width:min(620px,100%);
+padding:28px;
+background:#fff;
+border-radius:18px;
+text-align:center;
+box-shadow:0 18px 45px rgba(30,30,70,.16);
+overflow:hidden
+}
+
+.unlock{
+width:min(760px,100%);
+margin:auto
+}
+
+.main-title{
+margin:0 0 10px;
+font-size:24px;
+font-weight:700;
+line-height:1.35;
+overflow-wrap:anywhere;
+word-break:normal
+}
+
+.sub{
+font-size:14px;
+line-height:1.7;
+color:#666
+}
+
+.cover{
+width:220px;
+max-width:65%;
+margin:18px auto
+}
+
+.cover.hidden{
+display:none
+}
+
+.cover img{
+display:block;
+width:100%;
+aspect-ratio:3/4;
+object-fit:cover;
+border-radius:10px;
+box-shadow:0 5px 18px rgba(0,0,0,.16)
+}
+
+.story-name{
+max-width:100%;
+font-size:21px;
+font-weight:700;
+line-height:1.4;
+overflow-wrap:anywhere;
+word-break:normal
+}
+
+.story-meta{
+margin:7px 0;
+font-size:13px;
+font-weight:700;
+color:#0878ee
+}
+
+.done{
+margin-bottom:18px;
+font-size:12px;
+font-weight:700;
+color:#16a33c
+}
+
+.btn{
+width:100%;
+min-height:62px;
+padding:17px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:10px;
+color:#fff;
+font-size:18px;
+font-weight:700;
+text-decoration:none;
+text-align:center;
+overflow-wrap:anywhere
+}
+
+.shopee{
+background:#ee4d2d;
+box-shadow:0 7px 20px rgba(238,77,45,.22)
+}
+
+.read{
+margin-top:20px;
+background:#11aa31
+}
+
+.note{
+margin-top:12px;
+font-size:12px;
+line-height:1.6;
+color:#888
+}
+
+.check{
+width:70px;
+height:70px;
+margin:auto;
+display:grid;
+place-items:center;
+border-radius:50%;
+background:#e7f9eb;
+color:#16a33c;
+font-size:35px;
+font-weight:700
+}
+
+.profile{
+margin-bottom:16px;
+padding:20px;
+display:flex;
+align-items:center;
+gap:18px;
+background:#fff;
+border:1px solid #e1e1e9;
+border-radius:12px
+}
+
+.avatar{
+width:82px;
+height:82px;
+flex:0 0 auto;
+overflow:hidden;
+border-radius:50%;
+background:#eee
+}
+
+.avatar img{
+display:block;
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.profile h1{
+margin:0 0 7px;
+font-size:28px;
+font-weight:700
+}
+
+.profile-desc{
+margin-bottom:9px;
+font-size:13px;
+line-height:1.55;
+color:#555
+}
+
+.stats{
+display:flex;
+flex-wrap:wrap;
+gap:7px 16px;
+font-size:13px;
+color:#666
+}
+
+.library{
+padding:20px;
+background:#fff;
+border:1px solid #e1e1e9;
+border-radius:12px
+}
+
+.lib-head{
+margin-bottom:18px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px
+}
+
+.lib-head h2{
+margin:0;
+font-size:22px;
+font-weight:700;
+line-height:1.4
+}
+
+.team{
+font-size:13px;
+font-weight:700;
+color:#0878ee;
+text-decoration:none;
+white-space:nowrap
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(5,minmax(0,1fr));
+gap:22px 14px
+}
+
+.card{
+width:100%;
+margin:0;
+padding:0;
+border:0;
+background:none;
+text-align:left;
+cursor:pointer
+}
+
+.card-cover{
+position:relative;
+width:100%;
+aspect-ratio:3/4;
+overflow:hidden;
+border-radius:9px;
+background:#eee;
+box-shadow:0 2px 8px rgba(0,0,0,.08)
+}
+
+.card-cover img{
+display:block;
+width:100%;
+height:100%;
+object-fit:cover
+}
+
+.full-badge{
+position:absolute;
+top:7px;
+right:7px;
+padding:4px 7px;
+border-radius:5px;
+background:#11aa31;
+color:#fff;
+font-size:10px;
+font-weight:700
+}
+
+.library-title{
+margin-top:8px;
+font-size:13px;
+font-weight:700;
+line-height:1.38;
+overflow-wrap:anywhere
+}
+
+.library-meta{
+margin-top:4px;
+font-size:11px;
+color:#777
+}
+
+.extra-story{
+display:none
+}
+
+.extra-story.show{
+display:block
+}
+
+.more{
+width:100%;
+margin-top:22px;
+padding:14px;
+border:1px solid #d9dce5;
+border-radius:8px;
+background:#fafafa;
+font-size:13px;
+font-weight:700;
+cursor:pointer
+}
 
 @media(max-width:900px){
-.grid,.bg-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.grid,.bg-grid{
+grid-template-columns:repeat(4,minmax(0,1fr))
+}
 }
 
 @media(max-width:680px){
 .account{display:none}
-.grid,.bg-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-.profile{align-items:flex-start}
-.lib-head{display:block}
-.team{display:inline-block;margin-top:7px}
+
+.grid,.bg-grid{
+grid-template-columns:repeat(2,minmax(0,1fr))
+}
+
+.profile{
+align-items:flex-start
+}
+
+.lib-head{
+display:block
+}
+
+.team{
+display:inline-block;
+margin-top:7px
+}
 }
 
 @media(max-width:470px){
-.header-top{gap:10px}
-.brand{font-size:21px}
-.search{width:100%;min-width:0}
-.box,.unlock{padding:22px 16px}
-.main-title{font-size:21px}
-.profile{padding:16px}
-.avatar{width:64px;height:64px}
-.profile h1{font-size:23px}
-.library{padding:16px}
+
+.header-top{
+gap:10px
+}
+
+.brand{
+font-size:21px
+}
+
+.search{
+width:100%;
+min-width:0
+}
+
+.gate-center{
+padding:12px
+}
+
+.box,.unlock{
+padding:22px 16px
+}
+
+.main-title{
+font-size:20px
+}
+
+.story-name{
+font-size:18px
+}
+
+.profile{
+padding:16px
+}
+
+.avatar{
+width:64px;
+height:64px
+}
+
+.profile h1{
+font-size:23px
+}
+
+.library{
+padding:16px
+}
+
 }
 </style>
 </head>
@@ -122,11 +508,15 @@ a{color:inherit}
 <main class="container">
 
 <section id="gateState" class="state active">
+
 <div class="gate">
+
 <div id="bgGrid" class="bg-grid"></div>
+
 <div class="shade"></div>
 
 <div class="gate-center">
+
 <div class="box">
 
 <h1 class="main-title">
@@ -137,11 +527,12 @@ NHẤN VÀO LINK ỦNG HỘ ĐỂ ĐỌC TRUYỆN NÀY 💗
 Cảm ơn bạn đã ủng hộ để tụi mình có thể tiếp tục chia sẻ thêm nhiều truyện hay.
 </div>
 
-<div class="cover">
+<div id="gateCoverWrap" class="cover">
 <img id="gateCover">
 </div>
 
 <div id="gateTitle" class="story-name"></div>
+
 <div id="gateMeta" class="story-meta"></div>
 
 <div class="done">
@@ -165,6 +556,7 @@ Sau đó quay lại trang này để tiếp tục.
 </div>
 </div>
 </div>
+
 </section>
 
 <section id="unlockState" class="state">
@@ -182,7 +574,7 @@ Cảm ơn bạn đã ủng hộ.<br>
 Bây giờ bạn có thể mở truyện để đọc.
 </div>
 
-<div class="cover">
+<div id="unlockCoverWrap" class="cover">
 <img id="unlockCover">
 </div>
 
@@ -207,6 +599,7 @@ Khi quay lại trang này, thư viện Tí Hay Đọc sẽ hiện ra.
 </div>
 
 </div>
+
 </section>
 
 <section id="libraryState" class="state">
@@ -214,9 +607,11 @@ Khi quay lại trang này, thư viện Tí Hay Đọc sẽ hiện ra.
 <div class="profile">
 
 <div class="avatar">
+
 <img
 src="https://monkeydd.com/images/avatar/thumbs/230/2025/11/29/1764396590-56768.jpg"
 alt="Tí Hay Đọc">
+
 </div>
 
 <div>
@@ -228,9 +623,13 @@ CHÀO CÁC BÁC ĐÃ GHÉ Ổ CỦA TÍ, TÍ CHÚC CÁC BÁC ĐỌC TRUYỆN VUI
 </div>
 
 <div class="stats">
+
 <span>♡ 31 lượt theo dõi</span>
+
 <span>👁 4.587.863 lượt xem</span>
+
 <span>📚 1.319 truyện</span>
+
 </div>
 
 </div>
@@ -239,7 +638,10 @@ CHÀO CÁC BÁC ĐÃ GHÉ Ổ CỦA TÍ, TÍ CHÚC CÁC BÁC ĐỌC TRUYỆN VUI
 <div class="library">
 
 <div class="lib-head">
-<h2>TOP TRUYỆN HAY TRONG THÁNG</h2>
+
+<h2>
+TOP TRUYỆN HAY TRONG THÁNG
+</h2>
 
 <a
 class="team"
@@ -248,6 +650,7 @@ target="_blank"
 rel="noopener noreferrer">
 Xem trang nhóm ↗
 </a>
+
 </div>
 
 <div id="storyGrid" class="grid"></div>
@@ -260,6 +663,7 @@ XEM THÊM TRUYỆN ↓
 </button>
 
 </div>
+
 </section>
 
 </main>
@@ -279,11 +683,19 @@ const ALL_AFFILIATE=[
 ];
 
 const PRIMARY_STORY={
-title:"THEO ĐUỔI NHẦM PHU QUÂN, THÁI TỬ KHÔNG CHO ĐỔI",
-url:"https://monkeydd.com/theo-duoi-nham-phu-quan-thai-tu-khong-cho-doi.html",
+
+title:
+"THEO ĐUỔI NHẦM PHU QUÂN, THÁI TỬ KHÔNG CHO ĐỔI",
+
+url:
+"https://monkeydd.com/theo-duoi-nham-phu-quan-thai-tu-khong-cho-doi.html",
+
 cover:"",
+
 parts:"FULL",
+
 status:"FULL",
+
 affiliate:
 PRIMARY_AFFILIATE[
 Math.floor(
@@ -291,176 +703,213 @@ Math.random()*
 PRIMARY_AFFILIATE.length
 )
 ]
+
 };
 
 const STORIES=[
 
 {
-title:"GẢ CỐ ĐẠI NHÂN",
-url:"https://monkeydd.com/ga-co-dai-nhan.html",
-cover:"https://monkeydd.com/images/story/2026/10/31/1793454395-ga-co-dai-nhan.jpg",
-parts:"9 phần",
-status:"FULL"
+"title":"GẢ CỐ ĐẠI NHÂN",
+"url":"https://monkeydd.com/ga-co-dai-nhan.html",
+"cover":"https://monkeydd.com/images/story/2026/10/31/1793454395-ga-co-dai-nhan.jpg",
+"parts":"9 phần",
+"status":"FULL"
 },
 
 {
-title:"SÍNH THƯ TẠ TƯỚNG QUÂN",
-url:"https://monkeydd.com/sinh-thu-ta-tuong-quan.html",
-cover:"https://monkeydd.com/images/story/2026/10/31/1793460847-sinh-thu-ta-tuong-quan.jpg",
-parts:"8 phần",
-status:"FULL"
+"title":"SÍNH THƯ TẠ TƯỚNG QUÂN",
+"url":"https://monkeydd.com/sinh-thu-ta-tuong-quan.html",
+"cover":"https://monkeydd.com/images/story/2026/10/31/1793460847-sinh-thu-ta-tuong-quan.jpg",
+"parts":"8 phần",
+"status":"FULL"
 },
 
 {
-title:"NUÔI NHẦM HOÀNG TỬ",
-url:"https://monkeydd.com/nuoi-nham-hoang-tu.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793499652-nuoi-nham-hoang-tu.jpg",
-parts:"9 phần",
-status:"FULL"
+"title":"NUÔI NHẦM HOÀNG TỬ",
+"url":"https://monkeydd.com/nuoi-nham-hoang-tu.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793499652-nuoi-nham-hoang-tu.jpg",
+"parts":"9 phần",
+"status":"FULL"
 },
 
 {
-title:"THAY GẢ BA NĂM, TA ĐỔI MỘT THÁI TỬ",
-url:"https://monkeydd.com/thay-ga-ba-nam-ta-doi-mot-thai-tu.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793540514-thay-ga-ba-nam-ta-doi-mot-thai-tu.jpg",
-parts:"8 phần",
-status:"FULL"
+"title":"THAY GẢ BA NĂM, TA ĐỔI MỘT THÁI TỬ",
+"url":"https://monkeydd.com/thay-ga-ba-nam-ta-doi-mot-thai-tu.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793540514-thay-ga-ba-nam-ta-doi-mot-thai-tu.jpg",
+"parts":"8 phần",
+"status":"FULL"
 },
 
 {
-title:"TA ÉP PHU QUÂN ĂN CHƠI ĐI THI KHOA CỬ",
-url:"https://monkeydd.com/ta-ep-phu-quan-an-choi-di-thi-khoa-cu.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793520887-ta-ep-phu-quan-an-choi-di-thi-khoa-cu.jpg",
-parts:"10 phần",
-status:"FULL"
+"title":"TA ÉP PHU QUÂN ĂN CHƠI ĐI THI KHOA CỬ",
+"url":"https://monkeydd.com/ta-ep-phu-quan-an-choi-di-thi-khoa-cu.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793520887-ta-ep-phu-quan-an-choi-di-thi-khoa-cu.jpg",
+"parts":"10 phần",
+"status":"FULL"
 },
 
 {
-title:"THỨ MUỘI XUẤT GIÁ, TA ĐEM ĐI NỬA GIA SẢN",
-url:"https://monkeydd.com/thu-muoi-xuat-gia-ta-dem-di-nua-gia-san.html",
-cover:"https://monkeydd.com/images/story/2026/10/31/1793462188-thu-muoi-xuat-gia-ta-dem-di-nua-gia-san.jpg",
-parts:"10 phần",
-status:"FULL"
+"title":"THỨ MUỘI XUẤT GIÁ, TA ĐEM ĐI NỬA GIA SẢN",
+"url":"https://monkeydd.com/thu-muoi-xuat-gia-ta-dem-di-nua-gia-san.html",
+"cover":"https://monkeydd.com/images/story/2026/10/31/1793462188-thu-muoi-xuat-gia-ta-dem-di-nua-gia-san.jpg",
+"parts":"10 phần",
+"status":"FULL"
 },
 
 {
-title:"VƯƠNG GIA HỐI HẬN",
-url:"https://monkeydd.com/vuong-gia-hoi-han-mqkg.html",
-cover:"https://monkeydd.com/images/story/2026/11/02/1793576021-vuong-gia-hoi-han-mqkg.jpg",
-parts:"7 phần",
-status:"FULL"
+"title":"VƯƠNG GIA HỐI HẬN",
+"url":"https://monkeydd.com/vuong-gia-hoi-han-mqkg.html",
+"cover":"https://monkeydd.com/images/story/2026/11/02/1793576021-vuong-gia-hoi-han-mqkg.jpg",
+"parts":"7 phần",
+"status":"FULL"
 },
 
 {
-title:"XUÂN ĐÀO MŨ PHƯỢNG",
-url:"https://monkeydd.com/xuan-dao-mu-phuong.html",
-cover:"https://monkeydd.com/images/story/2026/10/31/1793451985-xuan-dao-mu-phuong.jpg",
-parts:"10 phần",
-status:"FULL"
+"title":"XUÂN ĐÀO MŨ PHƯỢNG",
+"url":"https://monkeydd.com/xuan-dao-mu-phuong.html",
+"cover":"https://monkeydd.com/images/story/2026/10/31/1793451985-xuan-dao-mu-phuong.jpg",
+"parts":"10 phần",
+"status":"FULL"
 },
 
 {
-title:"HỨA TÌNH",
-url:"https://monkeydd.com/hua-tinh.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793495872-hua-tinh.jpg",
-parts:"7 phần",
-status:"FULL"
+"title":"HỨA TÌNH",
+"url":"https://monkeydd.com/hua-tinh.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793495872-hua-tinh.jpg",
+"parts":"7 phần",
+"status":"FULL"
 },
 
 {
-title:"BA CANH GIỜ",
-url:"https://monkeydd.com/ba-canh-gio.html",
-cover:"https://monkeydd.com/images/story/2026/11/02/1793596370-ba-canh-gio.jpg",
-parts:"13 phần",
-status:"FULL"
+"title":"BA CANH GIỜ",
+"url":"https://monkeydd.com/ba-canh-gio.html",
+"cover":"https://monkeydd.com/images/story/2026/11/02/1793596370-ba-canh-gio.jpg",
+"parts":"13 phần",
+"status":"FULL"
 },
 
 {
-title:"TUYẾT CŨ KHÓ TAN",
-url:"https://monkeydd.com/tuyet-cu-kho-tan.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793468515-tuyet-cu-kho-tan.jpg",
-parts:"9 phần",
-status:"FULL"
+"title":"TUYẾT CŨ KHÓ TAN",
+"url":"https://monkeydd.com/tuyet-cu-kho-tan.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793468515-tuyet-cu-kho-tan.jpg",
+"parts":"9 phần",
+"status":"FULL"
 },
 
 {
-title:"TRÀO LƯU MỚI",
-url:"https://monkeydd.com/trao-luu-moi.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793497057-e-tu-anh-nay-giu-nguyen-chinh-cho-mau-sac-djep-bat-mat-giu-nguyen-mau-da-xoa-cac-chu-logo-ko-lien-quan-mau-da-nhan-vat-giu-nguyen-mau.jpg",
-parts:"10 phần",
-status:"FULL"
+"title":"TRÀO LƯU MỚI",
+"url":"https://monkeydd.com/trao-luu-moi.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793497057-e-tu-anh-nay-giu-nguyen-chinh-cho-mau-sac-djep-bat-mat-giu-nguyen-mau-da-xoa-cac-chu-logo-ko-lien-quan-mau-da-nhan-vat-giu-nguyen-mau.jpg",
+"parts":"10 phần",
+"status":"FULL"
 },
 
 {
-title:"NAN TRE GẶP XUÂN",
-url:"https://monkeydd.com/nan-tre-gap-xuan.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793546084-nan-tre-gap-xuan.jpg",
-parts:"10 phần",
-status:"FULL"
+"title":"NAN TRE GẶP XUÂN",
+"url":"https://monkeydd.com/nan-tre-gap-xuan.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793546084-nan-tre-gap-xuan.jpg",
+"parts":"10 phần",
+"status":"FULL"
 },
 
 {
-title:"THỨ NỮ LÀM KẾ THẤT, ĐÒI MẠNG THAY ĐÍCH TỶ",
-url:"https://monkeydd.com/thu-nu-lam-ke-that-doi-mang-thay-dich-ty.html",
-cover:"https://monkeydd.com/images/story/2026/10/31/1793463103-thu-nu-lam-ke-that-doi-mang-thay-dich-ty.jpg",
-parts:"9 phần",
-status:"FULL"
+"title":"THỨ NỮ LÀM KẾ THẤT, ĐÒI MẠNG THAY ĐÍCH TỶ",
+"url":"https://monkeydd.com/thu-nu-lam-ke-that-doi-mang-thay-dich-ty.html",
+"cover":"https://monkeydd.com/images/story/2026/10/31/1793463103-thu-nu-lam-ke-that-doi-mang-thay-dich-ty.jpg",
+"parts":"9 phần",
+"status":"FULL"
 },
 
 {
-title:"VỞ KỊCH ĐẠI HÔN",
-url:"https://monkeydd.com/vo-kich-dai-hon.html",
-cover:"https://monkeydd.com/images/story/2026/11/01/1793547830-vo-kich-dai-hon.jpg",
-parts:"9 phần",
-status:"FULL"
+"title":"VỞ KỊCH ĐẠI HÔN",
+"url":"https://monkeydd.com/vo-kich-dai-hon.html",
+"cover":"https://monkeydd.com/images/story/2026/11/01/1793547830-vo-kich-dai-hon.jpg",
+"parts":"9 phần",
+"status":"FULL"
 }
 
 ];
 
 const FLOW_KEY=
-"monkeydFlow:theo-duoi-nham-phu-quan-thai-tu-khong-cho-doi:v20261115static";
+"monkeydFlow:theo-duoi-nham-phu-quan-thai-tu-khong-cho-doi:v20261115fix2";
 
 const STORY_KEY=
-"monkeydStory:theo-duoi-nham-phu-quan-thai-tu-khong-cho-doi:v20261115static";
+"monkeydStory:theo-duoi-nham-phu-quan-thai-tu-khong-cho-doi:v20261115fix2";
 
 const gateState=
-document.getElementById("gateState");
+document.getElementById(
+"gateState"
+);
 
 const unlockState=
-document.getElementById("unlockState");
+document.getElementById(
+"unlockState"
+);
 
 const libraryState=
-document.getElementById("libraryState");
+document.getElementById(
+"libraryState"
+);
 
 const gateCover=
-document.getElementById("gateCover");
+document.getElementById(
+"gateCover"
+);
 
 const unlockCover=
-document.getElementById("unlockCover");
+document.getElementById(
+"unlockCover"
+);
+
+const gateCoverWrap=
+document.getElementById(
+"gateCoverWrap"
+);
+
+const unlockCoverWrap=
+document.getElementById(
+"unlockCoverWrap"
+);
 
 const gateTitle=
-document.getElementById("gateTitle");
+document.getElementById(
+"gateTitle"
+);
 
 const unlockTitle=
-document.getElementById("unlockTitle");
+document.getElementById(
+"unlockTitle"
+);
 
 const gateMeta=
-document.getElementById("gateMeta");
+document.getElementById(
+"gateMeta"
+);
 
 const affiliateButton=
-document.getElementById("affiliateButton");
+document.getElementById(
+"affiliateButton"
+);
 
 const readButton=
-document.getElementById("readButton");
+document.getElementById(
+"readButton"
+);
 
 const storyGrid=
-document.getElementById("storyGrid");
+document.getElementById(
+"storyGrid"
+);
 
 const bgGrid=
-document.getElementById("bgGrid");
+document.getElementById(
+"bgGrid"
+);
 
 const loadMore=
-document.getElementById("loadMore");
+document.getElementById(
+"loadMore"
+);
 
 let selectedStory=
 PRIMARY_STORY;
@@ -468,17 +917,12 @@ PRIMARY_STORY;
 let pendingReturn=
 null;
 
-function fallback(
-label="TRUYỆN FULL"
-){
+function fallback(){
 
 const svg=
 '<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800">'+
 '<rect width="100%" height="100%" fill="#eeeef4"/>'+
-'<text x="50%" y="48%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="24" font-weight="700" fill="#555">'+
-String(label).replace(/[<>&]/g,"")+
-'</text>'+
-'<text x="50%" y="55%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="16" fill="#888">'+
+'<text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial" font-size="28" fill="#777">'+
 'TRUYỆN FULL'+
 '</text>'+
 '</svg>';
@@ -493,7 +937,8 @@ encodeURIComponent(svg)
 function setImage(
 img,
 src,
-alt
+alt,
+wrap
 ){
 
 img.alt=
@@ -503,33 +948,44 @@ alt||
 img.referrerPolicy=
 "no-referrer";
 
-const original=
-src||
-"";
-
 if(
-!original
+!src
 ){
 
-img.src=
-fallback(
-alt
+if(
+wrap
+){
+
+wrap.classList.add(
+"hidden"
 );
 
+}
+
 return;
+
+}
+
+if(
+wrap
+){
+
+wrap.classList.remove(
+"hidden"
+);
 
 }
 
 const p1=
 "https://wsrv.nl/?url="+
 encodeURIComponent(
-original
+src
 );
 
 const p2=
 "https://images.weserv.nl/?url="+
 encodeURIComponent(
-original
+src
 );
 
 let step=
@@ -565,15 +1021,25 @@ return;
 img.onerror=
 null;
 
-img.src=
-fallback(
-alt
+if(
+wrap
+){
+
+wrap.classList.add(
+"hidden"
 );
+
+}else{
+
+img.src=
+fallback();
+
+}
 
 };
 
 img.src=
-original;
+src;
 
 }
 
@@ -628,7 +1094,8 @@ function prepareGate(){
 setImage(
 gateCover,
 selectedStory.cover,
-selectedStory.title
+selectedStory.title,
+gateCoverWrap
 );
 
 gateTitle.textContent=
@@ -639,7 +1106,14 @@ selectedStory.parts+
 " · Đã đủ bộ · FULL";
 
 affiliateButton.href=
-selectedStory.affiliate;
+selectedStory.affiliate
+||
+PRIMARY_AFFILIATE[
+Math.floor(
+Math.random()*
+PRIMARY_AFFILIATE.length
+)
+];
 
 }
 
@@ -648,7 +1122,8 @@ function prepareUnlock(){
 setImage(
 unlockCover,
 selectedStory.cover,
-selectedStory.title
+selectedStory.title,
+unlockCoverWrap
 );
 
 unlockTitle.textContent=
@@ -789,7 +1264,8 @@ pendingReturn;
 try{
 
 n=
-n||
+n
+||
 sessionStorage.getItem(
 FLOW_KEY
 );
@@ -857,27 +1333,28 @@ c.type=
 "button";
 
 c.className=
-"card";
-
-if(
+"card"+
+(
 idx>=10
-){
-
-c.classList.add(
-"extra-story"
+?" extra-story"
+:""
 );
 
-}
-
 c.innerHTML=
-`
-<div class="card-cover">
-<img loading="lazy">
-<span class="full-badge">FULL</span>
-</div>
-<div class="library-title">${esc(s.title)}</div>
-<div class="library-meta">${esc(s.parts)} · FULL</div>
-`;
+'<div class="card-cover">'+
+'<img loading="lazy">'+
+'<span class="full-badge">FULL</span>'+
+'</div>'+
+'<div class="library-title">'+
+esc(
+s.title
+)+
+'</div>'+
+'<div class="library-meta">'+
+esc(
+s.parts
+)+
+' · FULL</div>';
 
 setImage(
 c.querySelector(
@@ -892,6 +1369,7 @@ c.onclick=
 
 selectedStory={
 ...s,
+
 affiliate:
 ALL_AFFILIATE[
 Math.floor(
@@ -899,6 +1377,7 @@ Math.random()*
 ALL_AFFILIATE.length
 )
 ]
+
 };
 
 save();
@@ -938,7 +1417,8 @@ pendingReturn;
 try{
 
 n=
-n||
+n
+||
 sessionStorage.getItem(
 FLOW_KEY
 );
@@ -978,7 +1458,8 @@ pendingReturn;
 try{
 
 n=
-n||
+n
+||
 sessionStorage.getItem(
 FLOW_KEY
 );
